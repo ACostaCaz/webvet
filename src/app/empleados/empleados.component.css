@@ -1,0 +1,66 @@
+.contenedor1 {
+    position: absolute;
+    width: 90%;
+    height: 560px;
+    left: 51px;
+    top: 100px;
+    margin: auto;
+    align-self: center;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+
+
+
+.contenedor2 {
+
+    position: relative;
+    width: 92%;
+    height: 60%;
+    left: 50px;
+    top: 50px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+
+}
+
+
+.titulo {
+    position: relative;
+    width: 243px;
+    height: 27px;
+    left: 50px;
+    top: 30px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+
+}
+
+
+#contactar {
+
+    position: absolute;
+    width: 20%;
+    height: 7%;
+    left: 40%;
+    bottom: 30px;
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+

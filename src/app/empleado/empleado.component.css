@@ -1,0 +1,47 @@
+
+
+.cuadro {
+    width: 234px;
+    height: 238px;
+    top: 10px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 45px;
+    margin-left: 50px;
+}
+
+
+.foto {
+    position: relative;
+    width: 105px;
+    height: 105px;
+    left: 26%;
+    top: 30px;
+    border-radius: 6em;
+    border: 1px solid #000000;
+    background: #C4C4C4;
+    min-width: fit-content;
+    
+}
+
+
+.nombre {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    top: 60px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+
+    color: #000000;
+
+    max-width: fit-content;
+    margin: auto;
+}
