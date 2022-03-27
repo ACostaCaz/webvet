@@ -1,0 +1,71 @@
+body.AE{
+    width: 1366px;
+    margin: 0 auto;
+    float: center;
+}
+
+
+.RecuadroPrincipal {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "Info-Empleado Info-Empleado Info-Empleado"
+      "RecuadroImagen Nombre Apellidos"
+      "RecuadroImagen Funcion-Principal Telefono"
+      "calle ciudad cp"
+      "Provincia DNI ."; 
+
+    width: 1337px;
+    height: 839px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+  }
+  .Info-Empleado { 
+      grid-area: Info-Empleado; 
+    }
+  .Nombre { 
+      grid-area: Nombre; 
+    }
+  .RecuadroImagen { 
+      grid-area: RecuadroImagen; 
+    }
+  .Apellidos { 
+      grid-area: Apellidos; 
+    }
+  .Funcion-Principal { 
+      grid-area: Funcion-Principal; 
+    }
+  .Telefono { 
+      grid-area: Telefono; 
+    }
+  .calle { 
+      grid-area: calle; 
+    }
+  .ciudad { 
+      grid-area: ciudad; 
+    }
+  .cp { 
+      grid-area: cp;
+     }
+  .Provincia { 
+      grid-area: Provincia; 
+    }
+  .DNI { 
+      grid-area: DNI; 
+    }
+
+.recuadro1{
+    width: 360px;
+    height: 25px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+

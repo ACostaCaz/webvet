@@ -1,0 +1,197 @@
+body.AH{
+    width: 1366px;
+    margin: 0 auto;
+    float: center;
+}
+
+.recuadro{
+    margin: 0 auto;
+    width: 826px;
+    height: 646px;
+
+    background: #F1F1F1;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+          "NumHistorial NumHistorial Fecha Fecha"
+          "IDAnimal IDAnimal IDAnimal IDAnimal"
+          "Descripcion Descripcion Descripcion Descripcion"
+          "Tratamiento Tratamiento Tratamiento Tratamiento"
+          "Observaciones Observaciones Observaciones Observaciones"
+          "AtendidoPor AtendidoPor AtendidoPor AtendidoPor"; 
+}
+
+.NumHistorial { 
+    grid-area: NumHistorial; 
+}
+.Fecha { 
+    grid-area: Fecha; 
+}
+.IDAnimal { 
+    grid-area: IDAnimal; 
+}
+.Descripcion { 
+    grid-area: Descripcion; 
+}
+.Tratamiento { 
+    grid-area: Tratamiento; 
+}
+.Observaciones { 
+    grid-area: Observaciones;
+}
+.AtendidoPor { 
+    grid-area: AtendidoPor; 
+}
+
+.titulo{
+    margin-left: 270px;
+    margin-bottom: 30px;
+    width: 484px;
+    height: 42px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+}
+
+.texto{
+    margin-left:50px;
+    float: left;
+
+    width: 300px;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+}
+
+.recuadro1{ 
+    width: 253px;
+    height: 28px;
+    
+    margin-top: -50px;
+
+    margin-right: -30px;
+
+    float: right;
+
+    background: #FFFFFF;
+}
+
+.recuadro2{ 
+
+    margin-top: -50px;
+
+    margin-right: 50px;
+
+    width: 186px;
+    height: 28px;
+
+    float: right;
+
+    background: #FFFFFF;
+}
+
+.recuadro3{ 
+    width: 293px;
+    height: 28px;
+
+    margin-top: 25px;
+    margin-right: 170px;
+
+    float: right;
+    
+    background: #FFFFFF;
+}
+
+.recuadro4{ 
+    width: 541px;
+    height: 75px;
+
+    margin-top: -50px;
+    margin-right: 50px;
+
+    float: right;
+
+    background: #FFFFFF;
+}
+
+.recuadro5{ 
+    width: 537px;
+    height: 142px;
+
+    margin-top: -50px;
+    margin-right: 50px;
+
+    float: right;
+
+    background: #FFFFFF;
+}
+
+.recuadro6{ 
+    margin-top: -50px;
+    margin-right: 50px;
+    
+    width: 536px;
+    height: 100px;
+
+    float: right;
+
+    background: #FFFFFF;
+}
+
+.botonAceptar{
+    width: 198px;
+    height: 60px;
+
+    margin-left: 270px;
+    margin-top: 30px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+}
+
+.botonCancelar{
+    width: 198px;
+    height: 60px;
+
+    margin-left: 430px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+
+}
