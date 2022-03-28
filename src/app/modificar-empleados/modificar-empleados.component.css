@@ -11,11 +11,11 @@ body.AE{
     grid-template-rows: 0.2fr 0.4fr 0.4fr 0.4fr 0.4fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-      "Info-Empleado Info-Empleado Info-Empleado"
-      "RecuadroImagen Nombre Apellidos"
-      "RecuadroImagen Funcion-Principal Telefono"
-      "calle ciudad cp"
-      "Provincia DNI ."; 
+        "Info-Empleado Info-Empleado Info-Empleado"
+        "RecuadroImagen Nombre Apellidos"
+        "RecuadroImagen Funcion-Principal Telefono"
+        "calle ciudad cp"
+        "Provincia DNI Botones"; 
 
     width: 1337px;
     height: 839px;
@@ -79,6 +79,47 @@ body.AE{
       margin-left: 40px;
       grid-area: DNI; 
     }
+
+    .Botones { 
+        grid-area: Botones; 
+    }
+
+.botone1R{
+    width: 233px;
+    height: 50px;
+
+    background: #8DF2B0;
+    border-radius: 10px;
+
+    margin-left:100px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.botone2R{
+    width: 233px;
+    height: 50px;
+
+    margin-top:30px;
+    margin-left:100px;
+
+    background: #8DF2B0;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+}
 
 .recuadro1{
     width: 360px;
