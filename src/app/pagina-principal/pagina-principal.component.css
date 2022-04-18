@@ -1,0 +1,117 @@
+
+header {
+
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+   
+}
+
+
+
+body {
+
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "a1"
+        "a2"
+        "a3"
+        "a4"; 
+}
+
+
+.a1 { 
+    grid-area: a1; 
+    height: 509px;
+    
+}
+
+
+.a2 {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "texto1 foto1"; 
+  grid-area: a2; 
+}
+
+.texto1 { 
+    grid-area: texto1; 
+    margin: auto;
+    width: 400px;
+    text-align: justify;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: justify;
+    
+}
+
+
+.foto1 { 
+    grid-area: foto1;
+    width: 521px;
+    height: 541px;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 313px;
+}
+
+
+.a3 {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "foto2 texto2"; 
+  grid-area: a3; 
+  margin-top: 130px;
+}
+
+h2 {
+
+    font-size: bold;
+    text-align: center;
+
+}
+
+.foto2 { 
+    grid-area: foto2; 
+    width: 521px;
+    height: 541px;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 313px;
+}
+
+.texto2 { 
+    grid-area: texto2; 
+    margin: auto;
+    width: 400px;
+    text-align: justify;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: justify;
+
+}
+
+
+.a4 { 
+    grid-area: a4; 
+}
+

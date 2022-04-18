@@ -11,9 +11,10 @@ import { FotoComponent } from './foto/foto.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, PaginaPrincipalComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [CookieService],
   bootstrap: [AppComponent],
