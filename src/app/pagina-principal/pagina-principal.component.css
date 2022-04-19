@@ -1,25 +1,58 @@
 
 header {
 
-    position: absolute;
+    margin-top: 1px;
     width: 100%;
     height: 50px;
     left: 0px;
     top: 0px;
-
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
     background: #8DF2B0;
     border: 1px solid #000000;
     box-sizing: border-box;
    
 }
 
+#titulo {
+
+    position: relative;
+    top: 350px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    margin: auto;
+    text-align: center;
+    line-height: 84px;
+    
+    color: #000000;
+
+}
+
+h1 {
+
+    left: 100px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 10px;
+    text-align: justify;
+    margin-left: 20px;
+    color: #000000;
+
+}
 
 
 body {
 
     display: grid; 
     grid-template-columns: 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.6fr 1fr 1fr 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
         "a1"
@@ -32,8 +65,19 @@ body {
 .a1 { 
     grid-area: a1; 
     height: 509px;
+    width: 100%;
+    height: 509px;
+    left: 0px;
+    top: 87px;
+    image-rendering: auto;
+    background-image: url(http://www.diarioveterinario.com/images/showid/2807329);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
     
+
 }
+    
+
 
 
 .a2 {
@@ -111,7 +155,114 @@ h2 {
 }
 
 
-.a4 { 
+.a4 {
+    display: grid; 
+    margin: auto;
+    margin-top: 130px;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1.6fr 0.4fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "form"
+      "boton"; 
     grid-area: a4; 
+
 }
 
+
+.form {
+    
+    grid-area: form; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    grid-template-areas: 
+      "texto3 foto3"; 
+    
+    gap: 0px 0px;
+    margin: auto;
+    
+   
+  }
+
+
+.texto3 {
+    grid-area: texto3; 
+    margin: auto;
+    width: 400px;
+    text-align: justify;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: justify;
+    margin-right: 40%;
+
+}
+
+.foto3 {
+    grid-area: foto3;
+    width: 521px;
+    height: 541px;
+    border: 1px solid black;
+    border-radius: 313px;
+    margin: auto;
+    margin-left: 200px;
+}
+
+
+#boton {
+
+    margin: auto;
+    width: 200px;
+    height: 35px;
+    background-color: #79FFA7;
+    border-radius: 20px;
+    font-size: large;
+
+}
+
+
+footer {
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . redes"; 
+    width: 100%;
+    height: 50px;
+    margin-bottom: -1px;
+    margin: auto;
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    
+
+}
+
+
+.redes {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . ."; 
+    grid-area: redes; 
+    margin: auto;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.img_redes {
+
+    margin: auto;
+    margin-left: 50px;
+
+}
+
+
+a {
+    margin: auto;
+}
