@@ -12,9 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
+import { RegistrarseSoftwareComponent } from './registrarse-software/registrarse-software.component';
+import { HeaderSoftwareComponent } from './header-software/header-software.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, PaginaPrincipalComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [CookieService],
   bootstrap: [AppComponent],
