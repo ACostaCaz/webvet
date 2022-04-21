@@ -14,10 +14,15 @@ import { CookieService } from 'ngx-cookie-service';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 import { RegistrarseSoftwareComponent } from './registrarse-software/registrarse-software.component';
 import { HeaderSoftwareComponent } from './header-software/header-software.component';
+import { ContactarComponent } from './contactar/contactar.component';
+import { CondicionesComponent } from './condiciones/condiciones.component';
+
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
+  PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent, ContactarComponent, CondicionesComponent
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
   providers: [CookieService],
   bootstrap: [AppComponent],
 })

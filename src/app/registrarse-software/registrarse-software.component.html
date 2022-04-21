@@ -9,13 +9,11 @@
 
     <form action="" class="area1">
 
-        <input class="campos" type="email" placeholder="Correo Electrónico">
+        <input class="campos" type="email" [(ngModel)]="email" placeholder="Correo Electrónico">
         <input class="campos" type="email" placeholder="Confirmar Correo Electrónico">
-        <input class="campos" type="password" placeholder="Contraseña">
+        <input class="campos" type="password" [(ngModel)]="password" placeholder="Contraseña">
         <input class="campos" type="password" placeholder="Confirmar Contraseña">
         
-    
-
     </form>
 
 </div>
@@ -35,7 +33,7 @@
                 50 € / mes
             </h3>
 
-            <input class="boton" type="submit" value="Suscribirse">
+            <input class="boton" type="submit" value="Suscribirse"  >
         </div>
 
         <div class="cuadro">

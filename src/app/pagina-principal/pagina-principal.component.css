@@ -7,7 +7,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 40px;
     margin: auto;
     text-align: center;
     line-height: 84px;
@@ -203,9 +203,15 @@ h2 {
     background-color: #79FFA7;
     border-radius: 20px;
     font-size: large;
-
+    text-decoration: none;
+    text-align: center;
 }
 
+
+h4 {
+
+    margin-top: 7px;
+}
 
 footer {
 

@@ -6,9 +6,12 @@ header {
     left: 0px;
     top: 0px;
     display: grid; 
-    grid-template-columns: 1fr 1fr; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1.5fr 0.8fr 0.7fr; 
     grid-template-rows: 1fr; 
     gap: 0px 0px; 
+    grid-template-areas: 
+        ". . .";  
     background: #8DF2B0;
     border: 1px solid #000000;
     box-sizing: border-box;
@@ -29,4 +32,33 @@ header {
     color: #000000;
     text-decoration: none;
 
+}
+
+
+.registrarse {
+
+    width: 180px;
+    height: 30px;
+
+    background: #FFFDFD;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 14px;
+    margin: auto;
+    text-decoration: none;
+    margin-left:70%;
+}
+
+h1 {
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    margin: auto;
+    margin-top: -4px;
 }
