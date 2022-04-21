@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'addempleados', component: AddEmpleadosComponent, pathMatch: 'full' },
   { path: 'modempleados', component: ModificarEmpleadosComponent, pathMatch: 'full' },
   { path: 'empleados', component: EmpleadosComponent, pathMatch: 'full' },
-  { path: 'home', component: PaginaPrincipalComponent, pathMatch: 'full' },
+  { path: '', component: PaginaPrincipalComponent, pathMatch: 'full' },
 ];
 
 
