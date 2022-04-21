@@ -1,0 +1,56 @@
+
+.frame {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 400px;
+    height: 400px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+.foto {
+
+    position: relative;
+    width: 230px;
+    height: 230px;
+    background: #C4C4C4;
+    border-radius: 10em;
+    left: 80px;
+    top: 25px;
+    right: auto;
+    border: 1px solid black;
+    min-width: fit-content;
+    margin: auto;
+
+}
+
+.boton1 {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    background: #8DF2B0;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-size: 20px;
+    left: 24%;
+}
+
+.boton2 {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    background: #8DF2B0;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 20px;
+    left: 24%;
+    
+}

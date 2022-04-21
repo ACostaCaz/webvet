@@ -5,12 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { EmpleadosComponent } from './empleados/empleados.component';
+import { EmpleadoComponent } from './empleado/empleado.component';
+import { FotoComponent } from './foto/foto.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
+import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, NavbarComponent],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, PaginaPrincipalComponent, AddProductComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
