@@ -12,25 +12,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
-<<<<<<< HEAD
 import { AddHistoriaComponent } from './add-historia/add-historia.component';
-
-@NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, PaginaPrincipalComponent, AddHistoriaComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-=======
 import { RegistrarseSoftwareComponent } from './registrarse-software/registrarse-software.component';
 import { HeaderSoftwareComponent } from './header-software/header-software.component';
 import { ContactarComponent } from './contactar/contactar.component';
 import { CondicionesComponent } from './condiciones/condiciones.component';
 
 
+
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
-  PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent, ContactarComponent, CondicionesComponent
+  PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, 
+  AddHistoriaComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
->>>>>>> e1f131785962792f4dca8bad49bcd0977263bd3b
   providers: [CookieService],
   bootstrap: [AppComponent],
 })
