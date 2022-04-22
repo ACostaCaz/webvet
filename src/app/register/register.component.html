@@ -1,91 +1,95 @@
-<body class = R>
-
-    <section class="recuadro1">
+    <form class="recuadro1">
         <div class="Recuadro">
-            <p class = logoRecuadro>Logo empresa</p>
+            <p class = logoTitulo>Logo empresa</p>
+            <p class = logoRecuadro>
+                <label class="custom-file-upload">
+                    <input type="file"
+                    [(ngModel)]="image" 
+                    type="file" 
+                    name="image"
+                    accept="image/*"
+                    />
+                    Subir Archivo
+                </label>
+
+            </p>
         </div>
         <div class="Titulo">
             <p>Datos del centro:</p>
         </div>
+
         <div class="Nombre">
             <p>Nombre del centro:</p>
-            <div class = recuadroForm></div>
+
+            <input 
+            class = recuadroForm
+            type="text"
+            [(ngModel)]="nombre"
+            name="nombre"
+            required="required"          
+            />
+
         </div>
         <div class="Direccion">
             <p>Direccion:</p>
-            <div class = recuadroForm></div>
+            <input 
+            class = recuadroForm
+            type="text"
+            [(ngModel)]="direccion"
+            name="direccion"
+            required="required"          
+            />
         </div>
         <div class="Telefono">
             <p>Teléfono:</p>
-            <div class = recuadroForm></div>
+            <input 
+            class = recuadroForm
+            type="number"
+            [(ngModel)]="telefono"
+            name="telefono"
+            required="required"          
+            />
         </div>
         <div class="Ciudad">
             <p>Ciudad:</p>
-            <div class = recuadroForm></div>
+            <input 
+            class = recuadroForm
+            type="text"
+            [(ngModel)]="ciudad"
+            name="ciudad"
+            required="required"          
+            />
         </div>
         <div class="Codigo-postal">
             <p>Código postal:</p>
-            <div class = recuadroForm></div>
+            <input 
+            class = recuadroForm
+            type="number"
+            [(ngModel)]="codigoPostal"
+            name="codigoPostal"
+            required="required"          
+            />
         </div>
         <div class="Pais">
             <p>País:</p>
-            <div class = recuadroForm></div>
+            <input 
+            class = recuadroForm
+            type="text"
+            [(ngModel)]="pais"
+            name="pais"
+            required="required"          
+            />
         </div>
         <div class="iban">
             <p>IBAN:</p>
-            <div class = recuadroForm></div>
+            <input 
+            class = recuadroForm
+            type="text"
+            [(ngModel)]="iban"
+            name="iban"
+            required="required"          
+            />
         </div>
-      </section>
-
-      <section class="recuadro2">
-        <div class="RecuadroNombre">
-                <p class = nombreRecuadro>Nombre</p>
-        </div>
-        <div class="Nombre2">
-            <p>Nombre</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="FuncionPrincipal">
-            <p>Apellidos</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="Apellidos">
-            <p>Función Principal</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="Telefono2">
-            <p>Teléfono</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="calle">
-            <p>Calle</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="ciudad">
-            <p>Ciudad</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="cp">
-            <p>CP</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="provincia">
-            <p>Provincia</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="dni">
-            <p>DNI</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="edad">
-            <p>Edad</p>
-            <div class = recuadroForm></div>
-        </div>
-        <div class="InformacionPersonal">
-            <p>Información Personal</p>
-        </div>
-      </section>
-
-      <input class = boton value = Terminar type = submit>
-
-</body>
+      </form>
+    
+      <button class = boton onclick="location.href='http://localhost:4200/historia'" type="submit" (click)="terminar()">Terminar</button>

@@ -1,9 +1,6 @@
-body.AH{
-    width: 1366px;
-    margin: 0 auto;
-    float: center;
+textarea {
+    resize: none;
 }
-
 .recuadro{
     margin: 0 auto;
     width: 826px;
@@ -37,12 +34,15 @@ body.AH{
 }
 .Descripcion { 
     grid-area: Descripcion; 
+    text-align: top;
 }
 .Tratamiento { 
     grid-area: Tratamiento; 
+    text-align: top;
 }
 .Observaciones { 
     grid-area: Observaciones;
+    text-align: top;
 }
 .AtendidoPor { 
     grid-area: AtendidoPor; 
