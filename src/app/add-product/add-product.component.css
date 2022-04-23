@@ -1,33 +1,175 @@
 .titulo {
-    width: 100%;
-    text-align: center;
+    width: 85%;
+    text-align: left;
+    margin-left: 12%;
     
 }
 
 .block {
+    
+    width: 80%;
+    height: 500px;
 
-    width: 100%;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 20px;
     
 }
 
 .right{
     width: 47%;
+    height: 500px;
+
     float: right;
-    margin-right: 3%;
-    text-align: left;
-    background-color: blue;
 }
+.texto{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+#insertar{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(134, 26, 26);
+    
+    width: 50%;
+    height: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+   
+}
+/*Texto*/
+#ptext {
+    text-align: center;
+    color: black;
+    position: absolute;
+    
+    
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+/*Bton Enviar*/
+#file {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+#fondoinsert{
+    background-color: #C4C4C4;
+    border-color: black;
+    height: 250px;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+
+    padding: 60PX;
+}
+
 
 .left{
-    width: 47%;
-    float: left;
+    width: 45%;
+    height: 500px;
+    
     margin-left: 3%;
-}
 
-.Precio {
     float: left;
 }
 
-.Cantidad {
+.recuadro1{
+    background-color: #C4C4C4;
+    border-color: rgb(241, 239, 239);
+
+    width: 97%;
+    height: 25px;
+}
+
+.descripcion{
+    margin-top: 30px;
+}
+
+.recuadro2{
+    background-color: #C4C4C4;
+    border-color: rgb(241, 239, 239);
+
+    width: 97%;
+    height: 100px;
+
+    resize: none;
+    border-color: grey;
+}
+
+.precio {
+    width: 45%;
+
+    margin-top: 30px;
+
+    float: left;
+    
+}
+
+.cantidad {
+    width: 45%;
+
+    margin-top: 30px;
+    margin-left: 5%;
+    
     float: right;
+    
+}
+.recuadro3{
+    background-color: #C4C4C4;
+    border-color: rgb(241, 239, 239);
+
+    width: 93%;
+    height: 25px;
+
+    text-align: right;
+}
+
+.boton {
+    background-color: cornsilk;
+    
+    margin-left: 45%;
+    
+    
+    width: 198px;
+    height: 60px;
+
+    margin-top: 30px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
 }

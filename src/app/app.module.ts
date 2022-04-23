@@ -22,6 +22,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 
 
 
+
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
   PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, 
