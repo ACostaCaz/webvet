@@ -18,13 +18,14 @@ import { HeaderSoftwareComponent } from './header-software/header-software.compo
 import { ContactarComponent } from './contactar/contactar.component';
 import { CondicionesComponent } from './condiciones/condiciones.component';
 import { PagarComponent } from './pagar/pagar.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
   PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, 
-  AddHistoriaComponent, PagarComponent
+  AddHistoriaComponent, PagarComponent, AddProductComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
   providers: [CookieService],

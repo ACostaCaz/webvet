@@ -1,0 +1,33 @@
+.titulo {
+    width: 100%;
+    text-align: center;
+    
+}
+
+.block {
+
+    width: 100%;
+    
+}
+
+.right{
+    width: 47%;
+    float: right;
+    margin-right: 3%;
+    text-align: left;
+    background-color: blue;
+}
+
+.left{
+    width: 47%;
+    float: left;
+    margin-left: 3%;
+}
+
+.Precio {
+    float: left;
+}
+
+.Cantidad {
+    float: right;
+}
