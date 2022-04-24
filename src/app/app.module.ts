@@ -18,8 +18,10 @@ import { HeaderSoftwareComponent } from './header-software/header-software.compo
 import { ContactarComponent } from './contactar/contactar.component';
 import { CondicionesComponent } from './condiciones/condiciones.component';
 import { PagarComponent } from './pagar/pagar.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
+import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
 
 
 
@@ -28,7 +30,7 @@ import { ModProductComponent } from './mod-product/mod-product.component';
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
   PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, 
-  AddHistoriaComponent, PagarComponent, AddProductComponent, ModProductComponent
+  AddHistoriaComponent, PagarComponent, AddProductComponent, ModProductComponent, GestionInventarioComponent, NavbarComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
   providers: [CookieService],

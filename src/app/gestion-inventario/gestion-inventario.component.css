@@ -1,0 +1,77 @@
+#body {
+    width: 100%;
+
+    margin-top: 20px;
+    
+}
+
+#buscador {
+    width: 70%;
+
+    
+    margin-left: 25%;
+    
+
+    display: flex;
+}
+
+#buscador p {
+    margin-right: 20px;
+}
+
+.simpleline {
+    width: 450px;
+
+    background: #C4C4C4;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#listado {
+    width: 80%;
+
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.producto {
+    background-color: #F1F1F1;
+
+    height: 250px;
+    
+    margin-top: 20px;
+
+    padding: 20px;
+
+    display: flex;
+
+}
+.negrita {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 22px;
+}
+.producto p {
+    margin-left: 5%;
+    margin-top: 3%;
+    
+}
+
+.bottomline {
+    margin-bottom: 10px;
+
+    display: inline-flex;
+}
+
+.imagen img {
+    width: 170px;
+    max-width: 170px;
+    max-height: 170px;
+
+    margin-top: 30%;
+    
+}

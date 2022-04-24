@@ -14,6 +14,7 @@ import { ContactarComponent } from './contactar/contactar.component';
 import { CondicionesComponent } from './condiciones/condiciones.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
+import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'condiciones', component: CondicionesComponent, pathMatch: 'full' },
   { path: 'addproduct', component: AddProductComponent, pathMatch: 'full'},
   { path: 'modproduct', component: ModProductComponent, pathMatch: 'full'},
+  { path: 'inventario', component: GestionInventarioComponent, pathMatch: 'full'},
 ];
 
 

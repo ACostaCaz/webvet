@@ -150,16 +150,13 @@
 }
 
 .boton {
-    background-color: cornsilk;
-    
-    margin-left: 45%;
-    
-    
     width: 198px;
     height: 60px;
 
+    margin-left: 45%;
     margin-top: 30px;
-
+    
+    
     background: #8DF2B0;
     border: 1px solid #000000;
     box-sizing: border-box;
