@@ -2,9 +2,10 @@ textarea {
     resize: none;
 }
 .recuadro{
-    margin: 0 auto;
     width: 826px;
     height: 646px;
+
+    margin-left: 230px;
 
     background: #F1F1F1;
     border: 2px solid #000000;
@@ -49,7 +50,7 @@ textarea {
 }
 
 .titulo{
-    margin-left: 270px;
+    margin-left: 230px;
     margin-bottom: 30px;
     width: 484px;
     height: 42px;
@@ -158,7 +159,7 @@ textarea {
     width: 198px;
     height: 60px;
 
-    margin-left: 270px;
+    margin-left: 230px;
     margin-top: 30px;
 
     background: #8DF2B0;

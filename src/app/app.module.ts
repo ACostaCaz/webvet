@@ -22,6 +22,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
 import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
+import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
+import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
 
 
 
@@ -30,7 +32,7 @@ import { GestionInventarioComponent } from './gestion-inventario/gestion-inventa
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
   PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, 
-  AddHistoriaComponent, PagarComponent, AddProductComponent, ModProductComponent, GestionInventarioComponent, NavbarComponent
+  AddHistoriaComponent, PagarComponent, AddProductComponent, ModProductComponent, GestionInventarioComponent, NavbarComponent, HistorialServiciosComponent, InventarioClinicaComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
   providers: [CookieService],

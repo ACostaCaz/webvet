@@ -1,0 +1,112 @@
+.container {  
+    margin-left: 85px;
+    width: 1170px;
+    height: 480px;
+
+    background: #F1F1F1;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+    grid-template-rows: 0.1fr 0.1fr 0.3fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Tipo-servicio Animal"
+      "NombreAnimal IdAnimal"
+      "Descripcion Descripcion"
+      ". Precio";
+  }
+  
+  .Tipo-servicio { 
+      grid-area: Tipo-servicio; 
+    }
+  
+  .Animal { 
+      grid-area: Animal; 
+    }
+  
+  .NombreAnimal { 
+      grid-area: NombreAnimal; 
+    }
+  
+  .IdAnimal { 
+      grid-area: IdAnimal; 
+    }
+  
+  .Descripcion { 
+      grid-area: Descripcion; 
+    }
+  
+  .Precio { 
+      grid-area: Precio; 
+    }
+  .recuadroForm{
+    width: 216px;
+    height: 22px;
+
+    margin-top: 40px;
+    margin-right: 60px;
+    
+    background: #DDDDDD;
+    border-radius: 10px;
+    float: right;
+  }
+
+  .recuadoDesc{
+    width: 1076px;
+    height: 113px;
+    
+    background: #DDDDDD;
+    border-radius: 10px;
+    margin-left: 40px;
+  }
+
+  .texto{
+    width: 200px;
+    height: 21px;
+
+    margin-top: 40px;
+    margin-left: 40px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: #000000;
+    float: left;
+  }
+
+  .titulo{
+    margin-left: 85px;
+    width: 241px;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+  }
+
+  .boton{
+    margin-left: 590px;
+    margin-top: 40px;
+    width: 158px;
+    height: 33px;
+    
+    background: #5EFD95;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+  }

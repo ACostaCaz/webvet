@@ -12,9 +12,12 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
 import { RegistrarseSoftwareComponent } from './registrarse-software/registrarse-software.component';
 import { ContactarComponent } from './contactar/contactar.component';
 import { CondicionesComponent } from './condiciones/condiciones.component';
+import { AddServiciosComponent } from './add-servicios/add-servicios.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
-import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
+import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
+import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
+
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
@@ -28,9 +31,12 @@ const routes: Routes = [
   { path: 'registrarse', component: RegistrarseSoftwareComponent, pathMatch: 'full' },
   { path: 'contactar', component: ContactarComponent, pathMatch: 'full' },
   { path: 'condiciones', component: CondicionesComponent, pathMatch: 'full' },
+  { path: 'addServices', component: AddServiciosComponent, pathMatch: 'full' },
   { path: 'addproduct', component: AddProductComponent, pathMatch: 'full'},
   { path: 'modproduct', component: ModProductComponent, pathMatch: 'full'},
-  { path: 'inventario', component: GestionInventarioComponent, pathMatch: 'full'},
+  { path: 'servicios', component: HistorialServiciosComponent, pathMatch: 'full'},
+  { path: 'inventarioClinica', component: InventarioClinicaComponent, pathMatch: 'full'},
+
 ];
 
 
