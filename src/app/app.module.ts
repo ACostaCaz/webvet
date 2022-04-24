@@ -20,6 +20,8 @@ import { CondicionesComponent } from './condiciones/condiciones.component';
 import { PagarComponent } from './pagar/pagar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
+import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
+import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
 
 
 
@@ -29,7 +31,7 @@ import { ModProductComponent } from './mod-product/mod-product.component';
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
     PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, 
-    HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent],
+    HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, InventarioClinicaComponent],
 
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 

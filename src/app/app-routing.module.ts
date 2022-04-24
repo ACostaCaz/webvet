@@ -15,6 +15,8 @@ import { CondicionesComponent } from './condiciones/condiciones.component';
 import { AddServiciosComponent } from './add-servicios/add-servicios.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
+import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
+import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
 
 
 const routes: Routes = [
@@ -32,6 +34,8 @@ const routes: Routes = [
   { path: 'addServices', component: AddServiciosComponent, pathMatch: 'full' },
   { path: 'addproduct', component: AddProductComponent, pathMatch: 'full'},
   { path: 'modproduct', component: ModProductComponent, pathMatch: 'full'},
+  { path: 'servicios', component: HistorialServiciosComponent, pathMatch: 'full'},
+  { path: 'inventarioClinica', component: InventarioClinicaComponent, pathMatch: 'full'},
 
 ];
 

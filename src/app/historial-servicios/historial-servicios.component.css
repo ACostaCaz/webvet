@@ -1,0 +1,118 @@
+.container {  display: grid;
+
+    width: 1170px;
+    height: 200px;
+    margin-left:90px;
+
+    background: #F1F1F1;
+
+    grid-template-columns: 0.8fr 0.8fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.8fr 0.8fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "tipoServicio tipoAnimal nombreAnimal idAnimal"
+      "Descripcion Descripcion Descripcion Descripcion"
+      "Descripcion Descripcion Descripcion Descripcion"
+      ". . . Precio";
+  }
+  
+  .tipoServicio { 
+      grid-area: tipoServicio; 
+    }
+  
+  .tipoAnimal { 
+      grid-area: tipoAnimal; 
+    }
+  
+  .nombreAnimal { 
+      grid-area: nombreAnimal; 
+    }
+  
+  .idAnimal { 
+      grid-area: idAnimal; 
+    }
+  
+  .Descripcion { 
+      grid-area: Descripcion;
+    }
+  
+  .Precio { 
+      grid-area: Precio; 
+    }
+
+   .caracteristicasDesc{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;     
+        color: #000000;
+   }
+
+   .caracteristicas{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 19px;     
+    color: #000000;
+    float:left;
+}
+
+   .info{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;   
+        color: #000000;
+        float: right;
+        margin-right: 75px;
+        margin-top: 18px;
+   }
+
+   .infoDesc{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;   
+    color: #000000;
+    margin-right: 40px;
+}
+
+   .titulo{ 
+        width: 328px;
+        height: 28px;
+
+        margin-left: 90px;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+
+        color: #000000;
+   }
+
+   .boton{ 
+        width: 275px;
+        height: 47px;
+
+        background: #8DF2B0;
+        border-radius: 10px;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+
+        color: #000000;
+
+        margin-left:986px;
+        margin-top:40px;
+   }
+  

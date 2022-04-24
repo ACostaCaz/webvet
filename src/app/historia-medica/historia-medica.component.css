@@ -1,16 +1,7 @@
-body.HM{
-    width: 1366px;
-    margin: 0 auto;
-    float: center;
-}
-
-.sectionHM{
-    margin: auto;
-}
 .tituloHM{
     font-size: 40px;
     font-style: bold;
-    margin-left: 140px;
+    margin-left: 125px;
     font-weight: bold;
     float: left;
 }
@@ -19,9 +10,13 @@ body.HM{
     width: 1090px;
     height: 160px;
 
+    margin-top: 50px;
+    margin-left: 125px;
+
+    
+
     background: #C4C4C4;
 
-    margin: 0 auto;
 
     
     display: grid; 
@@ -77,24 +72,19 @@ body.HM{
         box-sizing: border-box;
         border-radius: 10px;
         font-weight: bold;
-        margin-left: 140px;
+        margin-left: 125px;
         margin-bottom: 20px;
     }
 
     .botonAñadir{
         width: 120px;
         height: 37px;
-
-        float: right;
-
-        margin: 0 auto;
-
         background: #8DF2B0;
         border: 1px solid #000000;
         box-sizing: border-box;
         border-radius: 10px;
         font-weight: bold;
-        margin-right: 160px;
+        margin-left: 460px;
         margin-top: 50px;
     }
 
@@ -107,6 +97,6 @@ body.HM{
         box-sizing: border-box;
         border-radius: 10px;
         font-weight: bold;
-        margin-left: 880px;
+        margin-left: 890px;
         margin-bottom: 20px;
     }

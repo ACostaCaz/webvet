@@ -1,0 +1,176 @@
+.container {  
+
+    margin-left: 90px;
+    margin-top: 150px;
+    width: 1170px;
+    height: 228px;
+    background: #F1F1F1;
+
+    border-radius: 10px;
+    
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "image Nombre ."
+      "image Descripcion Descripcion"
+      "image cantidad Precio";
+  }
+  
+  .image { 
+      grid-area: image; 
+    }
+  
+  .Nombre { 
+      grid-area: Nombre; 
+    }
+  
+  .Descripcion { 
+      grid-area: Descripcion; 
+    }
+  
+  .cantidad { 
+      grid-area: cantidad;
+    }
+  
+  .Precio { 
+      grid-area: Precio; 
+    }
+
+  .recuadroImagen{ 
+    width: 230px;
+    height: 172px;
+    margin-top: 30px;
+    margin-left: 50px;
+    
+    background: #C4C4C4;
+  }
+
+  .nombreProduto {
+    width: 141px;
+    height: 21px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+    
+  }
+
+  .textoDesc{    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    width: 760px;
+    
+    color: #000000;
+    
+  }
+
+  .masMenos{
+    width: 35px;
+    height: 30px;
+    float:left;
+
+    margin-top: 10px;
+    margin-right: 10px;
+    
+    background: #C4C4C4;
+    border-radius: 11px;
+  }
+
+  .cantidadText{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    float:left;
+    margin-right: 10px;
+
+    color: #000000;
+  }
+
+  .precioText{    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 320px;
+    
+    color: #000000;
+  }
+
+  .botonesCanc{
+    width: 158px;
+    height: 33px;
+    
+    background: #5EFD95;
+    border-radius: 11px;
+
+    margin-top: 40px;
+    margin-left: 850px;
+  }
+
+  .botonesMod{
+    width: 158px;
+    height: 33px;
+    
+    background: #5EFD95;
+    border-radius: 11px;
+    margin-top: 40px;
+    margin-left: 90px;
+  }
+
+  .textoBuscador{
+    width: 187px;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+
+    float: left;
+
+    margin-left: 250px;
+  }
+
+  .buscador{
+    width: 594px;
+    height: 71px;
+    
+    background: #C4C4C4;
+    border-radius: 13px;
+
+    float: left;
+    margin-left: 50px;
+  }
+
+  .titulo{
+    width: 354px;
+    height: 45px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    
+    color: #000000;
+  }
+
+
+   
+  
