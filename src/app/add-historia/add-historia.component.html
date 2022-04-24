@@ -1,35 +1,82 @@
-<body class = AH>
 
+    <form method="post">
     <p class =  titulo> Formulario de Historia Médica </p>
     <section class = recuadro>
             <div class = NumHistorial>
                 <p class = texto>Nº Historial</p>
-                <input class = recuadro1>
+                <input
+                class = recuadro1
+                type="number"
+                [(ngModel)]="numhistorial"
+                name="numHistorial"
+                required="required"
+                />
             </div>
 
             <div class = Fecha>
                 <p class = texto>Fecha:</p>
-                <input class = recuadro2>
+                <input
+                class = recuadro2
+                type="date"
+                [(ngModel)]="fecha"
+                name="Fecha"
+                required="required"
+                />
             </div>
 
             <div class = IDAnimal>
                 <p class = texto>Identificador del Animal:</p>
-                <input class = recuadro3>
+                <input
+                class = recuadro3
+                spellcheck="true"
+                type="number"
+                [(ngModel)]="idanimal"
+                name="IDAnimal"
+                required="required"
+                />
             </div>
 
             <div class = Descripcion>
                 <p class = texto>Descripción:</p>
-                <input class = recuadro4>
+                <textarea 
+                autocorrect = "on"
+                spellcheck="true"
+                class = recuadro4
+                type="text"
+                [(ngModel)]="descripcion"
+                name="Descripcion"
+                required="required"
+                resize= none>
+
+                </textarea>
+                                
             </div>
 
             <div class = Tratamiento>
                 <p class = texto>Tratamiento:</p>
-                <input class = recuadro5>
+                <textarea
+                autocorrect = "on"
+                class = recuadro5
+                spellcheck="true"
+                type="text"
+                [(ngModel)]="tratamiento"
+                name="Tratamiento"
+                required="required"
+                resize= none>
+
+                </textarea>
             </div>
 
             <div class = Observaciones>
                 <p class = texto>Observaciones:</p>
-                <input class = recuadro6>
+                <textarea
+                class = recuadro6
+                spellcheck="true"
+                type="text"
+                [(ngModel)]="observaciones"
+                name="Observaciones">
+
+                </textarea>
             </div>
 
             <div class = AtendidoPor>
@@ -38,10 +85,7 @@
 
 
     </section>
+    <button class = botonAceptar onclick="location.href='http://localhost:4200/historia'" type="submit" (click)="aceptar()">Aceptar</button>
+    <button class = botonCancelar onclick="location.href='http://localhost:4200/historia'" type="submit">Cancelar</button>
 
-    <input class = botonAceptar type = submit value = Aceptar>
-    <input class = botonCancelar type = submit value = Cancelar>
-
-
-
-</body>
+    </form>

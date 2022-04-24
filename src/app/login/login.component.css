@@ -1,0 +1,71 @@
+
+
+.contenedor {
+
+
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". ."; 
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    
+
+
+}
+
+form {
+
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "."
+        "."
+        "."
+        ".";
+
+
+}
+
+.imagen {
+    
+    width: 500px;
+    height: 450px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: auto;
+}
+
+
+
+.campo {
+
+    width: 404px;
+    height: 30px;
+    margin: auto;
+    background: #FFFFFF;
+
+}
+
+#boton {
+
+    width: 194.52px;
+    height: 41.92px;
+    margin: auto;
+
+    background: #e4fddd;
+    border-radius: 44px;
+}

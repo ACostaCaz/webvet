@@ -1,0 +1,107 @@
+.container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1.5fr; 
+    grid-template-rows: 0.9fr 1.1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "."
+      "area"; 
+  }
+
+.area {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "datos formulario"; 
+    grid-area: area; 
+}
+
+
+.datos {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "."
+      "."
+      "."
+      "."; 
+    grid-area: datos; 
+    margin: auto;
+}
+
+
+.formulario {
+    display: grid; 
+    grid-template-columns: 0.7fr 1.3fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". ."
+      ". ."
+      ". ."; 
+    grid-area: formulario; 
+    margin: auto;
+}
+
+
+h3 {
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    margin-left: 30%;
+    color: #000000;
+    
+}
+
+h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    margin: auto;
+} 
+
+.boton {
+
+    width: 175px;
+    height: 42px;
+    background: #8DF2B0;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 50%;
+}
+
+.campos {
+
+    width: 374px;
+    height: 30px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    margin: auto;
+
+}
+
+
+
+.textArea {
+    width: 400px;
+    height: 234px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    margin: auto;
+}

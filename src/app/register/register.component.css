@@ -4,6 +4,19 @@ body.R{
     float: center;
 }
 
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background: #8DF2B0;
+  margin-left: -20px;
+}
+
 .recuadro1 {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
@@ -15,9 +28,8 @@ body.R{
       "Recuadro Telefono Ciudad"
       "Codigo-postal Pais iban"; 
 
-    width: 1337px;
-    height: 550px;
-    margin-bottom: 100px;
+      width: 1116px;
+      height: 486px;
 
     background: #FFFFFF;
     border: 1px solid #000000;
@@ -31,10 +43,11 @@ body.R{
     line-height: 28px;
   
     color: #000000;
+    margin: 0 auto;
   }
   .Recuadro { 
     grid-area: Recuadro; 
-    width: 292px;
+    width: 260px;
     height: 206px;
 
     background: #FFFFFF;
@@ -42,7 +55,7 @@ body.R{
     box-sizing: border-box;
 
     margin-left: 40px;
-    margin-top: 30px;
+    margin-top: 60px;
     }
   .Titulo {
     grid-area: Titulo; 
@@ -81,7 +94,7 @@ body.R{
     }
 
 .recuadroForm{
-    width: 360px;
+    width: 260px;
     height: 25px;
 
     background: #FFFFFF;
@@ -92,94 +105,13 @@ body.R{
 .logoRecuadro{
     width: 200px;
     height: 100px;
-    margin: 80px;
+    margin-left: 70px;
+    margin-top: 90px;
 }
 
-.recuadro2 {
-    width: 1337px;
-    height: 687px;
-
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 5px;
-
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.13fr 0.2fr 0.2fr 0.2fr 0.2fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "InformacionPersonal InformacionPersonal InformacionPersonal"
-      "RecuadroNombre Nombre2 Apellidos"
-      "RecuadroNombre FuncionPrincipal Telefono2"
-      "calle ciudad cp"
-      "provincia dni edad"; 
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-  
-    color: #000000;
-  }
-  .RecuadroNombre { 
-    grid-area: RecuadroNombre; 
-    width: 234px;
-    height: 238px;
-
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 10px;
-
-    margin-left: 100px;
-    margin-top: 20px;
-    }
-  .Nombre2 { 
-    grid-area: Nombre2; 
-    margin-left: 40px;
-    }
-  .FuncionPrincipal { 
-    grid-area: FuncionPrincipal; 
-    margin-left: 40px;
-    }
-  .Apellidos { 
-    grid-area: Apellidos; 
-    margin-left: 40px;
-    }
-  .Telefono2 { 
-    grid-area: Telefono2; 
-    margin-left: 40px;
-    }
-  .calle { 
-    grid-area: calle; 
-    margin-left: 40px;
-    }
-  .ciudad {
-    grid-area: ciudad; 
-    margin-left: 40px;
-    }
-  .cp { 
-    grid-area: cp; margin-left: 40px;
-    }
-  .provincia { 
-    grid-area: provincia; 
-    margin-left: 40px;
-    }
-  .dni { 
-    grid-area: dni; 
-    margin-left: 40px;
-    }
-  .edad { 
-    grid-area: edad; 
-    margin-left: 40px;
-    }
-  .InformacionPersonal { 
-    grid-area: InformacionPersonal; 
-    margin-left: 40px;
-    font-weight: bold;
-    }
+.logoTitulo{
+  margin-top: -36px;
+}
 
 .nombreRecuadro{
     width: 100px;
@@ -189,10 +121,10 @@ body.R{
 }
 
 .boton{
-    margin-left: 500px;
-    margin-top: 50px;
-    width: 323px;
-    height: 64px;
+    margin-left: 545px;
+    margin-top: 30px;
+    width: 223px;
+    height: 44px;
 
     background: #8DF2B0;
     border: 1px solid #000000;
