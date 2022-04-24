@@ -1,0 +1,77 @@
+<p class = titulo> Añadir nuevo servicio.</p>
+
+
+<div class="container">
+
+    <div class="Tipo-servicio">
+        <p class = texto>Tipo de servicio:</p>
+        <input 
+            class = recuadroForm
+            type="select"
+            [(ngModel)]="tipoServicio"
+            name="tipoServicio"
+            required="required"          
+        />
+    </div>
+
+    <div class="Animal">
+        <p class = texto>Animal:</p>
+        <input 
+            class = recuadroForm
+            type="text"
+            [(ngModel)]="animal"
+            name="animal"
+            required="required"          
+        />
+    </div>
+
+    <div class="NombreAnimal">
+        <p class = texto>Nombre del animal:</p>
+        <input 
+            class = recuadroForm
+            type="text"
+            [(ngModel)]="nombreAnimal"
+            name="nombreAnimal"
+            required="required"          
+        />
+    </div>
+
+    <div class="IdAnimal">
+        <p class = texto>Id del animal:</p>
+        <input 
+            class = recuadroForm
+            type="text"
+            [(ngModel)]="idAnimal"
+            name="idAnimal"
+            required="required"          
+        />
+    </div>
+
+    <div class="Descripcion">
+        <p class = texto>Descripción:</p>
+        <textarea
+        class = recuadoDesc
+        type="text"
+        [(ngModel)]="descripcion"
+        name="descripcion"
+        required="required" > 
+                
+        </textarea> 
+    </div>
+    
+    <div class="Precio">
+        <p class = texto>Precio:</p>
+        <input 
+            class = recuadroForm
+            type="number"
+            [(ngModel)]="precio"
+            name="precio"
+            required="required"          
+        />
+    </div>
+
+  </div>
+
+  <button class = boton onclick="location.href='http://localhost:4200/servicio'" type="submit" (click)="add()">Añadir</button>
+
+  
