@@ -1,0 +1,51 @@
+.cabecera {
+    background-color: rgb(68, 231, 191);
+
+    width: 100%;
+    height: 90px;
+
+    margin: 0%;
+
+    padding-bottom: 0%;
+    
+}
+.vet {
+    width: 190px;
+    height: 90px;
+
+    padding-left: 60px;
+    
+    float: left;
+}
+.log {
+    width: 70px;
+    height: 70px;
+
+    padding-top: 10px;
+    padding-right: 40px;
+
+    float: right;
+}
+
+.navbar ul {
+    margin: 0%;
+    padding: 0%;
+    list-style-type: none;
+}
+.menuhorizontal li {
+    background-color: rgb(68, 231, 191);
+
+    width:16%;
+    
+    padding:3px 5px;
+
+    float: left;
+
+    text-align:center;
+    font-size:x-large;
+    border: solid 1px #000000;
+}
+.menuhorizontal a {
+    text-decoration:none;
+    color:#000000;
+}

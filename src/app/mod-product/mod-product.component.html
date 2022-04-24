@@ -1,0 +1,79 @@
+<form method="post">
+    <h1 class= titulo >Modificar un producto del inventario</h1>
+    
+    <div class= block >
+    
+        <div class= left >
+            <div class = nombre>
+                <p class = texto>Nombre:</p>
+                <input 
+                type="text" 
+                class="recuadro1" 
+                autocomplete="on"
+                required="required">
+            </div>
+    
+            <div class = descripcion>
+                <p class = texto>Descripción:</p>
+                <textarea 
+                    autocorrect = "on"
+                    spellcheck="true"
+                    class = recuadro2
+                    type="text"
+                    name="Descripcion"
+                    required="required">
+                </textarea>
+            </div>
+    
+            <div class= preciocant>
+                <div class = precio>
+                    <p class = texto>Precio:</p>
+                    <input 
+                    type="number" 
+                    class="recuadro3" 
+                    autocomplete="on"
+                    required="required">
+                </div>
+    
+                <div class = cantidad>
+                    <p class = texto>Cantidad:</p>
+                    <input 
+                    type="number" 
+                    class="recuadro3" 
+                    autocomplete="on"
+                    required="required">
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class= right>
+            <p class = texto>Insertar Imagen</p>
+            <div id= "fondoinsert">
+                <div id= "insertar">    
+                    <p id="ptext">Seleccionar archivo</p>
+                    <input 
+                    type="file"
+                    id="file"
+                    accept=".jpg,.png,.jpeg">
+                    <!--<script type="text/javascript">
+                        document.getElementById("file").onchange = function(e){
+                            let reader = new FileReader();
+                            reader.readAsDataURL(e.target.files[0]);
+                            reader.onload = function() {
+                                let preview = document.getElementById("fondoinsert");
+                                imagen = document.createElement('img');
+                                imagen.src = reader.result;
+                                imagen.style.width = "200px";
+                                preview.innerHTML = "";
+                                preview.append(imagen);
+                            }
+                        }
+                    </script>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="modificar()">Guardar</button>
+</form>
+    

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -18,13 +17,19 @@ import { RegistrarseSoftwareComponent } from './registrarse-software/registrarse
 import { HeaderSoftwareComponent } from './header-software/header-software.component';
 import { ContactarComponent } from './contactar/contactar.component';
 import { CondicionesComponent } from './condiciones/condiciones.component';
+import { PagarComponent } from './pagar/pagar.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ModProductComponent } from './mod-product/mod-product.component';
+
+
+
 
 
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
     PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, 
-    HeaderSoftwareComponent, ContactarComponent, CondicionesComponent],
+    HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent],
 
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
