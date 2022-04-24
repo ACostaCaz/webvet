@@ -4,12 +4,12 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-add-product',
-  templateUrl: './add-product.component.html',
-  styleUrls: ['./add-product.component.css']
+  selector: 'app-mod-product',
+  templateUrl: './mod-product.component.html',
+  styleUrls: ['./mod-product.component.css']
 })
 
-export class AddProductComponent {
+export class ModProductComponent {
   nombreproducto!:string;
   descriproducto!:string;
   precioproducto!:number;
@@ -18,7 +18,7 @@ export class AddProductComponent {
 
   constructor(public productoComponent: productoComponent, public router: Router) {}
 
-   anadir() {
+   modificar() {
     const producto = { nombreproducto: this.nombreproducto, descriproducto: this.descriproducto, 
       precioproducto: this.precioproducto, cantidproducto: this.cantidproducto, imagenproducto: 
     this.imagenproducto};
