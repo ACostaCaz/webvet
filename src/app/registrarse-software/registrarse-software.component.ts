@@ -12,6 +12,7 @@ import { UsersService } from '../users/users.service';
 export class RegistrarseSoftwareComponent {
   
 	email!: string;
+	repeatedEmail!: string;
 	password!: string;
 	repeatedPassword!: string;
 	constructor(public userService: UsersService, public router: Router, private titleService: Title) {
@@ -19,10 +20,69 @@ export class RegistrarseSoftwareComponent {
 	}
 
   	register() {
-		const user = { email: this.email, password: this.password, repeatedPassword: this.repeatedPassword};
-			this.userService.register(user).subscribe(data => {
-			this.router.navigateByUrl('/login');
-		});
+		
+		if (this.validation()) {
+			const user = { email: this.email, password: this.password, repeatedPassword: this.repeatedPassword};
+				this.userService.register(user).subscribe(data => {
+				this.router.navigateByUrl('/login');
+				alert("El usuario se ha creado correctamente");
+			});
+		}
+	}
+
+
+	validation(): boolean {
+
+		let value:boolean = true;
+
+		var html;
+
+		if (this.email != this.repeatedEmail) {
+
+			html = document.getElementsByName("repeatedEmail")[0];
+			html.setAttribute('value','');
+			html.style.border = "1px solid #e24a4a";
+
+			alert("Los emails tienen que ser iguales, inténtelo de nuevo");
+			value = false;
+			
+		}
+
+		else {
+
+			html = document.getElementsByName("repeatedEmail")[0];
+			html.style.border = "1px solid black";
+
+		}
+
+		if (this.password != this.repeatedPassword) {
+
+			html = document.getElementsByName("repeatedPassword")[0];
+			html.setAttribute('value','');
+			html.style.border = "1px solid #e24a4a";
+
+			alert("Las contraseñas tienen que ser iguales, inténtelo de nuevo");
+			value = false;
+
+		}
+
+		else {
+
+			html = document.getElementsByName("repeatedPassword")[0];
+			html.style.border = "1px solid black";
+
+		}
+
+		
+		
+
+		return value;
+		
+	}
+
+
+	inputFields() {
+
 	}
 
 }

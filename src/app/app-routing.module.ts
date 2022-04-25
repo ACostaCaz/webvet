@@ -18,6 +18,7 @@ import { ModProductComponent } from './mod-product/mod-product.component';
 import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
 import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
 import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
+import { PoliticaYPrivacidadComponent } from './politica-y-privacidad/politica-y-privacidad.component';
 
 
 const routes: Routes = [
@@ -38,9 +39,9 @@ const routes: Routes = [
   { path: 'servicios', component: HistorialServiciosComponent, pathMatch: 'full'},
   { path: 'inventarioClinica', component: InventarioClinicaComponent, pathMatch: 'full'},
   { path: 'inventario', component: GestionInventarioComponent, pathMatch: 'full'},
+  { path: 'politica-y-privacidad', component: PoliticaYPrivacidadComponent, pathMatch: 'full'},
 
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

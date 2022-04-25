@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Modelo } from '../model/models';
+import { inventarioVet } from '../model/models';
 import { FunctionService } from '../funciones/funciones';
 @Component({
   selector: 'app-gestion-inventario',
@@ -7,8 +7,8 @@ import { FunctionService } from '../funciones/funciones';
   styleUrls: ['./gestion-inventario.component.css']
 })
 export class GestionInventarioComponent implements OnInit {
-  productos?: Modelo[];
-  currentModelo: Modelo{};
+  productos?: inventarioVet[];
+  currentModelo: inventarioVet = {};
   currentIndex = -1;
   nombre='';
 
@@ -18,8 +18,7 @@ export class GestionInventarioComponent implements OnInit {
     this.retrieveProductos();
   }
   retrieveProductos(): void {
-    this.functionService.getAll()
-      .subscribe(
+    this.functionService.getAll().subscribe(
         data => {
           this.productos = data;
           console.log(data);
@@ -28,12 +27,18 @@ export class GestionInventarioComponent implements OnInit {
           console.log(error);
         });
   }
+  /*sumar(producto: inventarioVet, index: this.currentIndex): void{
+    this.productos
+  }
+  restar(): void{
+
+  }*/
   refreshList(): void {
     this.retrieveProductos();
     this.currentModelo = {};
     this.currentIndex = -1;
   }
-  setActiveProduct(producto: Modelo, index: number): void {
+  setActiveProduct(producto: inventarioVet, index: number): void {
     this.currentModelo = producto;
     this.currentIndex = index;
   }
@@ -51,7 +56,7 @@ export class GestionInventarioComponent implements OnInit {
   searchTitle(): void {
     this.currentModelo = {};
     this.currentIndex = -1;
-    this.functionService.findByTitle(this.title)
+    this.functionService.findByTitle(this.nombre)
       .subscribe(
         data => {
           this.productos = data;

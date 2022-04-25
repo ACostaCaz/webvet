@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Modelo } from '../model/models';
+import { inventarioVet } from '../model/models';
 const baseUrl = 'http://localhost:8080/api/tutorials';
 @Injectable({
   providedIn: 'root'
 })
 export class FunctionService {
   constructor(private http: HttpClient) { }
-  getAll(): Observable<Modelo[]> {
+  getAll(): Observable<any[]> {
     return this.http.get<any[]>(baseUrl);
   }
   get(id: any): Observable<any> {

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //import { productoComponent } from '../producto/producto.component';
 import { Router } from '@angular/router';
 
-import{ Modelo } from '../model/models';
+import{ inventarioVet } from '../model/models';
 import { FunctionService } from '../funciones/funciones';
 
 
@@ -13,7 +13,7 @@ import { FunctionService } from '../funciones/funciones';
 })
 
 export class AddProductComponent implements OnInit{
-  producto: Modelo = {
+  producto: inventarioVet = {
     nombre: '',
     descripcion: '',
     precio: 0,
@@ -26,26 +26,6 @@ export class AddProductComponent implements OnInit{
   ngOnInit(): void{
 
   }
-
-  saveProduct(): void{
-    const data = {
-      nombre: this.producto.nombre,
-      descripcion: this.producto.descripcion,
-      precio: this.producto.precio,
-      cantidad: this.producto.cantidad,
-      imagen: this.producto.imagen
-    }
-    this.functionService.create(data)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.submitted = true;
-        },
-        error => {
-          console.log(error);
-        });
-  }
-
   newProduct(): void{
     this.submitted = false;
     this.producto = {

@@ -24,11 +24,12 @@
 .area1 {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
       ". ."
-      ". ."; 
+      ". ."
+      "boton boton"; 
     justify-content: center; 
     grid-area: area1; 
 }
@@ -40,7 +41,6 @@
     height: 25px;
     margin: auto;
     background: #FFFFFF;
-    border: 1px solid #000000;
     box-sizing: border-box;
 }
 
@@ -145,8 +145,9 @@ h3 {
 
 .boton {
 
+    grid-area: boton;
     width: 190px;
-    height: 53px;
+    height: 33px;
 
     background: #8DF2B0;
     border: 1px solid #000000;
@@ -159,6 +160,6 @@ h3 {
     font-size: 20px;
     line-height: 28px;
     text-align: center;
-    
+    cursor: pointer;
     margin: auto;
 }

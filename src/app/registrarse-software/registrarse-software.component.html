@@ -7,11 +7,19 @@
 
     <form method="post" class="area1">
 
-        <input class="campos" type="email" name="email" [(ngModel)]="email" placeholder="Correo Electrónico">
-        <input class="campos" type="email" name="email" placeholder="Confirmar Correo Electrónico">
-        <input class="campos" type="password" name="password" [(ngModel)]="password" placeholder="Contraseña">
-        <input class="campos" type="password" name="repeatedPassword" [(ngModel)]="repeatedPassword" placeholder="Confirmar Contraseña">
-        <input type="submit" (click)="register()"> 
+        <input class="campos" type="email" required="required" name="email" 
+        [(ngModel)]="email" placeholder="Correo Electrónico">
+
+        <input class="campos" type="email" required="required" name="repeatedEmail" 
+        [(ngModel)]="repeatedEmail" placeholder="Confirmar Correo Electrónico">
+
+        <input class="campos" type="password" required="required" name="password" 
+        [(ngModel)]="password" placeholder="Contraseña">
+
+        <input class="campos" type="password" required="required" name="repeatedPassword" 
+        [(ngModel)]="repeatedPassword" placeholder="Confirmar Contraseña">
+        
+        <input class="boton" type="submit" (click)="register()"> 
     </form>
 
 </div>

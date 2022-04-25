@@ -6,33 +6,63 @@
         <input class= simpleline>
     </div>
     <div id="listado">
-        <div class=producto>
-            <div class=imagen>
-                <img src="https://img.freepik.com/foto-gratis/bola-hilo-aislado-sobre-fondo-blanco-madejas-hilo-lana_362171-860.jpg">
+        <div class=producto *ngFor="let producto of productos; let i = index" >
+            <div 
+            class=imagen 
+            *ngFor="let producto of productos; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActiveProduct(producto, i)">
+                {{currentModelo.imagen}}
             </div>
             <div class= informacion>
-                <p class=negrita>Ovillo</p>
-                <p>Lana para tejido y ganchillo de DY Choice la Paz Aran, lanas de diseño. Inspirado en los tonos de la ciudad Belezian, la Paz, alta en las montañas, 
-                    lo que se refleja en los colores. Lana duradera, con 10% de alpaca para un toque de lujo. Mezcla: 75% acrílico, 15% mohair, 10% alpaca. 
-                    Longitud aproximada por ovillo de 100 g: 190 metros. Peso por ovillo: 100 g. Tamaño de la aguja: 4.5 mm. Tensión: 17 puntos x 25 filas a 10 x 10 cm 
-                    sobre costura en aguja de 4,5 mm. Lavar a mano 30 grados.
+                <p class=negrita
+                *ngFor="let producto of productos; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActiveProduct(producto, i)">
+                    {{currentModelo.nombre}}
                 </p>
-                <!--<button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="sumar()">+</button>-->
-                <p class=bottomline>Cantidad Disponible: 30</p>  
-                <!--<button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="restar()">-</button>-->
-                <p class=bottomline>Precio: 2€</p>  
+                <p 
+                *ngFor="let producto of productos; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActiveProduct(producto, i)">
+                    {{currentModelo.descripcion}}
+                </p>
+                <button class = boton  onclick="restar()">+</button>
+                <p class=bottomline>Cantidad Disponible:</p>  
+                <p class=bottomline
+                *ngFor="let producto of productos; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActiveProduct(producto, i)">
+                    {{currentModelo.cantidad}}
+                <button class = boton onclick="sumar()">-</button>
+                <p class=bottomline
+                *ngFor="let producto of productos; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActiveProduct(producto, i)">
+                    {{currentModelo.precio}}
+                </p>  
             </div>
         </div>
-        <div class=producto>
+        <script>
+            function sumar() {
+                valor = document.getElementById("currentModelo");
+                if (valor.value < 10)valor.value ++;
+            }
+        </script>
+        <script>
+            valor = document.getElementById("currentModelo");
+            if (valor.value > 01)valor.value --;
+        </script>
+        <!--<div class=producto>
             <div class=imagen>
                 <img src="https://www.sfpharmaplus.com/8895-medium_default/jeringa-3-cuerpos-10-ml-luer-lock-caja-100-uds.jpg">
             </div>
             <div class= informacion>
                 <p class=negrita>Jeringa sin aguja</p>
                 <p>Jeringuilla de llenado de nutrientes reutilizable para perros y gatos, herramientas de medición de alimentos estériles, plástico, 5/10/20/30ML</p>
-                <!--<button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="sumar()">+</button>-->
+                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="sumar()">+</button>
                 <p class=bottomline>Cantidad Disponible: 42</p>  
-                <!--<button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="restar()">-</button>-->
+                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="restar()">-</button>
                 <p class=bottomline>Precio: 3€</p>  
             </div>
         </div>
@@ -49,11 +79,11 @@
                     la digestión y el sistema inmune. También incluye alimentos funcionales que ayudan a mantener en estado óptimo articulaciones , músculos y  
                     ligamentos.
                 </p>
-                <!--<button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="sumar()">+</button>-->
+                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="sumar()">+</button>
                 <p class=bottomline>Cantidad Disponible: 23</p>  
-                <!--<button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="restar()">-</button>-->
+                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="restar()">-</button>
                 <p class=bottomline>Precio: 5€</p>  
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
