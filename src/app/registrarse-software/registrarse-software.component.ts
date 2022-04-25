@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Title} from "@angular/platform-browser";
+import { Router } from '@angular/router';
+import { UsersService } from '../users/users.service';
 
 @Component({
 	selector: 'app-registrarse-software',
@@ -7,17 +9,20 @@ import {Title} from "@angular/platform-browser";
 	styleUrls: ['./registrarse-software.component.css'],
 
 })
-export class RegistrarseSoftwareComponent implements OnInit {
+export class RegistrarseSoftwareComponent {
   
 	email!: string;
 	password!: string;
-	constructor(private titleService: Title) { 
-
-		this.titleService.setTitle("Registrarse");
+	repeatedPassword!: string;
+	constructor(public userService: UsersService, public router: Router, private titleService: Title) {
+		this.titleService.setTitle("Iniciar Sesión");
 	}
 
-
-	ngOnInit(): void {
+  	register() {
+		const user = { email: this.email, password: this.password, repeatedPassword: this.repeatedPassword};
+			this.userService.register(user).subscribe(data => {
+			this.router.navigateByUrl('/login');
+		});
 	}
 
 }
