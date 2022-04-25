@@ -13,6 +13,10 @@ export class UsersService {
     return this.http.post("http://localhost:3002/users/login", user);
   }
 
+  register(user: any): Observable<any> {
+    return this.http.post("http://localhost:3002/users/signup", user);
+  }
+
   setToken(token: string) {
     this.cookies.set("token", token);
   }
