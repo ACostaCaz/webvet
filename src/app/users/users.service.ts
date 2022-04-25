@@ -19,4 +19,10 @@ export class UsersService {
   getToken() {
     return this.cookies.get("token");
   }
+
+  getRole() {
+    if(this.getToken()){
+      
+    }
+  }
 }
