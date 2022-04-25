@@ -9,6 +9,7 @@
             <input 
             type="text" 
             class="recuadro1" 
+            [(ngModel)]="producto.nombre"
             autocomplete="on"
             required="required">
         </div>
@@ -20,6 +21,7 @@
                 spellcheck="true"
                 class = recuadro2
                 type="text"
+                [(ngModel)]="producto.descripcion"
                 name="Descripcion"
                 required="required">
             </textarea>
@@ -31,6 +33,7 @@
                 <input 
                 type="number" 
                 class="recuadro3" 
+                [(ngModel)]="producto.precio"
                 autocomplete="on"
                 required="required">
             </div>
@@ -40,6 +43,7 @@
                 <input 
                 type="number" 
                 class="recuadro3" 
+                [(ngModel)]="producto.cantidad"
                 autocomplete="on"
                 required="required">
             </div>
@@ -55,6 +59,7 @@
                 <input 
                 type="file"
                 id="file"
+                [(ngModel)]="producto.imagen"
                 accept=".jpg,.png,.jpeg">
                 <!--<script type="text/javascript">
                     document.getElementById("file").onchange = function(e){
@@ -74,5 +79,5 @@
         </div>
     </div>
 </div>
-<button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="anadir()">Añadir</button>
+<!--<button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="anadir()">Añadir</button>-->
 </form>
