@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <form method="post">
 <h1 class= titulo >Añadir un producto al inventario</h1>
 
@@ -9,6 +10,7 @@
             <input 
             type="text" 
             class="recuadro1" 
+            [(ngModel)]="nombreproducto"
             autocomplete="on"
             required="required">
         </div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -21,6 +22,7 @@ import { PagarComponent } from './pagar/pagar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
+import { AddServiciosComponent } from './add-servicios/add-servicios.component';
 import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
 import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
 import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
@@ -31,7 +33,7 @@ import { InventarioClinicaComponent } from './inventario-clinica/inventario-clin
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
-  PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, 
+  PaginaPrincipalComponent, RegistrarseSoftwareComponent, HeaderSoftwareComponent, ContactarComponent, CondicionesComponent,  AddServiciosComponent,
   AddHistoriaComponent, PagarComponent, AddProductComponent, ModProductComponent, GestionInventarioComponent, NavbarComponent, HistorialServiciosComponent, InventarioClinicaComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
