@@ -16,6 +16,10 @@ export class EmpleadosComponent implements OnInit {
 
         document.getElementsByName("empleados")[0].style.fontWeight = "bold";
 
+		let contenedor = document.getElementsByClassName("contenedor2")[0];
+
+		
+
     } 
 
 }

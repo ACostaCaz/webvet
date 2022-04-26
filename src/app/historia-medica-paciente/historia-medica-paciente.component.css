@@ -13,9 +13,9 @@
     margin-top: 50px;
     margin-left: 125px;
 
-    
+    border: 1px solid black;
 
-    background: #C4C4C4;
+    background: #ffffff;
 
 
     
@@ -74,6 +74,7 @@
         font-weight: bold;
         margin-left: 125px;
         margin-bottom: 20px;
+        cursor: pointer;
     }
 
     .botonAñadir{
@@ -86,6 +87,7 @@
         font-weight: bold;
         margin-left: 460px;
         margin-top: 50px;
+        cursor: pointer;
     }
 
     .botonEliminar{
@@ -99,4 +101,5 @@
         font-weight: bold;
         margin-left: 890px;
         margin-bottom: 20px;
+        cursor: pointer;
     }

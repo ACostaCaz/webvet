@@ -3,6 +3,7 @@ import { productoComponent } from '../producto/producto.component';
 import { Router } from '@angular/router';
 import { Stock } from '../model/models';
 import { FunctionService } from '../funciones/funciones';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-mod-product',
@@ -19,9 +20,12 @@ export class ModProductComponent {
     imagen: 0,
   };
   submitted = false;
-  constructor(private functionService: FunctionService) { }
-  ngOnInit(): void{
 
+  constructor(private functionService: FunctionService, private titleService: Title) { 
+    this.titleService.setTitle("Iniciar Sesión");
+  }
+  ngOnInit(): void{
+    document.getElementsByName("inventario")[0].style.fontWeight = "bold";
   }
   saveProduct(): void{
     const data = {
