@@ -15,7 +15,6 @@ import { Router } from '@angular/router';
         tipoServicio: '',
         nameAnimal: '',
         animal: '',
-        idAnimal: 0,
         descripcion: '',
         precio: 0,
       }

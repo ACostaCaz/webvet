@@ -9,7 +9,7 @@
         <input 
             class = recuadroForm
             type="text"
-            [(ngModel)]="tipoServicio"
+            [(ngModel)]="serviceType"
             name="tipoServicio"
             required="required"          
         />
@@ -20,7 +20,7 @@
         <input 
             class = recuadroForm
             type="text"
-            [(ngModel)]="animal"
+            [(ngModel)]="animalType"
             name="animal"
             required="required"          
         />
@@ -31,7 +31,7 @@
         <input 
             class = recuadroForm
             type="text"
-            [(ngModel)]="nameAnimal"
+            [(ngModel)]="animalName"
             name="nameAnimal"
             required="required"          
         />
@@ -53,7 +53,7 @@
         <textarea
         class = recuadoDesc
         type="text"
-        [(ngModel)]="descripcion"
+        [(ngModel)]="description"
         name="descripcion"
         required="required" > 
                 
@@ -65,7 +65,7 @@
         <input 
             class = recuadroForm
             type="number"
-            [(ngModel)]="precio"
+            [(ngModel)]="cost"
             required="required"          
         />
         
@@ -74,7 +74,7 @@
   </div>
 
   
-  <button class = boton onclick="location.href='http://localhost:4200/servicios'" (click)="addServicio()">Aceptar</button>
+  <button class = boton (click)="addServicio()">Aceptar</button>
 
 
 

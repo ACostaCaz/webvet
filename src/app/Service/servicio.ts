@@ -1,9 +1,7 @@
 export interface ServiciosAtr {
-    tipoServicio: string;
-    nameAnimal: string;
-    animal: string;
-    idAnimal: number;
-    descripcion: string;
-    precio: number;
+  serviceType: string;
+  animalType: string;
+  animalName: string;
+  description: string;
+    cost: number;
   }
-  
