@@ -14,7 +14,6 @@ export class EmpleadosComponent implements OnInit {
 
   ngOnInit(): void {
 
-    document.getElementsByName("repeatedEmail")[0];
         document.getElementsByName("empleados")[0].style.fontWeight = "bold";
 
     } 

@@ -13,7 +13,7 @@ export class HistorialServiciosComponent implements OnInit {
 	}
 
   ngOnInit(): void {
-      document.getElementsByName("historiales")[0].style.fontWeight = "bold";
+      document.getElementsByName("servicios")[0].style.fontWeight = "bold";
   }
 
 }

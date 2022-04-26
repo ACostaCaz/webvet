@@ -29,6 +29,10 @@ import { InventarioClinicaComponent } from './inventario-clinica/inventario-clin
 import { PoliticaYPrivacidadComponent } from './politica-y-privacidad/politica-y-privacidad.component';
 import { NavComponent } from './nav/nav.component';
 import { authInterceptorProviders } from 'src/helpers/auth.interceptor';
+import { HistoriaMedicaPacienteComponent } from './historia-medica-paciente/historia-medica-paciente.component';
+import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
+import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-empleado.component';
+
 
 
 
@@ -39,7 +43,7 @@ import { authInterceptorProviders } from 'src/helpers/auth.interceptor';
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
     PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, GestionInventarioComponent, NavbarComponent,
     HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, 
-    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent],
+    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent,],
 
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
