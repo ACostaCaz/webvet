@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'registrarse', component: RegistrarseSoftwareComponent, pathMatch: 'full' },
   { path: 'contactar', component: ContactarComponent, pathMatch: 'full' },
   { path: 'condiciones', component: CondicionesComponent, pathMatch: 'full' },
-  { path: 'addServices', component: AddServiciosComponent, pathMatch: 'full' },
+  { path: 'addServicios', component: AddServiciosComponent, pathMatch: 'full' },
   { path: 'addproduct', component: AddProductComponent, pathMatch: 'full'},
   { path: 'modproduct', component: ModProductComponent, pathMatch: 'full'},
   { path: 'servicios', component: HistorialServiciosComponent, pathMatch: 'full'},

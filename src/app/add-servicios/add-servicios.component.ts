@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { añadirServicio1 } from '../Service/servicio.service';
+import { Servicio } from '../Service/servicio.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
@@ -12,27 +12,30 @@ import { Title } from '@angular/platform-browser';
 export class AddServiciosComponent implements OnInit{
   tipoServicio!: string;
   animal!: string;
-  nombreAnimal!: string;
+  nameAnimal!: string;
   idAnimal!: number;
   descripcion!: string;
   precio!: number;
-
-  constructor(public añadirServicio1: añadirServicio1, public router: Router, private titleService: Title) {
+  
+  constructor(public Servicio: Servicio, public router: Router, private titleService: Title) {
     this.titleService.setTitle("Añadir Servicio");
   }
+
   ngOnInit(): void {
     document.getElementsByName("servicios")[0].style.fontWeight = "bold";
   }
 
-  add() {
-    const añadirServicio = { tipoServicio: this.tipoServicio, animal: this.animal, nombreAnimal: this.nombreAnimal, 
-      idAnimal: this.idAnimal, descripcion: this.descripcion, precio: 
-    this.precio};
+  addServicio() {
+    const data = { tipoServicio: this.tipoServicio,nameAnimal:  this.nameAnimal, 
+    animal:  this.animal, idAnimal:  this.idAnimal, descripcion:  this.descripcion, 
+    precio: this.precio};
 
-    this.añadirServicio1.add(añadirServicio).subscribe(data => {
-      this.router.navigateByUrl('/');
+
+    this.Servicio.addServicio(data).subscribe(response => {
+      console.log(response)
     });
   }
+
 }
 
 

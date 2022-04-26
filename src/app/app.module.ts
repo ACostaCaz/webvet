@@ -25,6 +25,9 @@ import { AddServiciosComponent } from './add-servicios/add-servicios.component';
 import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
 import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
 import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
+import { DataService } from './data.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { ReactiveFormsModule } from '@angular/forms';
 import { PoliticaYPrivacidadComponent } from './politica-y-privacidad/politica-y-privacidad.component';
 import { NavComponent } from './nav/nav.component';
 import { authInterceptorProviders } from 'src/helpers/auth.interceptor';
@@ -34,19 +37,18 @@ import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-emple
 
 
 
-
-
-
-
 @NgModule({
+
+  
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
     PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, GestionInventarioComponent,
     HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, 
     InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent,],
 
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule, HttpClientModule, InMemoryWebApiModule.forRoot(DataService)],
 
   providers: [CookieService, authInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
