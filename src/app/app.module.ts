@@ -25,22 +25,15 @@ import { AddServiciosComponent } from './add-servicios/add-servicios.component';
 import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
 import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
 import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
-<<<<<<< HEAD
 import { DataService } from './data.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ReactiveFormsModule } from '@angular/forms';
-=======
 import { PoliticaYPrivacidadComponent } from './politica-y-privacidad/politica-y-privacidad.component';
 import { NavComponent } from './nav/nav.component';
 import { authInterceptorProviders } from 'src/helpers/auth.interceptor';
 import { HistoriaMedicaPacienteComponent } from './historia-medica-paciente/historia-medica-paciente.component';
 import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
 import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-empleado.component';
-
-
-
-
->>>>>>> 5d0d0996da615a9fabf9ce6b7cb063dea11ef7c3
 
 
 
