@@ -28,6 +28,8 @@ import { HistorialServiciosComponent } from './historial-servicios/historial-ser
 import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
 import { PoliticaYPrivacidadComponent } from './politica-y-privacidad/politica-y-privacidad.component';
 import { NavComponent } from './nav/nav.component';
+import { authInterceptorProviders } from 'src/helpers/auth.interceptor';
+
 
 
 
@@ -41,7 +43,7 @@ import { NavComponent } from './nav/nav.component';
 
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
-  providers: [CookieService],
+  providers: [CookieService, authInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
