@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-inventario-clinica',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InventarioClinicaComponent implements OnInit {
 
-  constructor() { }
+    constructor(private titleService: Title) {
+        this.titleService.setTitle("Inventario");
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+      document.getElementsByName("inventario")[0].style.fontWeight = "bold";
+    }
 
 }

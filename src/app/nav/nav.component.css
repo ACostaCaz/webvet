@@ -1,0 +1,66 @@
+.container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.4fr 0.6fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "area1"
+      "area2";
+      background: #8DF2B0;
+      box-sizing: border-box;
+}
+  
+.area1 {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "foto navegacion cuenta";
+    grid-area: area1;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+  
+.foto { 
+    grid-area: foto; 
+    margin: auto;
+}
+  
+.navegacion { 
+    grid-area: navegacion; 
+    margin: auto;
+}
+  
+.cuenta { 
+    grid-area: cuenta; 
+    margin: auto;
+    margin-right: 10%;
+}
+  
+.area2 {  
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . .";
+    grid-area: area2;
+    margin-top: -1px;
+    border: 1px solid black;
+}
+
+
+a {
+    margin: auto;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}

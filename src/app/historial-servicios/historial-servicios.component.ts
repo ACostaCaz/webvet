@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-historial-servicios',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistorialServiciosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) {
+		this.titleService.setTitle("Servicios");
+	}
 
   ngOnInit(): void {
+      document.getElementsByName("historiales")[0].style.fontWeight = "bold";
   }
 
 }
