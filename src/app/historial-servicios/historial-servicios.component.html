@@ -1,40 +1,38 @@
 
 <p class = titulo>Historiales de servicios</p>
 
-<div class="container">
+<div class="container" *ngFor="let servicio of servicios">
 
     <div class="tipoServicio">
         <p class = caracteristicas>Tipo Servicio: </p>
-        <p class = info>Consulta</p>
+        <td  class = info> {{servicio.tipoServicio}}</td>
     </div>
 
     <div class="tipoAnimal">
         <p class = caracteristicas>Animal: </p>
-        <p class = info>Perro</p>
+        <td  class = info>  {{servicio.animal}}</td>
     </div>
 
     <div class="nombreAnimal">
         <p class = caracteristicas>Nombre animal:</p>
-        <p class = info>Julio</p>
+        <td  class = info> {{servicio.nameAnimal}}</td>
     </div>
 
     <div class="idAnimal">
         <p class = caracteristicas>Id del animal:</p>
-        <p class = info>832923</p>
+        <td  class = info> {{servicio.idAnimal}}</td>
     </div>
 
     <div class="Descripcion">
         <p class = caracteristicasDesc>Descripcion:</p>
-        <p class = infoDesc>Esta es una descripcion de pruebaEsta es una descripcion de pruebaEsta es una descripcion 
-            Esta es una descripcion de pruebaEsta es una descripcion de pruebaEsta es una descripcion de prueba
-            Esta es una descripcion de pruebaEsta es una descripcion de pruebaEsta es una descripcion de prueba</p>
+        <td class = infoDesc> {{servicio.descripcion}}</td>
     </div>
 
     <div class="Precio">
         <p class = caracteristicas>Precio:</p>
-        <p class = info>345€</p>
+        <td  class = info> {{servicio.precio}}</td>
     </div>
 
   </div>
 
-  <button class = boton onclick="location.href='http://localhost:4200/addhistoria'" type="submit">Añadir nuevo servicio</button>
+  <button class = boton onclick="location.href='http://localhost:4200/addServicios'" type="submit">Añadir nuevo servicio</button>

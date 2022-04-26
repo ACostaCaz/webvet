@@ -3,6 +3,7 @@
     width: 1170px;
     height: 200px;
     margin-left:90px;
+    margin-bottom:40px;
 
     background: #F1F1F1;
 
@@ -48,6 +49,7 @@
         font-size: 16px;
         line-height: 19px;     
         color: #000000;
+        margin-left:20px;
    }
 
    .caracteristicas{
@@ -58,6 +60,7 @@
     line-height: 19px;     
     color: #000000;
     float:left;
+    margin-left:20px;
 }
 
    .info{
@@ -68,7 +71,7 @@
         line-height: 19px;   
         color: #000000;
         float: right;
-        margin-right: 75px;
+        margin-right: 65px;
         margin-top: 18px;
    }
 
@@ -79,7 +82,7 @@
     font-size: 16px;
     line-height: 19px;   
     color: #000000;
-    margin-right: 40px;
+    padding-left:20px;
 }
 
    .titulo{ 
