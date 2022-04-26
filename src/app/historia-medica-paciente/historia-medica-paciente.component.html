@@ -11,19 +11,38 @@
 
 <section>
 
-    <div class = recuadroHM>
+    <div class = recuadroHM *ngFor="let historia of historias; let i = index">
         
-        <div class = NumHistorial Style = "font-style: bold;">Número del historial: 9012</div>
-        <div class = TipoAnimal>Animal: Perro</div>
-        <div class = NombreAnimal>Nombre del animal: Nadal</div>
-        <div class = Id-animal>Id del animal: 123</div>
+        <div class = NumHistorial Style = "font-style: bold;">Número del historial:</div>
+        <div *ngFor="let historia of historias; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveProduct(historia, i)">
+            {{currentHistoria.id}}
+        </div>
+        <div class = TipoAnimal>Animal:</div>
+        <div *ngFor="let historia of historias; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveProduct(historia, i)">
+            <!--{{currentHistoria.species}}-->
+        </div>
+        <div class = NombreAnimal>Nombre del animal:</div>
+        <div *ngFor="let historia of historias; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveProduct(historia, i)">
+            <!--{{currentHistoria.name}}-->
+        </div>
+        <div class = Id-animal>Id del animal: </div>
+        <div *ngFor="let historia of historias; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveProduct(historia, i)">
+            {{currentHistoria.animal_id}}
+        </div>
         <div class = Descripcion>Descripción:</div>
-        <div class = Texto-Descripcion>Esto es un texto de ejemplo para ver el
-            como queda en el html.Esto es un texto de ejemplo para ver el
-            como queda en el html.Esto es un texto de ejemplo para ver el
-            como queda en el html.Esto es un texto de ejemplo para ver el
-            como queda en el html.Esto es un texto de ejemplo para ver el
-            como queda en el html.</div>
+        <div class = Texto-Descripcion *ngFor="let historia of historias; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveProduct(historia, i)">
+            <!--{{currentHistoria.description}}-->
+        </div>
     </div>
 
     <button class = botonModificar onclick="location.href='./addhistoria'" type="submit">Modificar</button>
