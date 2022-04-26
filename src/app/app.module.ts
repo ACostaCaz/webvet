@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -12,7 +14,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 import { AddHistoriaComponent } from './add-historia/add-historia.component';
-import { AddServiciosComponent } from './add-servicios/add-servicios.component';
 import { RegistrarseSoftwareComponent } from './registrarse-software/registrarse-software.component';
 import { HeaderSoftwareComponent } from './header-software/header-software.component';
 import { ContactarComponent } from './contactar/contactar.component';
@@ -20,11 +21,26 @@ import { CondicionesComponent } from './condiciones/condiciones.component';
 import { PagarComponent } from './pagar/pagar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
+import { AddServiciosComponent } from './add-servicios/add-servicios.component';
+import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
 import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
 import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
+<<<<<<< HEAD
 import { DataService } from './data.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ReactiveFormsModule } from '@angular/forms';
+=======
+import { PoliticaYPrivacidadComponent } from './politica-y-privacidad/politica-y-privacidad.component';
+import { NavComponent } from './nav/nav.component';
+import { authInterceptorProviders } from 'src/helpers/auth.interceptor';
+import { HistoriaMedicaPacienteComponent } from './historia-medica-paciente/historia-medica-paciente.component';
+import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
+import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-empleado.component';
+
+
+
+
+>>>>>>> 5d0d0996da615a9fabf9ce6b7cb063dea11ef7c3
 
 
 
@@ -32,14 +48,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
   
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
-    PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, 
-    HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, InventarioClinicaComponent],
+    PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, GestionInventarioComponent,
+    HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, 
+    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent,],
 
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule, HttpClientModule, InMemoryWebApiModule.forRoot(DataService)],
 
-  providers: [CookieService],
+  providers: [CookieService, authInterceptorProviders],
   bootstrap: [AppComponent],
-  })
-
+})
 export class AppModule {}
 

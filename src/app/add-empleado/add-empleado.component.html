@@ -1,5 +1,9 @@
+<app-nav></app-nav>
+
+
+
 <body class = AE>
-    <section class = RecuadroPrincipal>
+    <form class = RecuadroPrincipal>
 
         <p class = Info-Empleado>Información Empleado</p>
 
@@ -12,12 +16,12 @@
         </div>
         <div class = Nombre>
             <p class = texto>Nombre</p>
-            <input class = recuadro1>
+            <input class = recuadro1 required>
         </div>
 
         <div class = Apellidos>
             <p class = texto>Apellidos</p>
-            <input class = recuadro1>
+            <input class = recuadro1 required>
         </div>
 
         <div class = RecuadroImagen>
@@ -28,68 +32,68 @@
 
         <div class = Funcion-Principal>
             <p class = texto>Función Principal</p>
-            <input class = recuadro1>
+            <input class = recuadro1 required>
         </div>
 
         <div class = Telefono>
             <p class = texto>Teléfono</p>
-            <input class = recuadro1>
+            <input class = recuadro1 required>
         </div>
 
         <div class = calle>
             <p class = texto>Calle</p>
-            <input class = recuadro1>
+            <input class = recuadro1 required>
         </div>
 
         <div class = ciudad>
             <p class = texto>Ciudad</p>
-            <input class = recuadro1>
+            <input class = recuadro1 required>
         </div>
 
         <div class = cp>
             <p class = texto>CP</p>
-            <input class = recuadro1>
+            <input class = recuadro1 required>
         </div>
 
         <div class = Provincia>
             <p class = texto>Provincia</p>
-            <input class = recuadro1>
+            <input class = recuadro1 required>
         </div>
 
         <div class = DNI>
             <p class = texto>DNI</p>
-            <input class = recuadro1>
+            <input class = recuadro1 required>
         </div>
 
 
 
-    </section>
+    </form>
 
-    <section class = RecuadroSecundario>
+    <form class = RecuadroSecundario>
 
             <p class="Credenciales"> Credenciales </p>
 
             <div class="Correo">
                 <p class = texto2> Correo Electrónico</p>
-                <input class = recuadroForm>
+                <input class = recuadroForm required>
             </div>
             <div class="Contraseña1">
                 <p class = texto2> Confirmar Contraseña</p>
-                <input class = recuadroForm>
+                <input class = recuadroForm required>
             </div>
             <div class="ConfirmarCorreo">
                 <p class = texto2> Confirmar Correo Electrónico</p>
-                <input class = recuadroForm>
+                <input class = recuadroForm required>
             </div>
             <div class="Confirmar-Contraseña">
                 <p class = texto2> Confirmar Contraseña</p>
-                <input class = recuadroForm>
+                <input class = recuadroForm required>
             </div>
             <div class="Boton-modificar">
-                <input class = botonModificar type = submit value = Modificar>
+                <input class = botonModificar onclick="añadirEmpleado()" type = submit value = "Añadir">
             </div>
 
-    </section>
+        </form>
 
 
 </body>

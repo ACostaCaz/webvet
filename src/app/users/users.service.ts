@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { CookieService } from "ngx-cookie-service";
+import { Token } from "@angular/compiler";
 @Injectable({
   providedIn: "root"
 })
@@ -12,11 +13,21 @@ export class UsersService {
     return this.http.post("http://localhost:3002/users/login", user);
   }
 
+  register(user: any): Observable<any> {
+    return this.http.post("http://localhost:3002/users/signup", user);
+  }
+
   setToken(token: string) {
     this.cookies.set("token", token);
   }
   
   getToken() {
     return this.cookies.get("token");
+  }
+
+  getRole() {
+    if(this.getToken()){
+      
+    }
   }
 }

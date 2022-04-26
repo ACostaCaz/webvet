@@ -10,6 +10,7 @@
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 5px;
+    margin-top: 100px;
 
 }
 
@@ -57,9 +58,19 @@
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 10px;
-    font-size: 18px;
+    
     margin-left: -620px;
     margin-top: 360px;
+    text-decoration: none;
+    color: #000000;
+}
+
+h3 {
+
+    margin: auto;
+    font-size: 20px;
+    margin-top: 12px ;
+    text-align: center;
 }
 
 

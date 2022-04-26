@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-empleados',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpleadosComponent implements OnInit {
 
-  constructor() { }
+    constructor(private titleService: Title) {
+        this.titleService.setTitle("Empleados");
+    }
 
   ngOnInit(): void {
-  }
+
+        document.getElementsByName("empleados")[0].style.fontWeight = "bold";
+
+		let contenedor = document.getElementsByClassName("contenedor2")[0];
+
+		
+
+    } 
 
 }

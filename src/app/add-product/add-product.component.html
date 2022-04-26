@@ -1,45 +1,50 @@
+<app-nav></app-nav>
 <form method="post">
 <h1 class= titulo >Añadir un producto al inventario</h1>
 
-<div class= block >
+<div *ngIf="!submitted" class= block >
 
     <div class= left >
         <div class = nombre>
-            <p class = texto>Nombre:</p>
+            <p for="nombre" class = texto>Nombre:</p>
             <input 
             type="text" 
             class="recuadro1" 
+            [(ngModel)]="producto.nombre"
             autocomplete="on"
             required="required">
         </div>
 
-        <div class = descripcion>
+        <div for="descripcion" class = descripcion>
             <p class = texto>Descripción:</p>
             <textarea 
                 autocorrect = "on"
                 spellcheck="true"
                 class = recuadro2
                 type="text"
+                [(ngModel)]="producto.descripcion"
                 name="Descripcion"
                 required="required">
             </textarea>
         </div>
 
         <div class= preciocant>
-            <div class = precio>
+            <div for="precio" class = precio>
                 <p class = texto>Precio:</p>
                 <input 
                 type="number" 
                 class="recuadro3" 
+                [(ngModel)]="producto.precio"
                 autocomplete="on"
                 required="required">
             </div>
 
-            <div class = cantidad>
+            <div for="cantidad" class = cantidad>
                 <p class = texto>Cantidad:</p>
                 <input 
                 type="number" 
                 class="recuadro3" 
+                [(ngModel)]="producto.cantidad"
                 autocomplete="on"
                 required="required">
             </div>
@@ -50,29 +55,16 @@
     <div class= right>
         <p class = texto>Insertar Imagen</p>
         <div id= "fondoinsert">
-            <div id= "insertar">    
+            <div for="imagen" id= "insertar">    
                 <p id="ptext">Seleccionar archivo</p>
                 <input 
                 type="file"
                 id="file"
+                [(ngModel)]="producto.imagen"
                 accept=".jpg,.png,.jpeg">
-                <!--<script type="text/javascript">
-                    document.getElementById("file").onchange = function(e){
-                        let reader = new FileReader();
-                        reader.readAsDataURL(e.target.files[0]);
-                        reader.onload = function() {
-                            let preview = document.getElementById("fondoinsert");
-                            imagen = document.createElement('img');
-                            imagen.src = reader.result;
-                            imagen.style.width = "200px";
-                            preview.innerHTML = "";
-                            preview.append(imagen);
-                        }
-                    }
-                </script>-->
             </div>
         </div>
     </div>
 </div>
-<button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="anadir()">Añadir</button>
+<button class = boton onclick="location.href='http://localhost:4200/inventario'" type="submit" (click)="newProduct()">Añadir</button>
 </form>

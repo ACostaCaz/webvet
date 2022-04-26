@@ -1,0 +1,89 @@
+<app-nav></app-nav>
+<br>
+<div id="body">
+    <div id="buscador">
+        <p class=negrita>Buscar Producto:</p>
+        <input class= simpleline>
+    </div>
+    <div id="listado">
+        <div class=producto *ngFor="let producto of productos; let i = index" >
+            <div 
+            class=imagen 
+            *ngFor="let producto of productos; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActiveProduct(producto, i)">
+                {{currentModelo.imagen}}
+            </div>
+            <div class= informacion>
+                <p class=negrita
+                *ngFor="let producto of productos; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActiveProduct(producto, i)">
+                    {{currentModelo.nombre}}
+                </p>
+                <p 
+                *ngFor="let producto of productos; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActiveProduct(producto, i)">
+                    {{currentModelo.descripcion}}
+                </p>
+                <button class = boton  onclick="restar()">+</button>
+                <p class=bottomline>Cantidad Disponible:</p>  
+                <p class=bottomline
+                *ngFor="let producto of productos; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActiveProduct(producto, i)">
+                    {{currentModelo.cantidad}}
+                <button class = boton onclick="sumar()">-</button>
+                <p class=bottomline
+                *ngFor="let producto of productos; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActiveProduct(producto, i)">
+                    {{currentModelo.precio}}
+                </p>  
+            </div>
+        </div>
+        <script>
+            function sumar() {
+                valor = document.getElementById("currentModelo");
+                if (valor.value < 10)valor.value ++;
+            }
+        </script>
+        <script>
+            valor = document.getElementById("currentModelo");
+            if (valor.value > 01)valor.value --;
+        </script>
+        <!--<div class=producto>
+            <div class=imagen>
+                <img src="https://www.sfpharmaplus.com/8895-medium_default/jeringa-3-cuerpos-10-ml-luer-lock-caja-100-uds.jpg">
+            </div>
+            <div class= informacion>
+                <p class=negrita>Jeringa sin aguja</p>
+                <p>Jeringuilla de llenado de nutrientes reutilizable para perros y gatos, herramientas de medición de alimentos estériles, plástico, 5/10/20/30ML</p>
+                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="sumar()">+</button>
+                <p class=bottomline>Cantidad Disponible: 42</p>  
+                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="restar()">-</button>
+                <p class=bottomline>Precio: 3€</p>  
+            </div>
+        </div>
+        <div class=producto>
+            <div class=imagen> 
+                <img src="https://mascota10.com/wp-content/uploads/pienso-para-perros-friskies-purina-300x300.jpg">
+            </div>
+            <div class= informacion>
+                <p class=negrita>Pienso</p>
+                <p>Esta receta está elaborada exclusivamente con pescado blanco (merluza) y almidón de patata. Así, tanto su proteína de bajo peso molecular, 
+                    como la digestibilidad de la patata, hacen que este producto sea ideal para perros con digestiones especialmente sensibles. 
+                    Además, se le añade Krill, que actúa como antioxidante;  nucleótidos, que refuerzan el sistema inmune y la salud gastrointestinal; 
+                    y MSM como analgésico y antinflamatorio natural. Las hortalizas y hierbas medicinales añadidas mejoran el tránsito intestinal, 
+                    la digestión y el sistema inmune. También incluye alimentos funcionales que ayudan a mantener en estado óptimo articulaciones , músculos y  
+                    ligamentos.
+                </p>
+                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="sumar()">+</button>
+                <p class=bottomline>Cantidad Disponible: 23</p>  
+                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="restar()">-</button>
+                <p class=bottomline>Precio: 5€</p>  
+            </div>
+        </div>-->
+    </div>
+</div>

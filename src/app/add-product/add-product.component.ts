@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { productoComponent } from '../producto/producto.component';
+//import { productoComponent } from '../producto/producto.component';
 import { Router } from '@angular/router';
+
+import{ inventarioVet } from '../model/models';
+import { FunctionService } from '../funciones/funciones';
 
 
 @Component({
@@ -9,16 +12,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-product.component.css']
 })
 
-export class AddProductComponent {
-  nombreproducto!:string;
-  descriproducto!:string;
-  precioproducto!:number;
-  cantidproducto!:number;
-  imagenproducto!:unknown;
+export class AddProductComponent implements OnInit{
+  producto: inventarioVet = {
+    nombre: '',
+    descripcion: '',
+    precio: 0,
+    cantidad: 0,
+    imagen: 0,
+  };
 
-  constructor(public productoComponent: productoComponent, public router: Router) {}
+  submitted = false;
+  constructor(private functionService: FunctionService) {}
+  ngOnInit(): void{
 
-   anadir() {
+  }
+  newProduct(): void{
+    this.submitted = false;
+    this.producto = {
+      nombre: '',
+      descripcion: '',
+      precio: 0,
+      cantidad: 0,
+      imagen: 0,
+    };
+  }
+  
+  /*constructor(public productoComponent: productoComponent, public router: Router) {}
+
+  anadir() {
     const producto = { nombreproducto: this.nombreproducto, descriproducto: this.descriproducto, 
       precioproducto: this.precioproducto, cantidproducto: this.cantidproducto, imagenproducto: 
     this.imagenproducto};
@@ -26,5 +47,5 @@ export class AddProductComponent {
     this.productoComponent.anadir(producto).subscribe(data => {
       this.router.navigateByUrl('/');
     });
-  }
+  }*/
 }
