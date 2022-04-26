@@ -8,14 +8,17 @@ import { Title } from '@angular/platform-browser';
 })
 export class AddEmpleadoComponent implements OnInit {
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle("Empleados");
-}
+  	constructor(private titleService: Title) {
+    	this.titleService.setTitle("Empleados");
+	}
 
-ngOnInit(): void {
+	añadirEmpleado(): void {
+		
+	}
 
-    document.getElementsByName("empleados")[0].style.fontWeight = "bold";
 
-}
+  	ngOnInit(): void {
+    	document.getElementsByName("empleados")[0].style.fontWeight = "bold";
+  	}
 
 }

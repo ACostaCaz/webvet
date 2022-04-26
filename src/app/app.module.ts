@@ -19,7 +19,6 @@ import { HeaderSoftwareComponent } from './header-software/header-software.compo
 import { ContactarComponent } from './contactar/contactar.component';
 import { CondicionesComponent } from './condiciones/condiciones.component';
 import { PagarComponent } from './pagar/pagar.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
 import { AddServiciosComponent } from './add-servicios/add-servicios.component';
@@ -41,7 +40,7 @@ import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-emple
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
-    PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, GestionInventarioComponent, NavbarComponent,
+    PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, GestionInventarioComponent,
     HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, 
     InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent,],
 
