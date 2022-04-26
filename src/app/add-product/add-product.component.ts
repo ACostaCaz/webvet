@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //import { productoComponent } from '../producto/producto.component';
 import { Router } from '@angular/router';
 
-import{ inventarioVet } from '../model/models';
+import{ Stock } from '../model/models';
 import { FunctionService } from '../funciones/funciones';
 
 
@@ -13,11 +13,11 @@ import { FunctionService } from '../funciones/funciones';
 })
 
 export class AddProductComponent implements OnInit{
-  producto: inventarioVet = {
-    nombre: '',
-    descripcion: '',
-    precio: 0,
-    cantidad: 0,
+  producto: Stock = {
+    name: '',
+    description: '',
+    price: 0,
+    units: 0,
     imagen: 0,
   };
 
@@ -29,10 +29,10 @@ export class AddProductComponent implements OnInit{
   newProduct(): void{
     this.submitted = false;
     this.producto = {
-      nombre: '',
-      descripcion: '',
-      precio: 0,
-      cantidad: 0,
+      name: '',
+      description: '',
+      price: 0,
+      units: 0,
       imagen: 0,
     };
   }

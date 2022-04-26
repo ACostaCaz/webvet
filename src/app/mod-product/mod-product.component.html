@@ -10,7 +10,7 @@
                 <input 
                 type="text" 
                 class="recuadro1" 
-                [(ngModel)]="producto.nombre"
+                [(ngModel)]="producto.name"
                 autocomplete="on"
                 required="required">
             </div>
@@ -22,7 +22,7 @@
                     spellcheck="true"
                     class = recuadro2
                     type="text"
-                    [(ngModel)]="producto.descripcion"
+                    [(ngModel)]="producto.description"
                     name="Descripcion"
                     required="required">
                 </textarea>
@@ -34,7 +34,7 @@
                     <input 
                     type="number" 
                     class="recuadro3" 
-                    [(ngModel)]="producto.precio"
+                    [(ngModel)]="producto.price"
                     autocomplete="on"
                     required="required">
                 </div>
@@ -44,7 +44,7 @@
                     <input 
                     type="number" 
                     class="recuadro3" 
-                    [(ngModel)]="producto.cantidad"
+                    [(ngModel)]="producto.units"
                     autocomplete="on"
                     required="required">
                 </div>

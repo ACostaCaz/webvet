@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { inventarioVet } from '../model/models';
+import { Stock } from '../model/models';
 import { FunctionService } from '../funciones/funciones';
 @Component({
   selector: 'app-gestion-inventario',
@@ -7,8 +7,8 @@ import { FunctionService } from '../funciones/funciones';
   styleUrls: ['./gestion-inventario.component.css']
 })
 export class GestionInventarioComponent implements OnInit {
-  productos?: inventarioVet[];
-  currentModelo: inventarioVet = {};
+  productos?: Stock[];
+  currentModelo: Stock = {};
   currentIndex = -1;
   nombre='';
 
@@ -38,7 +38,7 @@ export class GestionInventarioComponent implements OnInit {
     this.currentModelo = {};
     this.currentIndex = -1;
   }
-  setActiveProduct(producto: inventarioVet, index: number): void {
+  setActiveProduct(producto: Stock, index: number): void {
     this.currentModelo = producto;
     this.currentIndex = index;
   }

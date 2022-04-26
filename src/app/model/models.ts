@@ -5,12 +5,12 @@
     cantidad !: number;
     imagen !: unknown;
 }*/
-export class inventarioVet{
+export class Stock {
     currentModelo ?: unknown;
     currentIndex ?: number;
-    nombre ?: string;
-    descripcion ?: string;
-    precio ?: number;
-    cantidad ?: number;
+    name ?: string;
+    description ?: string;
+    price ?: number;
+    units ?: number;
     imagen ?: unknown;
 }
