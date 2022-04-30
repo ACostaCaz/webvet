@@ -3,7 +3,7 @@ textarea {
 }
 .recuadro{
     width: 826px;
-    height: 646px;
+    height: 350px;
 
     margin-left: 230px;
 
@@ -18,10 +18,8 @@ textarea {
     grid-template-areas: 
           "NumHistorial NumHistorial Fecha Fecha"
           "IDAnimal IDAnimal IDAnimal IDAnimal"
-          "Descripcion Descripcion Descripcion Descripcion"
-          "Tratamiento Tratamiento Tratamiento Tratamiento"
-          "Observaciones Observaciones Observaciones Observaciones"
-          "AtendidoPor AtendidoPor AtendidoPor AtendidoPor"; 
+          "tipo tipo tipo tipo"
+          "Descripcion Descripcion Descripcion Descripcion"; 
 }
 
 .NumHistorial { 
@@ -35,15 +33,12 @@ textarea {
 }
 .Descripcion { 
     grid-area: Descripcion; 
-    text-align: top;
 }
-.Tratamiento { 
-    grid-area: Tratamiento; 
-    text-align: top;
+.tipo { 
+    grid-area: tipo; 
 }
 .Observaciones { 
     grid-area: Observaciones;
-    text-align: top;
 }
 .AtendidoPor { 
     grid-area: AtendidoPor; 
@@ -93,6 +88,19 @@ textarea {
     background: #FFFFFF;
 }
 
+.recuadroTipo {
+    width: 253px;
+    height: 28px;
+    
+    margin-top: 24px;
+
+    margin-right: 170px;
+
+    float: right;
+
+    background: #FFFFFF;
+}
+
 .recuadro2{ 
 
     margin-top: -50px;
@@ -108,7 +116,7 @@ textarea {
 }
 
 .recuadro3{ 
-    width: 293px;
+    width: 253px;
     height: 28px;
 
     margin-top: 25px;

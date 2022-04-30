@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { historiaService } from '../historia/historia.service';
+import { Historia } from '../historiaServicio/historia.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
@@ -13,10 +13,9 @@ export class AddHistoriaComponent implements OnInit{
   fecha!: string;
   idanimal!: number;
   descripcion!: string;
-  tratamiento!: string;
-  observaciones!: string;
+  tipoAnimal!: string;
 
-  constructor(public historiaService: historiaService, public router: Router, private titleService: Title) {
+  constructor(public Historia: Historia, public router: Router, private titleService: Title) {
     this.titleService.setTitle("Añadir Historia");
   }
   ngOnInit(): void {
@@ -25,12 +24,14 @@ export class AddHistoriaComponent implements OnInit{
 
   aceptar() {
     const historia = { numhistorial: this.numhistorial, fecha: this.fecha, 
-      idanimal: this.idanimal, descripcion: this.descripcion, tratamiento: 
-    this.tratamiento,observaciones: this.observaciones};
+    idanimal: this.idanimal, descripcion: this.descripcion, tipoAnimal: 
+    this.tipoAnimal};
 
-    this.historiaService.aceptar(historia).subscribe(data => {
-      this.router.navigateByUrl('/');
+    this.Historia.addHistoria(historia).subscribe(response => {
+      console.log(response)
     });
+
+    this.router.navigateByUrl('/historial');
   }
 }
 

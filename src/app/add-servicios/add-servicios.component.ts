@@ -36,6 +36,9 @@ export class AddServiciosComponent implements OnInit{
     this.Servicio.addServicio(data).subscribe(response => {
       console.log(response)
     });
+
+    
+    this.router.navigateByUrl('/servicios');
   }
 
 }

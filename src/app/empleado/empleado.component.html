@@ -1,8 +1,8 @@
 
 <a href="./modificar-empleado">
-    <div class="cuadro">
+    <div class="cuadro" *ngFor="let empleado of empleados">
 
-        <img class = foto src="assets/contactar.jpeg" alt="" width="105" height="105">
-        <h1 class="nombre" id = nombre>NOMBRE</h1>
+        <td class = foto {{empleado.imagen}} width="105" height="105">
+        <td class="nombre" id = nombre> {{empleado.nombre}} </td>
     </div>
 </a>
