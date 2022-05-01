@@ -32,6 +32,8 @@ import { authInterceptorProviders } from 'src/helpers/auth.interceptor';
 import { HistoriaMedicaPacienteComponent } from './historia-medica-paciente/historia-medica-paciente.component';
 import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
 import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-empleado.component';
+import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-facturas.component';
+import { AddFacturasComponent } from './add-facturas/add-facturas.component';
 
 
 
@@ -41,7 +43,7 @@ import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-emple
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
     PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, GestionInventarioComponent,
     HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, 
-    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent,],
+    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent, GestionarFacturasComponent, AddFacturasComponent,],
 
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule, HttpClientModule,],
 

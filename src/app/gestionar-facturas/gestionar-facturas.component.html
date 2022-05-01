@@ -1,0 +1,40 @@
+<app-nav></app-nav>
+<p class = titulo>Historial de facturas</p>
+
+<div class="container" *ngFor="let factura of facturas">
+
+    <div class="tipoServicio">
+        <p class = caracteristicas>Tipo Servicio: </p>
+        <td  class = info> {{factura.facturaType}}</td>
+    </div>
+
+    <div class="tipoAnimal">
+        <p class = caracteristicas>Animal: </p>
+        <td  class = info>  {{factura.animalType}}</td>
+    </div>
+
+    <div class="nombreAnimal">
+        <p class = caracteristicas>Nombre animal:</p>
+        <td  class = info> {{factura.animalName}}</td>
+    </div>
+
+    <div class="idAnimal">
+        <p class = caracteristicas>Id del animal:</p>
+        <td  class = info> </td>
+    </div>
+
+    <div class="Descripcion">
+        <p class = caracteristicasDesc>Descripcion:</p>
+        <td class = infoDesc> {{factura.description}}</td>
+    </div>
+
+    <div class="Precio">
+        <p class = caracteristicas>Precio:</p>
+        <td  class = info> {{factura.cost}} €</td>
+    </div>
+
+  </div>
+
+
+  <button class = boton onclick="location.href='http://localhost:4200/addFactura'" type="submit">Añadir nueva Factura</button>
+

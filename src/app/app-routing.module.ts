@@ -19,6 +19,8 @@ import { GestionInventarioComponent } from './gestion-inventario/gestion-inventa
 import { PoliticaYPrivacidadComponent } from './politica-y-privacidad/politica-y-privacidad.component';
 import { HistoriaMedicaPacienteComponent } from './historia-medica-paciente/historia-medica-paciente.component';
 import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
+import { AddFacturasComponent } from './add-facturas/add-facturas.component';
+import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-facturas.component';
 
 
 const routes: Routes = [
@@ -40,7 +42,8 @@ const routes: Routes = [
   { path: 'politica-y-privacidad', component: PoliticaYPrivacidadComponent, pathMatch: 'full'},
   { path: 'historial', component: HistoriaMedicaPacienteComponent, pathMatch: 'full'},
   { path: 'addEmpleado', component: AddEmpleadoComponent, pathMatch: 'full'},
-
+  { path: 'addFactura', component: AddFacturasComponent, pathMatch: 'full'},
+  { path: 'historialFacturas', component: GestionarFacturasComponent, pathMatch: 'full'},
 ];
 
 @NgModule({

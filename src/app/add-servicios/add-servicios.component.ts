@@ -10,10 +10,8 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class AddServiciosComponent implements OnInit{
-  serviceType!: string;
+  serviceName!: string;
   animalType!: string;
-  animalName!: string;
-  idAnimal!: number;
   description!: string;
   cost!: number;
   
@@ -28,9 +26,8 @@ export class AddServiciosComponent implements OnInit{
  
 
   addServicio() {
-    const data = { serviceType: this.serviceType,animalName:  this.animalName, 
-      animalType:  this.animalType, description:  this.description, 
-      cost: this.cost};
+    const data = { serviceName: this.serviceName, animalType:  this.animalType, 
+      description:  this.description, cost: this.cost};
 
 
     this.Servicio.addServicio(data).subscribe(response => {

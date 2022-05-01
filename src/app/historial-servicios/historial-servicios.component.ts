@@ -13,11 +13,10 @@ import { Title } from '@angular/platform-browser';
   export class HistorialServiciosComponent implements OnInit {
 
       servicio = {
-        tipoServicio: '',
-        nameAnimal: '',
-        animal: '',
-        descripcion: '',
-        precio: 0,
+        serviceName: '',
+        animalType: '',
+        description: '',
+        cost: 0,
       }
 
 
