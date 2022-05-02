@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { inventarioVet } from '../model/models';
+import { Product } from '../model/models';
 import { FunctionService } from '../funciones/funciones';
 import { Title } from '@angular/platform-browser';
 @Component({
@@ -8,18 +8,18 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./gestion-inventario.component.css']
 })
 export class GestionInventarioComponent implements OnInit {
-  productos?: inventarioVet[];
-  currentModelo: inventarioVet = {};
+  productos?: Product[];
+  currentModelo: Product = {};
   currentIndex = -1;
   nombre='';
 
-  constructor(private functionService: FunctionService, private titleService: Title) { 
-    this.titleService.setTitle("Inventario");
+  constructor(private functionService: FunctionService/*, private titleService: Title*/) { 
+    //this.titleService.setTitle("Inventario");
   }
 
   ngOnInit(): void {
     this.retrieveProductos();
-    document.getElementsByName("inventario")[0].style.fontWeight = "bold";
+    //document.getElementsByName("inventario")[0].style.fontWeight = "bold";
   }
   retrieveProductos(): void {
     this.functionService.getAll().subscribe(
@@ -42,7 +42,7 @@ export class GestionInventarioComponent implements OnInit {
     this.currentModelo = {};
     this.currentIndex = -1;
   }
-  setActiveProduct(producto: inventarioVet, index: number): void {
+  setActiveProduct(producto: Product, index: number): void {
     this.currentModelo = producto;
     this.currentIndex = index;
   }

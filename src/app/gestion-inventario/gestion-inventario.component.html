@@ -7,25 +7,25 @@
     </div>
     <div id="listado">
         <div class=producto *ngFor="let producto of productos; let i = index" >
-            <div 
+            <!--<div 
             class=imagen 
             *ngFor="let producto of productos; let i = index"
             [class.active]="i == currentIndex"
             (click)="setActiveProduct(producto, i)">
-                {{currentModelo.imagen}}
-            </div>
+                {{currentModelo.media}}
+            </div>-->
             <div class= informacion>
                 <p class=negrita
                 *ngFor="let producto of productos; let i = index"
                 [class.active]="i == currentIndex"
                 (click)="setActiveProduct(producto, i)">
-                    {{currentModelo.nombre}}
+                    {{currentModelo.name}}
                 </p>
                 <p 
                 *ngFor="let producto of productos; let i = index"
                 [class.active]="i == currentIndex"
                 (click)="setActiveProduct(producto, i)">
-                    {{currentModelo.descripcion}}
+                    {{currentModelo.description}}
                 </p>
                 <button class = boton  onclick="restar()">+</button>
                 <p class=bottomline>Cantidad Disponible:</p>  
@@ -33,13 +33,13 @@
                 *ngFor="let producto of productos; let i = index"
                 [class.active]="i == currentIndex"
                 (click)="setActiveProduct(producto, i)">
-                    {{currentModelo.cantidad}}
+                    {{currentModelo.units}}
                 <button class = boton onclick="sumar()">-</button>
                 <p class=bottomline
                 *ngFor="let producto of productos; let i = index"
                 [class.active]="i == currentIndex"
                 (click)="setActiveProduct(producto, i)">
-                    {{currentModelo.precio}}
+                    {{currentModelo.price}}
                 </p>  
             </div>
         </div>
