@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import{ inventarioVet } from '../model/models';
 import { FunctionService } from '../funciones/funciones';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { FunctionService } from '../funciones/funciones';
   styleUrls: ['./add-product.component.css']
 })
 
-export class AddProductComponent implements OnInit{
+export class AddProductComponent implements OnInit {
   producto: inventarioVet = {
     nombre: '',
     descripcion: '',
@@ -22,9 +23,11 @@ export class AddProductComponent implements OnInit{
   };
 
   submitted = false;
-  constructor(private functionService: FunctionService) {}
+  constructor(private functionService: FunctionService, private titleService: Title) {
+    this.titleService.setTitle("Inventario");
+  }
   ngOnInit(): void{
-
+    document.getElementsByName("inventario")[0].style.fontWeight = "bold";
   }
   newProduct(): void{
     this.submitted = false;

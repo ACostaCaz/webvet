@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { añadirServicio1 } from '../Service/servicio.service';
+import { Servicio } from '../Service/servicio.service';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-add-servicios',
@@ -8,25 +9,35 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-servicios.component.css']
 })
 
-export class AddServiciosComponent {
-  tipoServicio!: string;
-  animal!: string;
-  nombreAnimal!: string;
-  idAnimal!: number;
-  descripcion!: string;
-  precio!: number;
-
-  constructor(public añadirServicio1: añadirServicio1, public router: Router) {}
-
-  add() {
-    const añadirServicio = { tipoServicio: this.tipoServicio, animal: this.animal, nombreAnimal: this.nombreAnimal, 
-      idAnimal: this.idAnimal, descripcion: this.descripcion, precio: 
-    this.precio};
-
-    this.añadirServicio1.add(añadirServicio).subscribe(data => {
-      this.router.navigateByUrl('/');
-    });
+export class AddServiciosComponent implements OnInit{
+  serviceName!: string;
+  animalType!: string;
+  description!: string;
+  cost!: number;
+  
+  constructor(public Servicio: Servicio, public router: Router, private titleService: Title) {
+    this.titleService.setTitle("Añadir Servicio");
   }
+
+  ngOnInit(): void {
+    document.getElementsByName("servicios")[0].style.fontWeight = "bold";
+  }
+
+ 
+
+  addServicio() {
+    const data = { serviceName: this.serviceName, animalType:  this.animalType, 
+      description:  this.description, cost: this.cost};
+
+
+    this.Servicio.addServicio(data).subscribe(response => {
+      console.log(response)
+    });
+
+    
+    this.router.navigateByUrl('/servicios');
+  }
+
 }
 
 

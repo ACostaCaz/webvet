@@ -1,5 +1,5 @@
-
-    <form method="post">
+<app-nav></app-nav>
+<form method="post">
     <p class =  titulo> Formulario de Historia Médica </p>
     <section class = recuadro>
             <div class = NumHistorial>
@@ -34,7 +34,21 @@
                 name="IDAnimal"
                 required="required"
                 />
+
+                      
             </div>
+
+            <div class = tipo> 
+                <p class = texto>Tipo de Animal:</p>
+                <input
+                class = recuadroTipo
+                spellcheck="true"
+                type="string"
+                [(ngModel)]="tipoAnimal"
+                name="tipoAnimal"
+                required="required"
+                />
+            </div> 
 
             <div class = Descripcion>
                 <p class = texto>Descripción:</p>
@@ -52,40 +66,8 @@
                                 
             </div>
 
-            <div class = Tratamiento>
-                <p class = texto>Tratamiento:</p>
-                <textarea
-                autocorrect = "on"
-                class = recuadro5
-                spellcheck="true"
-                type="text"
-                [(ngModel)]="tratamiento"
-                name="Tratamiento"
-                required="required"
-                resize= none>
-
-                </textarea>
-            </div>
-
-            <div class = Observaciones>
-                <p class = texto>Observaciones:</p>
-                <textarea
-                class = recuadro6
-                spellcheck="true"
-                type="text"
-                [(ngModel)]="observaciones"
-                name="Observaciones">
-
-                </textarea>
-            </div>
-
-            <div class = AtendidoPor>
-                <p class = texto>Atendido por: Ylenia</p>
-            </div>
-
-
     </section>
-    <button class = botonAceptar onclick="location.href='http://localhost:4200/historia'" type="submit" (click)="aceptar()">Aceptar</button>
-    <button class = botonCancelar onclick="location.href='http://localhost:4200/historia'" type="submit">Cancelar</button>
+    <button class = botonAceptar  (click)="aceptar()">Aceptar</button>
+    <button class = botonCancelar onclick="location.href='http://localhost:4200/historial'" type="submit">Cancelar</button>
 
     </form>

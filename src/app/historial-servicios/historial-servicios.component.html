@@ -1,40 +1,30 @@
+<app-nav></app-nav>
+<p class = titulo>Servicios ofrecidos por la clinica</p>
 
-<p class = titulo>Historiales de servicios</p>
-
-<div class="container">
+<div class="container" *ngFor="let servicio of servicios">
 
     <div class="tipoServicio">
-        <p class = caracteristicas>Tipo Servicio: </p>
-        <p class = info>Consulta</p>
+        <p class = caracteristicas>Nombre del Servicio: </p>
+        <td  class = info> {{servicio.serviceName}}</td>
     </div>
 
     <div class="tipoAnimal">
-        <p class = caracteristicas>Animal: </p>
-        <p class = info>Perro</p>
+        <p class = caracteristicas>Tipo de Animal: </p>
+        <td  class = info>  {{servicio.animalType}}</td>
     </div>
-
-    <div class="nombreAnimal">
-        <p class = caracteristicas>Nombre animal:</p>
-        <p class = info>Julio</p>
-    </div>
-
-    <div class="idAnimal">
-        <p class = caracteristicas>Id del animal:</p>
-        <p class = info>832923</p>
-    </div>
-
+    
     <div class="Descripcion">
         <p class = caracteristicasDesc>Descripcion:</p>
-        <p class = infoDesc>Esta es una descripcion de pruebaEsta es una descripcion de pruebaEsta es una descripcion 
-            Esta es una descripcion de pruebaEsta es una descripcion de pruebaEsta es una descripcion de prueba
-            Esta es una descripcion de pruebaEsta es una descripcion de pruebaEsta es una descripcion de prueba</p>
+        <td class = infoDesc> {{servicio.description}}</td>
     </div>
 
     <div class="Precio">
         <p class = caracteristicas>Precio:</p>
-        <p class = info>345€</p>
+        <td  class = info> {{servicio.cost}} €</td>
     </div>
 
   </div>
 
-  <button class = boton onclick="location.href='http://localhost:4200/addhistoria'" type="submit">Añadir nuevo servicio</button>
+
+  <button class = boton onclick="location.href='http://localhost:4200/addServicios'" type="submit">Añadir nuevo servicio</button>
+

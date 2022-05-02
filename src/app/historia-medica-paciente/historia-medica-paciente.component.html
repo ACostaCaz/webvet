@@ -1,0 +1,47 @@
+<app-nav></app-nav>
+
+
+<div>
+
+    <p class = "tituloHM"> Historial de historias médicas</p>
+
+    <input class = botonAñadir onclick="location.href='./addhistoria'" type="submit" value="Añadir Historia">
+
+</div>
+
+<section>
+
+    <div class = recuadroHM *ngFor="let historia of historias">
+        
+        <div class = NumHistorial Style = "font-style: bold;">
+            Número del historial: 
+            <td  class = info> {{historia.numhistorial}}</td>
+        </div>
+        <div class = TipoAnimal>
+            Animal: 
+            <td  class = info> {{historia.tipoAnimal}}</td>
+        </div>
+        <div class = NombreAnimal>
+            Fecha: 
+            <td  class = info> {{historia.fecha}}</td>
+        </div>
+        <div class = Id-animal>
+            Id del animal: 
+            <td  class = info> {{historia.idanimal}}</td>
+        </div>
+
+        <div class = Descripcion>Descripción:</div>
+        <div class = Texto-Descripcion>
+            <td  class = info> {{historia.descripcion}}</td>
+        </div>
+    </div>
+
+    <button class = botonModificar onclick="location.href='./addhistoria'" type="submit">Modificar</button>
+
+    <input type=button class = botonEliminar value = Eliminar>
+
+
+</section>
+
+
+

@@ -1,0 +1,105 @@
+.tituloHM{
+    font-size: 40px;
+    font-style: bold;
+    margin-left: 125px;
+    font-weight: bold;
+    float: left;
+}
+
+.recuadroHM {
+    width: 1090px;
+    height: 160px;
+
+    margin-top: 50px;
+    margin-left: 125px;
+
+    border: 1px solid black;
+
+    background: #ffffff;
+
+
+    
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.4fr 0.3fr 0.1fr; 
+    gap: 7px 15px; 
+    grid-template-areas: 
+    "NumHistorial TipoAnimal NombreAnimal Id-animal"
+    "Descripcion Descripcion Descripcion Descripcion"
+    "Texto-Descripcion Texto-Descripcion Texto-Descripcion Texto-Descripcion"; 
+
+    margin-bottom: 20px;
+      
+  }
+  .Descripcion { 
+        margin-left: 40px;
+        font-weight: bold;
+    }
+  .Texto-Descripcion { 
+        grid-area: Texto-Descripcion; 
+        margin-left: 40px;
+        width: 1010px;
+        text-align: justify;
+        
+    }
+  .NumHistorial { 
+        margin-left: 40px;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+  .TipoAnimal { 
+        margin-left: 40px;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+  .NombreAnimal { 
+        margin-left: 40px;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+  .Id-animal { 
+        margin-left: 40px;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .botonModificar{
+        width: 100px;
+        height: 37px;
+
+        background: #8DF2B0;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-weight: bold;
+        margin-left: 125px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .botonAñadir{
+        width: 120px;
+        height: 37px;
+        background: #8DF2B0;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-weight: bold;
+        margin-left: 460px;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+
+    .botonEliminar{
+        width: 100px;
+        height: 37px;
+
+        background: #8DF2B0;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-weight: bold;
+        margin-left: 890px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }

@@ -1,25 +1,23 @@
 import { Observable,  throwError } from "rxjs";
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ServiciosAtr } from './servicio';
+import { EmpleadosAtr } from './empleadosAtr';
 import { HttpErrorResponse } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: "root"
 })
-export class Servicio {
+export class Empleado {
 
-  //private productsUrl = 'api/servicios';
+  private productsUrl = 'http://localhost:3002/employ/newEmploy';
 
-  private productsUrl = 'http://localhost:3002/service/newService';
-
-  private productsUrl1 = 'http://localhost:3002/service/showServices';
+  private productsUrl1 = 'http://localhost:3002/employ/showEmployers';
   
   constructor(private http: HttpClient) {}
 
-  getServicios(): Observable<ServiciosAtr[]>  {
-    return this.http.get<ServiciosAtr[]>(this.productsUrl1).pipe(
+  getEmpleados()  {
+    return this.http.get(this.productsUrl1).pipe(
       retry(2),
       catchError((error: HttpErrorResponse) => {
         console.error(error);
@@ -28,8 +26,8 @@ export class Servicio {
     );
   }
 
-  addServicio(servicio: ServiciosAtr): Observable<ServiciosAtr> {
-    return this.http.post<ServiciosAtr>(this.productsUrl, servicio).pipe(
+  addEmpleado(empleado: EmpleadosAtr): Observable<EmpleadosAtr> {
+    return this.http.post<EmpleadosAtr>(this.productsUrl, empleado).pipe(
       catchError((error: HttpErrorResponse) => {
         console.error(error);
         return throwError(error);

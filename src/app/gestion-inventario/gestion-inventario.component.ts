@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { inventarioVet } from '../model/models';
 import { FunctionService } from '../funciones/funciones';
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-gestion-inventario',
   templateUrl: './gestion-inventario.component.html',
@@ -12,10 +13,13 @@ export class GestionInventarioComponent implements OnInit {
   currentIndex = -1;
   nombre='';
 
-  constructor(private functionService: FunctionService) { }
+  constructor(private functionService: FunctionService, private titleService: Title) { 
+    this.titleService.setTitle("Inventario");
+  }
 
   ngOnInit(): void {
     this.retrieveProductos();
+    document.getElementsByName("inventario")[0].style.fontWeight = "bold";
   }
   retrieveProductos(): void {
     this.functionService.getAll().subscribe(

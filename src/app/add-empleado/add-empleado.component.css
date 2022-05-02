@@ -1,0 +1,233 @@
+body.AE{
+    width: 1366px;
+    margin: 0 auto;
+    float: center;
+    margin-top: 100px;
+}
+
+
+.RecuadroPrincipal {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.2fr 0.4fr 0.4fr 0.4fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "Info-Empleado Info-Empleado Info-Empleado"
+      "RecuadroImagen Nombre Apellidos"
+      "RecuadroImagen Funcion-Principal Telefono"
+      "calle ciudad cp"; 
+
+    width: 1337px;
+    height: 479px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .Info-Empleado { 
+      margin-left: 40px;
+      grid-area: Info-Empleado; 
+
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+
+      color: #000000;
+    }
+  .Nombre { 
+      margin-left: 40px;
+      grid-area: Nombre; 
+    }
+  .RecuadroImagen { 
+      margin-left: 40px;
+      grid-area: RecuadroImagen; 
+    }
+  .Apellidos { 
+      margin-left: 40px;
+      grid-area: Apellidos; 
+    }
+  .Funcion-Principal { 
+      margin-left: 40px;
+      grid-area: Funcion-Principal; 
+    }
+  .Telefono { 
+      margin-left: 40px;
+      grid-area: Telefono; 
+    }
+  .calle { 
+      margin-left: 40px;
+      grid-area: calle; 
+    }
+  .ciudad { 
+      margin-left: 40px;
+      grid-area: ciudad; 
+    }
+  .cp { 
+      margin-left: 40px;
+      grid-area: cp;
+     }
+  .Provincia { 
+      margin-left: 40px;
+      grid-area: Provincia; 
+    }
+  .DNI { 
+      margin-left: 40px;
+      grid-area: DNI; 
+    }
+
+.recuadro1{
+    width: 360px;
+    height: 25px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.recuadroImagen2{
+  margin-left: 40px;
+  margin-top: 40px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 234px;
+  height: 238px;
+}
+
+.recuadroImg{
+  width: 104px;
+  height: 105px;
+  margin: auto;
+  margin-top:40px;
+  border-radius: 100px;
+
+  background: #C4C4C4;
+}
+
+.texto1{
+  width: 90px;
+  height: 28px;
+
+  margin: auto;
+  margin-top:30px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+.RecuadroSecundario {
+  width: 1337px;
+  height: 320px;
+
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  margin: auto;
+
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 0.1fr 0.4fr 0.4fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Credenciales Credenciales Credenciales"
+    "Correo Contraseña1 Boton-modificar"
+    "ConfirmarCorreo Confirmar-Contraseña Boton-modificar"; 
+}
+.Credenciales { 
+  width: 159px;
+  height: 27px;
+  margin-left: 40px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #000000;
+  grid-area: Credenciales; 
+}
+.Correo { 
+  margin-left: 40px;
+  grid-area: Correo; 
+}
+.Contraseña1 { 
+  margin-left: 40px;
+  grid-area: Contraseña1; 
+}
+.ConfirmarCorreo { 
+  margin-left: 40px;
+  grid-area: ConfirmarCorreo; 
+}
+.Confirmar-Contraseña { 
+  margin-left: 40px;
+  grid-area: Confirmar-Contraseña; 
+}
+.Boton-modificar { 
+  margin-left: 40px;
+  grid-area: Boton-modificar; 
+}
+
+.recuadroForm{
+  width: 360px;
+  height: 25px;
+
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.texto2{
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #000000;
+
+}
+
+.texto{
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #000000;
+
+}
+
+.botonModificar{
+  width: 233px;
+  height: 50px;
+
+  background: #8DF2B0;
+  border-radius: 10px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #000000;
+  margin-top:90px;
+  margin-left: 40px;
+}
