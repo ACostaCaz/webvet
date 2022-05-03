@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { historiaService } from '../historia/historia.service';
+import { Historia } from '../historiaServicio/historia.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
@@ -9,14 +9,15 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./add-historia.component.css']
 })
 export class AddHistoriaComponent implements OnInit{
-  id!: number;
-  created_At!: string;
-  animal_id !: number;
-  description !: string;
+  numhistorial!: number;
+  fecha!: string;
+  idanimal !: number;
+  descripcion !: string;
   treatment !: string;
   observaciones !: string;
 
-  constructor(public historiaService: historiaService, public router: Router, private titleService: Title) {
+
+  constructor(public Historia: Historia, public router: Router, private titleService: Title) {
     this.titleService.setTitle("Añadir Historia");
   }
   ngOnInit(): void {
@@ -24,13 +25,15 @@ export class AddHistoriaComponent implements OnInit{
   }
 
   aceptar() {
-    const historia = { numhistorial: this.id, fecha: this.created_At, 
-      idanimal: this.animal_id, descripcion: this.description, tratamiento: 
+    const historia = { numhistorial: this.numhistorial, fecha: this.fecha, 
+      idanimal: this.idanimal, descripcion: this.descripcion, treatment: 
     this.treatment, observaciones: this.observaciones};
 
-    this.historiaService.aceptar(historia).subscribe(data => {
-      this.router.navigateByUrl('/');
+    this.Historia.addHistoria(historia).subscribe(response => {
+      console.log(response)
     });
+
+    this.router.navigateByUrl('/historial');
   }
 }
 

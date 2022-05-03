@@ -1,27 +1,49 @@
 <app-nav></app-nav>
-<p class = titulo> Añadir nuevo servicio.</p>
+<p class = titulo> Añadir nueva factura</p>
 
 
 <div class="container">
 
     <div class="Tipo-servicio">
-        <p class = texto>Nombre del Servicio:</p>
+        <p class = texto>Tipo de servicio:</p>
         <input 
             class = recuadroForm
             type="text"
-            [(ngModel)]="serviceName"
-            name="nombreServicio"
+            [(ngModel)]="facturaType"
+            name="tipoFactura"
             required="required"          
         />
     </div>
 
     <div class="Animal">
-        <p class = texto>Tipo animal:</p>
+        <p class = texto>Tipo de animal:</p>
         <input 
             class = recuadroForm
             type="text"
             [(ngModel)]="animalType"
             name="animal"
+            required="required"          
+        />
+    </div>
+
+    <div class="NombreAnimal">
+        <p class = texto>Nombre del animal:</p>
+        <input 
+            class = recuadroForm
+            type="text"
+            [(ngModel)]="animalName"
+            name="nameAnimal"
+            required="required"          
+        />
+    </div>
+
+    <div class="IdAnimal">
+        <p class = texto>Id del animal:</p>
+        <input 
+            class = recuadroForm
+            type="number"
+            [(ngModel)]="idAnimal"
+            name="idAnimal"
             required="required"          
         />
     </div>
@@ -44,7 +66,6 @@
             class = recuadroForm
             type="number"
             [(ngModel)]="cost"
-            name="cost"
             required="required"          
         />
         
@@ -53,7 +74,7 @@
   </div>
 
   
-  <button class = boton (click)="addServicio()">Aceptar</button>
+  <button class = boton (click)="addFactura()">Aceptar</button>
 
 
 

@@ -1,36 +1,26 @@
 <app-nav></app-nav>
-<p class = titulo>Historiales de servicios</p>
+<p class = titulo>Servicios ofrecidos por la clinica</p>
 
 <div class="container" *ngFor="let servicio of servicios">
 
     <div class="tipoServicio">
-        <p class = caracteristicas>Tipo Servicio: </p>
-        <td  class = info> {{servicio.tipoServicio}}</td>
+        <p class = caracteristicas>Nombre del Servicio: </p>
+        <td  class = info> {{servicio.serviceName}}</td>
     </div>
 
     <div class="tipoAnimal">
-        <p class = caracteristicas>Animal: </p>
-        <td  class = info>  {{servicio.animal}}</td>
+        <p class = caracteristicas>Tipo de Animal: </p>
+        <td  class = info>  {{servicio.animalType}}</td>
     </div>
-
-    <div class="nombreAnimal">
-        <p class = caracteristicas>Nombre animal:</p>
-        <td  class = info> {{servicio.nameAnimal}}</td>
-    </div>
-
-    <div class="idAnimal">
-        <p class = caracteristicas>Id del animal:</p>
-        <td  class = info> {{servicio.idAnimal}}</td>
-    </div>
-
+    
     <div class="Descripcion">
         <p class = caracteristicasDesc>Descripcion:</p>
-        <td class = infoDesc> {{servicio.descripcion}}</td>
+        <td class = infoDesc> {{servicio.description}}</td>
     </div>
 
     <div class="Precio">
         <p class = caracteristicas>Precio:</p>
-        <td  class = info> {{servicio.precio}}</td>
+        <td  class = info> {{servicio.cost}} €</td>
     </div>
 
   </div>

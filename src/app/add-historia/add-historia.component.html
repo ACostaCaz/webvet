@@ -7,7 +7,7 @@
                 <input
                 class = recuadro1
                 type="number"
-                [(ngModel)]="id"
+                [(ngModel)]="numhistorial"
                 name="numHistorial"
                 required="required"
                 />
@@ -18,7 +18,7 @@
                 <input
                 class = recuadro2
                 type="date"
-                [(ngModel)]="created_At"
+                [(ngModel)]="fecha"
                 name="Fecha"
                 required="required"
                 />
@@ -30,11 +30,24 @@
                 class = recuadro3
                 spellcheck="true"
                 type="number"
-                [(ngModel)]="animal_id"
+                [(ngModel)]="idanimal"
                 name="IDAnimal"
                 required="required"
                 />
+
+                      
             </div>
+            <!--<div class = tipo> 
+                <p class = texto>Tipo de Animal:</p>
+                <input
+                class = recuadroTipo
+                spellcheck="true"
+                type="string"
+                [(ngModel)]="tipoAnimal"
+                name="tipoAnimal"
+                required="required"
+                />
+            </div> -->
 
             <div class = Descripcion>
                 <p class = texto>Descripción:</p>
@@ -43,7 +56,7 @@
                 spellcheck="true"
                 class = recuadro4
                 type="text"
-                [(ngModel)]="description"
+                [(ngModel)]="descripcion"
                 name="Descripcion"
                 required="required"
                 resize= none>
@@ -85,7 +98,7 @@
 
 
     </section>
-    <button class = botonAceptar onclick="location.href='http://localhost:4200/historial'" type="submit" (click)="aceptar()">Aceptar</button>
+    <button class = botonAceptar  (click)="aceptar()">Aceptar</button>
     <button class = botonCancelar onclick="location.href='http://localhost:4200/historial'" type="submit">Cancelar</button>
 
     </form>

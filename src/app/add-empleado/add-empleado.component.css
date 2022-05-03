@@ -9,17 +9,16 @@ body.AE{
 .RecuadroPrincipal {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.2fr 0.4fr 0.4fr 0.4fr 0.4fr; 
+    grid-template-rows: 0.2fr 0.4fr 0.4fr 0.4fr; 
     gap: 0px 0px; 
     grid-template-areas: 
       "Info-Empleado Info-Empleado Info-Empleado"
       "RecuadroImagen Nombre Apellidos"
       "RecuadroImagen Funcion-Principal Telefono"
-      "calle ciudad cp"
-      "Provincia DNI ."; 
+      "calle ciudad cp"; 
 
     width: 1337px;
-    height: 839px;
+    height: 479px;
 
     background: #FFFFFF;
     border: 1px solid #000000;

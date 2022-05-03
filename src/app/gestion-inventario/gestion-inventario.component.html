@@ -7,28 +7,28 @@
     </div>
     <div id="listado">
         <div class=producto *ngFor="let producto of productos; let i = index" >
-            <td class=imagen >
-                {{currentModelo.imagen}}
-            </td>
+            <!--<td class=imagen >
+                {{producto.imagen}}
+            </td>-->
             <div class= informacion>
                 <td class=negrita>
-                    {{currentModelo.name}}
+                    {{producto.name}}
                 </td>
                 <td>
-                    {{currentModelo.description}}
+                    {{producto.description}}
                 </td>
                 <button class = boton  onclick="restar()">-</button>
                 <p class=bottomline>Cantidad Disponible:</p>  
                 <td class=bottomline>
-                    {{currentModelo.units}}
+                    {{producto.units}}
                 </td>
                 <button class = boton onclick="sumar()">+</button>
                 <td class=bottomline>
-                    {{currentModelo.price}}
+                    {{producto.price}}
                 </td>  
             </div>
         </div>
-        <script>
+        <!--<script>
             function sumar() {
                 valor = document.getElementById("currentModelo");
                 if (valor.value < 10)valor.value ++;
@@ -37,38 +37,6 @@
         <script>
             valor = document.getElementById("currentModelo");
             if (valor.value > 01)valor.value --;
-        </script>
-        <!--<div class=producto>
-            <div class=imagen>
-                <img src="https://www.sfpharmaplus.com/8895-medium_default/jeringa-3-cuerpos-10-ml-luer-lock-caja-100-uds.jpg">
-            </div>
-            <div class= informacion>
-                <p class=negrita>Jeringa sin aguja</p>
-                <p>Jeringuilla de llenado de nutrientes reutilizable para perros y gatos, herramientas de medición de alimentos estériles, plástico, 5/10/20/30ML</p>
-                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="sumar()">+</button>
-                <p class=bottomline>Cantidad Disponible: 42</p>  
-                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="restar()">-</button>
-                <p class=bottomline>Precio: 3€</p>  
-            </div>
-        </div>
-        <div class=producto>
-            <div class=imagen> 
-                <img src="https://mascota10.com/wp-content/uploads/pienso-para-perros-friskies-purina-300x300.jpg">
-            </div>
-            <div class= informacion>
-                <p class=negrita>Pienso</p>
-                <p>Esta receta está elaborada exclusivamente con pescado blanco (merluza) y almidón de patata. Así, tanto su proteína de bajo peso molecular, 
-                    como la digestibilidad de la patata, hacen que este producto sea ideal para perros con digestiones especialmente sensibles. 
-                    Además, se le añade Krill, que actúa como antioxidante;  nucleótidos, que refuerzan el sistema inmune y la salud gastrointestinal; 
-                    y MSM como analgésico y antinflamatorio natural. Las hortalizas y hierbas medicinales añadidas mejoran el tránsito intestinal, 
-                    la digestión y el sistema inmune. También incluye alimentos funcionales que ayudan a mantener en estado óptimo articulaciones , músculos y  
-                    ligamentos.
-                </p>
-                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="sumar()">+</button>
-                <p class=bottomline>Cantidad Disponible: 23</p>  
-                <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="restar()">-</button>
-                <p class=bottomline>Precio: 5€</p>  
-            </div>
-        </div>-->
+        </script>-->
     </div>
 </div>

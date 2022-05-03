@@ -10,12 +10,10 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class AddServiciosComponent implements OnInit{
-  tipoServicio!: string;
-  animal!: string;
-  nameAnimal!: string;
-  idAnimal!: number;
-  descripcion!: string;
-  precio!: number;
+  serviceName!: string;
+  animalType!: string;
+  description!: string;
+  cost!: number;
   
   constructor(public Servicio: Servicio, public router: Router, private titleService: Title) {
     this.titleService.setTitle("Añadir Servicio");
@@ -25,15 +23,19 @@ export class AddServiciosComponent implements OnInit{
     document.getElementsByName("servicios")[0].style.fontWeight = "bold";
   }
 
+ 
+
   addServicio() {
-    const data = { tipoServicio: this.tipoServicio,nameAnimal:  this.nameAnimal, 
-    animal:  this.animal, idAnimal:  this.idAnimal, descripcion:  this.descripcion, 
-    precio: this.precio};
+    const data = { serviceName: this.serviceName, animalType:  this.animalType, 
+      description:  this.description, cost: this.cost};
 
 
     this.Servicio.addServicio(data).subscribe(response => {
       console.log(response)
     });
+
+    
+    this.router.navigateByUrl('/servicios');
   }
 
 }

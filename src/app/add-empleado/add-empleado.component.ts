@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Empleado } from '../ServicioEmpleados/EmpleadosServicio';
+import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -8,17 +10,40 @@ import { Title } from '@angular/platform-browser';
 })
 export class AddEmpleadoComponent implements OnInit {
 
-  	constructor(private titleService: Title) {
-    	this.titleService.setTitle("Empleados");
-	}
+	imagen!: File;
+	nombre!: string;
+	apellidos!: string;
+	funcPrincipal!: string;
+	telefono!: number;
+	dni!: string;
+	correo!:string;
+	password!:string;
 
-	añadirEmpleado(): void {
+	constructor(public Empleado: Empleado, public router: Router, private titleService: Title) {
+		this.titleService.setTitle("Añadir Servicio");
+	  }
+	
+	  ngOnInit(): void {
+		document.getElementsByName("servicios")[0].style.fontWeight = "bold";
+	  }
+	
+	 
+	
+	  addEmpleado() {
+		const data = { imagen: this.imagen,nombre:  this.nombre, 
+			apellidos:  this.apellidos, funcPrincipal:  this.funcPrincipal, 
+			telefono: this.telefono, dni: this.dni, correo: this.correo, password: this.password};
+	
+	
+		this.Empleado.addEmpleado(data).subscribe(response => {
+		  console.log(response)
+		});
+	
 		
+		this.router.navigateByUrl('/servicios');
+	  }
+	
 	}
-
-
-  	ngOnInit(): void {
-    	document.getElementsByName("empleados")[0].style.fontWeight = "bold";
-  	}
-
-}
+	
+	
+	

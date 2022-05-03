@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { productoComponent } from '../producto/producto.component';
-import { Router } from '@angular/router';
-import { Stock } from '../model/models';
-import { FunctionService } from '../funciones/funciones';
+
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -12,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class ModProductComponent {
-  producto: Stock = {
+  /*producto: Product = {
     name: '',
     description: '',
     price: 0,
@@ -44,5 +41,5 @@ export class ModProductComponent {
         error => {
           console.log(error);
         });
-  }
+  }*/
 }

@@ -2,7 +2,7 @@
 <form method="post">
 <h1 class= titulo >Añadir un producto al inventario</h1>
 
-<div *ngIf="!submitted" class= block >
+<div class= block >
 
     <div class= left >
         <div class = nombre>
@@ -10,7 +10,7 @@
             <input 
             type="text" 
             class="recuadro1" 
-            [(ngModel)]="producto.name"
+            [(ngModel)]="name"
             autocomplete="on"
             required="required">
         </div>
@@ -22,7 +22,7 @@
                 spellcheck="true"
                 class = recuadro2
                 type="text"
-                [(ngModel)]="producto.description"
+                [(ngModel)]="description"
                 name="Descripcion"
                 required="required">
             </textarea>
@@ -34,7 +34,7 @@
                 <input 
                 type="number" 
                 class="recuadro3" 
-                [(ngModel)]="producto.price"
+                [(ngModel)]="price"
                 autocomplete="on"
                 required="required">
             </div>
@@ -44,7 +44,7 @@
                 <input 
                 type="number" 
                 class="recuadro3" 
-                [(ngModel)]="producto.units"
+                [(ngModel)]="units"
                 autocomplete="on"
                 required="required">
             </div>
@@ -52,7 +52,7 @@
 
     </div>
 
-    <div class= right>
+    <!--<div class= right>
         <p class = texto>Insertar Imagen</p>
         <div id= "fondoinsert">
             <div for="imagen" id= "insertar">    
@@ -60,11 +60,11 @@
                 <input 
                 type="file"
                 id="file"
-                [(ngModel)]="producto.imagen"
+                [(ngModel)]="producto.media"
                 accept=".jpg,.png,.jpeg">
             </div>
         </div>
-    </div>
+    </div>-->
 </div>
-<button class = boton onclick="location.href='http://localhost:4200/inventario'" type="submit" (click)="newProduct()">Añadir</button>
+<button class = boton (click)="addProducto()">Añadir</button>
 </form>

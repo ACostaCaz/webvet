@@ -9,19 +9,34 @@
 
         <div class = RecuadroImagen>
 
-            <div class = recuadroImagen2>
-                <div class = recuadroImg></div>
-                <p class = texto1>Nombre</p>
-            </div>
+                <input 
+                class = recuadroImagen2
+                type="File"
+                [(ngModel)]="imagen"
+                name="imagen"
+                required="required"          
+                />
         </div>
         <div class = Nombre>
             <p class = texto>Nombre</p>
-            <input class = recuadro1 required>
+            <input 
+                class = recuadro1
+                type="text"
+                [(ngModel)]="nombre"
+                name="nombre"
+                required="required"          
+                />
         </div>
 
         <div class = Apellidos>
             <p class = texto>Apellidos</p>
-            <input class = recuadro1 required>
+            <input 
+                class = recuadro1
+                type="text"
+                [(ngModel)]="apellidos"
+                name="apellidos"
+                required="required"          
+                />
         </div>
 
         <div class = RecuadroImagen>
@@ -32,37 +47,35 @@
 
         <div class = Funcion-Principal>
             <p class = texto>Función Principal</p>
-            <input class = recuadro1 required>
+            <input 
+                class = recuadro1
+                type="text"
+                [(ngModel)]="funcPrincipal"
+                name="funcPrincipal"
+                required="required"          
+            />
         </div>
 
         <div class = Telefono>
             <p class = texto>Teléfono</p>
-            <input class = recuadro1 required>
-        </div>
-
-        <div class = calle>
-            <p class = texto>Calle</p>
-            <input class = recuadro1 required>
+            <input 
+                class = recuadro1
+                type="number"
+                [(ngModel)]="telefono"
+                name="telefono"
+                required="required"          
+            />
         </div>
 
         <div class = ciudad>
-            <p class = texto>Ciudad</p>
-            <input class = recuadro1 required>
-        </div>
-
-        <div class = cp>
-            <p class = texto>CP</p>
-            <input class = recuadro1 required>
-        </div>
-
-        <div class = Provincia>
-            <p class = texto>Provincia</p>
-            <input class = recuadro1 required>
-        </div>
-
-        <div class = DNI>
             <p class = texto>DNI</p>
-            <input class = recuadro1 required>
+            <input 
+                class = recuadro1
+                type="text"
+                [(ngModel)]="dni"
+                name="dni"
+                required="required"          
+            />
         </div>
 
 
@@ -75,11 +88,25 @@
 
             <div class="Correo">
                 <p class = texto2> Correo Electrónico</p>
-                <input class = recuadroForm required>
+
+                <input 
+                class = recuadroForm
+                type="text"
+                [(ngModel)]="correo"
+                name="correo"
+                required="required"          
+                />
+
             </div>
             <div class="Contraseña1">
                 <p class = texto2> Confirmar Contraseña</p>
-                <input class = recuadroForm required>
+                <input 
+                class = recuadroForm
+                type="text"
+                [(ngModel)]="password"
+                name="passwword"
+                required="required"          
+                />
             </div>
             <div class="ConfirmarCorreo">
                 <p class = texto2> Confirmar Correo Electrónico</p>

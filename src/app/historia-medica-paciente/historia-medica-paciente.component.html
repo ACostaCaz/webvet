@@ -11,37 +11,28 @@
 
 <section>
 
-    <div class = recuadroHM *ngFor="let historia of historias; let i = index">
+    <!--<div class = recuadroHM *ngFor="let historia of historias">
         
-        <div class = NumHistorial Style = "font-style: bold;">Número del historial:</div>
-        <div *ngFor="let historia of historias; let i = index"
-        [class.active]="i == currentIndex"
-        (click)="setActiveProduct(historia, i)">
-            {{currentHistoria.id}}
+        <div class = NumHistorial Style = "font-style: bold;">
+            Número del historial: 
+            <td  class = info> {{historia.numhistorial}}</td>
         </div>
-        <div class = TipoAnimal>Animal:</div>
-        <div *ngFor="let historia of historias; let i = index"
-        [class.active]="i == currentIndex"
-        (click)="setActiveProduct(historia, i)">
-            <!--{{currentHistoria.species}}-->
+        <div class = TipoAnimal>
+            Animal: 
+            <td  class = info> {{historia.tipoAnimal}}</td>
         </div>
-        <div class = NombreAnimal>Nombre del animal:</div>
-        <div *ngFor="let historia of historias; let i = index"
-        [class.active]="i == currentIndex"
-        (click)="setActiveProduct(historia, i)">
-            <!--{{currentHistoria.name}}-->
+        <div class = NombreAnimal>
+            Fecha: 
+            <td  class = info> {{historia.fecha}}</td>
         </div>
-        <div class = Id-animal>Id del animal: </div>
-        <div *ngFor="let historia of historias; let i = index"
-        [class.active]="i == currentIndex"
-        (click)="setActiveProduct(historia, i)">
-            {{currentHistoria.animal_id}}
+        <div class = Id-animal>
+            Id del animal: 
+            <td  class = info> {{historia.idanimal}}</td>
         </div>
+
         <div class = Descripcion>Descripción:</div>
-        <div class = Texto-Descripcion *ngFor="let historia of historias; let i = index"
-        [class.active]="i == currentIndex"
-        (click)="setActiveProduct(historia, i)">
-            <!--{{currentHistoria.description}}-->
+        <div class = Texto-Descripcion>
+            <td  class = info> {{historia.descripcion}}</td>
         </div>
     </div>
 
@@ -49,7 +40,7 @@
 
     <input type=button class = botonEliminar value = Eliminar>
 
-
+-->
 </section>
 
 
