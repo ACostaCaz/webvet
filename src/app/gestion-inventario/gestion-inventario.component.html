@@ -7,40 +7,25 @@
     </div>
     <div id="listado">
         <div class=producto *ngFor="let producto of productos; let i = index" >
-            <div 
-            class=imagen 
-            *ngFor="let producto of productos; let i = index"
-            [class.active]="i == currentIndex"
-            (click)="setActiveProduct(producto, i)">
+            <td class=imagen >
                 {{currentModelo.imagen}}
-            </div>
+            </td>
             <div class= informacion>
-                <p class=negrita
-                *ngFor="let producto of productos; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveProduct(producto, i)">
+                <td class=negrita>
                     {{currentModelo.name}}
-                </p>
-                <p 
-                *ngFor="let producto of productos; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveProduct(producto, i)">
+                </td>
+                <td>
                     {{currentModelo.description}}
-                </p>
+                </td>
                 <button class = boton  onclick="restar()">-</button>
                 <p class=bottomline>Cantidad Disponible:</p>  
-                <p class=bottomline
-                *ngFor="let producto of productos; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveProduct(producto, i)">
+                <td class=bottomline>
                     {{currentModelo.units}}
+                </td>
                 <button class = boton onclick="sumar()">+</button>
-                <p class=bottomline
-                *ngFor="let producto of productos; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveProduct(producto, i)">
+                <td class=bottomline>
                     {{currentModelo.price}}
-                </p>  
+                </td>  
             </div>
         </div>
         <script>

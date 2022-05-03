@@ -25,8 +25,8 @@ import { AddServiciosComponent } from './add-servicios/add-servicios.component';
 import { GestionInventarioComponent } from './gestion-inventario/gestion-inventario.component';
 import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
 import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
-import { DataService } from './data.service';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { PoliticaYPrivacidadComponent } from './politica-y-privacidad/politica-y-privacidad.component';
 import { NavComponent } from './nav/nav.component';
@@ -45,7 +45,7 @@ import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-emple
     HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, PagarComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, 
     InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent,],
 
-  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule, HttpClientModule, InMemoryWebApiModule.forRoot(DataService)],
+  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule, HttpClientModule, ],
 
   providers: [CookieService, authInterceptorProviders],
   bootstrap: [AppComponent],
