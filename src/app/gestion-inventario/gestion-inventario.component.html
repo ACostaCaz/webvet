@@ -15,32 +15,16 @@
                 {{currentModelo.media}}
             </div>-->
             <div class= informacion>
-                <p class=negrita
-                *ngFor="let producto of productos; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveProduct(producto, i)">
-                    {{currentModelo.name}}
-                </p>
-                <p 
-                *ngFor="let producto of productos; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveProduct(producto, i)">
-                    {{currentModelo.description}}
-                </p>
+                
+                <td  class=negrita> {{producto.name}}</td>
+                
+                <td> {{producto.description}} </td>
+                
                 <button class = boton  onclick="restar()">+</button>
                 <p class=bottomline>Cantidad Disponible:</p>  
-                <p class=bottomline
-                *ngFor="let producto of productos; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveProduct(producto, i)">
-                    {{currentModelo.units}}
+                <td class=bottomline>{{producto.units}}</td>
                 <button class = boton onclick="sumar()">-</button>
-                <p class=bottomline
-                *ngFor="let producto of productos; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveProduct(producto, i)">
-                    {{currentModelo.price}}
-                </p>  
+                <td class=bottomline>{{producto.price}}</td> 
             </div>
         </div>
         <script>

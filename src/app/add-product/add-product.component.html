@@ -2,7 +2,7 @@
 <form method="post">
 <h1 class= titulo >Añadir un producto al inventario</h1>
 
-<div *ngIf="!submitted" class= block >
+<div class= block >
 
     <div class= left >
         <div class = nombre>
@@ -66,5 +66,5 @@
         </div>
     </div>-->
 </div>
-<button class = boton onclick="location.href='http://localhost:4200/product/addProduct'" type="submit" (click)="newProduct()">Añadir</button>
+<button class = boton (click)="addProducto()">Aceptar</button>
 </form>

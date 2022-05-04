@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { productoComponent } from '../producto/producto.component';
+//import { productoComponent } from '../producto/producto.component';
 import { Router } from '@angular/router';
-import { inventarioVet } from '../model/models';
+//import { inventarioVet } from '../model/models';
 import { FunctionService } from '../funciones/funciones';
 import { Title } from '@angular/platform-browser';
 
@@ -12,7 +12,7 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class ModProductComponent {
-  producto: inventarioVet = {
+  /*producto: inventarioVet = {
     nombre: '',
     descripcion: '',
     precio: 0,
@@ -44,5 +44,5 @@ export class ModProductComponent {
         error => {
           console.log(error);
         });
-  }
+  }*/
 }
