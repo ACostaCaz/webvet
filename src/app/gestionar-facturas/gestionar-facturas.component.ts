@@ -16,7 +16,8 @@ export class GestionarFacturasComponent implements OnInit {
         nameAnimal: '',
         animal: '',
         descripcion: '',
-        precio: 0,
+        precio: '',
+        createDate:''
       }
 
 

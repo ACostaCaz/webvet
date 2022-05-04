@@ -13,9 +13,9 @@ export class AddFacturasComponent implements OnInit {
   facturaType!: string;
   animalType!: string;
   animalName!: string;
-  idAnimal!: number;
+  idAnimal!: string;
   description!: string;
-  cost!: number;
+  cost!: string;
   
   constructor(public servicioFactura: servicioFactura, public router: Router, private titleService: Title) {
     this.titleService.setTitle("Añadir facturas");
@@ -30,7 +30,7 @@ export class AddFacturasComponent implements OnInit {
   addFactura() {
     const data = { facturaType: this.facturaType,animalName:  this.animalName, 
       animalType:  this.animalType, description:  this.description, 
-      cost: this.cost};
+      cost: this.cost, createDate:this.idAnimal};
 
 
     this.servicioFactura.addFactura(data).subscribe(response => {

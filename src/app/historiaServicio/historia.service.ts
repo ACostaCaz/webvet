@@ -10,9 +10,9 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class Historia {
 
-  private productsUrl = 'http://localhost:3002/history/newHistory';
+  private productsUrl = 'http://localhost:3002/history/create_history';
 
-  private productsUrl1 = 'http://localhost:3002/history/showHistories';
+  private productsUrl1 = 'http://localhost:3002/history/show_history';
   
   constructor(private http: HttpClient) {}
 

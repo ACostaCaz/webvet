@@ -11,27 +11,18 @@ import { Title } from '@angular/platform-browser';
 })
 export class HistoriaMedicaPacienteComponent implements OnInit {
 
-@Component({
-  selector: 'app-historia-medica',
-  templateUrl: './historia-medica.component.html',
-  styleUrls: ['./historia-medica.component.css']
-})
-
   historia = {
-    numhistorial: 0,
-    fecha: '',
-    tipoAnimal: '',
-    idanimal: 0,
-    descripcion: '',
-    tratamiento: '',
-    observaciones: '',
-    veterinarioEncargado: ''
+    history_id: '',
+    createdAt: '',
+    animal_id: '',
+    treatment: '',
+    createDate: ''
   }
 
 
   edit = false;
   add = false;
-  historias!: HistoriaAtr[];
+  historias!: any[];
 
   constructor(public Historia: Historia, private titleService: Title) {
     this.titleService.setTitle("Historias");
@@ -39,7 +30,7 @@ export class HistoriaMedicaPacienteComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHistorias();
-    document.getElementsByName("historias")[0].style.fontWeight = "bold";
+    document.getElementsByName("historiales")[0].style.fontWeight = "bold";
   }
 
   getHistorias() {

@@ -9,34 +9,33 @@
 
 </div>
 
-<section>
+<section *ngFor="let historia of historias">
 
-    <div class = recuadroHM *ngFor="let historia of historias">
+    <div class = recuadroHM >
         
-        <div class = NumHistorial Style = "font-style: bold;">
+        <div class = NumHistorial>
             Número del historial: 
-            <td  class = info> {{historia.numhistorial}}</td>
+            <td  class = info> {{historia.history_id}}</td>
         </div>
-        <div class = TipoAnimal>
-            Animal: 
-            <td  class = info> {{historia.tipoAnimal}}</td>
+
+        <div class = NumHistorial>
+            <td > {{historia.createDate}}</td>
         </div>
+
         <div class = NombreAnimal>
             Fecha: 
-            <td  class = info> {{historia.fecha}}</td>
+            <td  class = info> {{historia.createdAt}}</td>
         </div>
         <div class = Id-animal>
             Id del animal: 
-            <td  class = info> {{historia.idanimal}}</td>
+            <td  class = info> {{historia.animal_id}}</td>
         </div>
 
         <div class = Descripcion>Descripción:</div>
         <div class = Texto-Descripcion>
-            <td  class = info> {{historia.descripcion}}</td>
+            <td > {{historia.treatment[3]}}</td>
         </div>
     </div>
-
-    <button class = botonModificar onclick="location.href='./addhistoria'" type="submit">Modificar</button>
 
     <input type=button class = botonEliminar value = Eliminar>
 

@@ -1,54 +1,33 @@
 <app-nav></app-nav>
 <form method="post">
     <p class =  titulo> Formulario de Historia Médica </p>
+
     <section class = recuadro>
             <div class = NumHistorial>
                 <p class = texto>Nº Historial</p>
                 <input
                 class = recuadro1
-                type="number"
-                [(ngModel)]="numhistorial"
-                name="numHistorial"
+                type="string"
+                [(ngModel)]="history_id"
+                name="history_id"
                 required="required"
                 />
             </div>
 
-            <div class = Fecha>
-                <p class = texto>Fecha:</p>
-                <input
-                class = recuadro2
-                type="date"
-                [(ngModel)]="fecha"
-                name="Fecha"
-                required="required"
-                />
-            </div>
 
             <div class = IDAnimal>
                 <p class = texto>Identificador del Animal:</p>
                 <input
                 class = recuadro3
                 spellcheck="true"
-                type="number"
-                [(ngModel)]="idanimal"
-                name="IDAnimal"
+                type="string"
+                [(ngModel)]="animal_id"
+                name="animal_id"
                 required="required"
                 />
 
                       
             </div>
-
-            <div class = tipo> 
-                <p class = texto>Tipo de Animal:</p>
-                <input
-                class = recuadroTipo
-                spellcheck="true"
-                type="string"
-                [(ngModel)]="tipoAnimal"
-                name="tipoAnimal"
-                required="required"
-                />
-            </div> 
 
             <div class = Descripcion>
                 <p class = texto>Descripción:</p>
@@ -57,17 +36,20 @@
                 spellcheck="true"
                 class = recuadro4
                 type="text"
-                [(ngModel)]="descripcion"
-                name="Descripcion"
+                [(ngModel)]="treatment"
+                name="treatment"
                 required="required"
                 resize= none>
 
                 </textarea>
-                                
+                        
+                <button class = botonAceptar  (click)="aceptar()">Aceptar</button>
+                <button class = botonCancelar onclick="location.href='http://localhost:4200/historial'" type="submit">Cancelar</button>
             </div>
 
+        
+
     </section>
-    <button class = botonAceptar  (click)="aceptar()">Aceptar</button>
-    <button class = botonCancelar onclick="location.href='http://localhost:4200/historial'" type="submit">Cancelar</button>
+    
 
     </form>
