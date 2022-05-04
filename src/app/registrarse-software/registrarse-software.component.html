@@ -5,22 +5,92 @@
     <h2 class = "titulo">Credenciales - Crear Cuenta</h2>
 
 
-    <form method="post" class="area1">
+    <form [formGroup]="credenciales" method="post" class="area1">
 
         <input class="campos" type="email" required="required" name="email" 
-        [(ngModel)]="email" placeholder="Correo Electrónico">
+        formControlName="email" placeholder="Correo Electrónico">
 
         <input class="campos" type="email" required="required" name="repeatedEmail" 
-        [(ngModel)]="repeatedEmail" placeholder="Confirmar Correo Electrónico">
+        formControlName="repeatedEmail" placeholder="Confirmar Correo Electrónico">
 
         <input class="campos" type="password" required="required" name="password" 
-        [(ngModel)]="password" placeholder="Contraseña">
+        formControlName="password" placeholder="Contraseña">
 
         <input class="campos" type="password" required="required" name="repeatedPassword" 
-        [(ngModel)]="repeatedPassword" placeholder="Confirmar Contraseña">
-        
-        <input class="boton" type="submit" (click)="register()"> 
+        formControlName="repeatedPassword" placeholder="Confirmar Contraseña">
+         
     </form>
+
+</div>
+
+
+
+<form [formGroup]="pago" class="contenedor">
+
+    <div class="titulo2">
+        <h2><b>Método de pago:</b> Tarjeta de crédito/débito</h2>
+    </div>
+    
+    <div class="numero">
+        <input type="text" class="campos1" 
+        placeholder="   Número de la tarjeta"
+        required = "required" formControlName = "cardNumber"
+        pattern="([0-9]{16})" title="Debe introducir los 16 digitos de su tarjeta" >
+    </div>
+
+    <div class="caducidad">
+        <input type="date" class="campos2"  required
+        placeholder="   Caducidad" formControlName = "expirationDate"
+        max="2004-02-05">
+    </div>
+    
+    <div class="cvv">
+        <input type="text" class="campos2" required
+        placeholder="   cvv" formControlName = "cvv" 
+        pattern="([0-9]{3})" title="Código de seguridad CVV de 3 dígitos,
+         se encuentra en el panel de firma en el reverso de su tarjeta">
+    </div>
+
+    <div class="nombre">
+        <input type="text" class="campos1" required
+        placeholder="   Nombre del titular de la tarjeta"
+        formControlName = "cardOwnerName" pattern="[A-Za-z]{1}">
+    </div>
+
+
+</form>
+
+
+<div id = "contenedor3">
+
+    <h2 class = "titulo">Tipo de suscripción</h2>
+
+    <div class="area2">
+        <div class="cuadro">
+            <h3>
+                Suscripción Mensual
+            </h3>
+
+            <h3>
+                50 € / mes
+            </h3>
+
+            <input class="boton" type="submit" value="Suscribirse" (click)="register('Mensual')" >
+        </div>
+
+        <div class="cuadro">
+            
+            <h3>
+                Suscripción Anual
+            </h3>
+
+            <h3>
+                340 € / año
+            </h3>
+
+            <input class="boton" type="submit" value="Suscribirse" (click)="register('Anual')">
+        </div>
+    </div>
 
 </div>
 
