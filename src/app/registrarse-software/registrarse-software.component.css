@@ -52,7 +52,7 @@ h2 {
 
 }
 
-#contenedor2 {
+#contenedor3 {
 
 
     display: grid; 
@@ -61,7 +61,7 @@ h2 {
     gap: 0px 0px; 
     grid-template-areas: 
     "."
-    "area1"; 
+    "area2"; 
 
     width: 80%;
     height: 500px;
@@ -85,7 +85,7 @@ h2 {
     gap: 0px 0px; 
     grid-template-areas: 
       ". ."; 
-    grid-area: area1; 
+    grid-area: area2; 
 
   }
 
@@ -116,8 +116,7 @@ h2 {
     grid-template-areas: 
         "."
         "."
-        "."; 
-
+        "boton"; 
     width: 326px;
     height: 300px;
     
@@ -132,14 +131,16 @@ h2 {
 
 
 h3 {
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    
     margin: auto;
+
+    
 }
 
 
@@ -163,3 +164,105 @@ h3 {
     cursor: pointer;
     margin: auto;
 }
+
+
+
+
+
+.contenedor {
+
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.6fr 1.2fr 1.2fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "titulo2 titulo2"
+        "numero numero"
+        "caducidad cvv"
+        "nombre nombre"; 
+
+
+    width: 869px;
+    height: 40%;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+
+.titulo2 { grid-area: titulo2; 
+}
+.numero { 
+    grid-area: numero; 
+    margin: auto;
+}
+.nombre { 
+    grid-area: nombre; 
+    margin: auto;
+}
+
+.caducidad { 
+    grid-area: caducidad; 
+    margin: auto;
+    margin-left:228px;
+}
+.cvv { 
+    grid-area: cvv; 
+    margin: auto;
+    margin-right:230px;
+}
+
+
+.campos1 {
+
+    width: 400px;
+    height: 40px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 22px;
+
+}
+
+
+.campos2 { 
+
+    width: 200px;
+    height: 40px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 22px;
+
+}
+
+h2 {
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: justify;
+    color: #000000;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

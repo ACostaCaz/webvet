@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { productoComponent } from '../producto/producto.component';
-import { Router } from '@angular/router';
-import { inventarioVet } from '../model/models';
-import { FunctionService } from '../funciones/funciones';
+
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -12,11 +9,11 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class ModProductComponent {
-  producto: inventarioVet = {
-    nombre: '',
-    descripcion: '',
-    precio: 0,
-    cantidad: 0,
+  /*producto: Product = {
+    name: '',
+    description: '',
+    price: 0,
+    units: 0,
     imagen: 0,
   };
   submitted = false;
@@ -29,10 +26,10 @@ export class ModProductComponent {
   }
   saveProduct(): void{
     const data = {
-      nombre: this.producto.nombre,
-      descripcion: this.producto.descripcion,
-      precio: this.producto.precio,
-      cantidad: this.producto.cantidad,
+      nombre: this.producto.name,
+      descripcion: this.producto.description,
+      precio: this.producto.price,
+      cantidad: this.producto.units,
       imagen: this.producto.imagen
     }
     this.functionService.create(data)
@@ -44,5 +41,5 @@ export class ModProductComponent {
         error => {
           console.log(error);
         });
-  }
+  }*/
 }

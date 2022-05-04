@@ -1,16 +1,40 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Observable,  throwError } from "rxjs";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Product } from './producto';
+import { HttpErrorResponse } from '@angular/common/http';
+import { catchError, retry } from 'rxjs/operators';
+
 @Injectable({
   providedIn: "root"
 })
+export class Producto {
 
-export class productoComponent {
+  //private productsUrl = 'api/servicios';
 
-  constructor(private http: HttpClient) {}
+  private productsUrl = 'http://localhost:3002/service/addproduct';
+
+  private productsUrl1 = 'http://localhost:3002/service/showProducts';
   
-  anadir(producto: any): Observable<any> {
-    return this.http.post("http://localhost:4200/addproduct/anadir", producto);
+  constructor(private http: HttpClient) {}
+
+  getProductos(): Observable<Product[]>  {
+    return this.http.get<Product[]>(this.productsUrl1).pipe(
+      retry(2),
+      catchError((error: HttpErrorResponse) => {
+        console.error(error);
+        return throwError(error);
+      })
+    );
+  }
+
+  addProducto(producto: Product): Observable<Product> {
+    return this.http.post<Product>(this.productsUrl, producto).pipe(
+      catchError((error: HttpErrorResponse) => {
+        console.error(error);
+        return throwError(error);
+      })
+    )
   }
 }
 

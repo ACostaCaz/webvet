@@ -13,13 +13,7 @@ export class EmpleadosComponent implements OnInit {
     }
 
   ngOnInit(): void {
-
-        document.getElementsByName("empleados")[0].style.fontWeight = "bold";
-
-		let contenedor = document.getElementsByClassName("contenedor2")[0];
-
-		
-
+        document.getElementsByName("empleados")[0].style.fontWeight = "bold";	
     } 
 
 }

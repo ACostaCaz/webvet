@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { inventarioVet } from '../model/models';
-import { FunctionService } from '../funciones/funciones';
+import { Producto } from '../producto/producto.component';
+import { Product } from '../producto/producto';
 import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-gestion-inventario',
@@ -8,66 +8,28 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./gestion-inventario.component.css']
 })
 export class GestionInventarioComponent implements OnInit {
-  productos?: inventarioVet[];
-  currentModelo: inventarioVet = {};
-  currentIndex = -1;
-  nombre='';
+  producto = {
+    name: '',
+    description: '',
+    units: '',
+    price: 0,
+  }
 
-  constructor(private functionService: FunctionService, private titleService: Title) { 
-    this.titleService.setTitle("Inventario");
+
+  edit = false;
+  add = false;
+  productos!: Product[];
+
+  constructor(public Producto: Producto, private titleService: Title) {
+    this.titleService.setTitle("Productos");
   }
 
   ngOnInit(): void {
-    this.retrieveProductos();
-    document.getElementsByName("inventario")[0].style.fontWeight = "bold";
+    this.getProductos();
+    document.getElementsByName("servicios")[0].style.fontWeight = "bold";
   }
-  retrieveProductos(): void {
-    this.functionService.getAll().subscribe(
-        data => {
-          this.productos = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
+  getProductos() {
+    this.Producto.getProductos().subscribe(productos => this.productos = productos);
   }
-  /*sumar(producto: inventarioVet, index: this.currentIndex): void{
-    this.productos
-  }
-  restar(): void{
-
-  }*/
-  refreshList(): void {
-    this.retrieveProductos();
-    this.currentModelo = {};
-    this.currentIndex = -1;
-  }
-  setActiveProduct(producto: inventarioVet, index: number): void {
-    this.currentModelo = producto;
-    this.currentIndex = index;
-  }
-  removeAllProductos(): void {
-    this.functionService.deleteAll()
-      .subscribe(
-        response => {
-          console.log(response);
-          this.refreshList();
-        },
-        error => {
-          console.log(error);
-        });
-  }
-  searchTitle(): void {
-    this.currentModelo = {};
-    this.currentIndex = -1;
-    this.functionService.findByTitle(this.nombre)
-      .subscribe(
-        data => {
-          this.productos = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
-  }
+  
 }

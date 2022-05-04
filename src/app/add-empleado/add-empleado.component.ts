@@ -26,7 +26,13 @@ export class AddEmpleadoComponent implements OnInit {
 	 
 	
 	  addEmpleado() {
+<<<<<<< HEAD
 		const data = {email: this.email, repeatedEmail: this.repeatedEmail, password: this.password, repeatedPassword: this.repeatedPassword};
+=======
+		const data = { image: this.imagen, name:  this.nombre, 
+			surname:  this.apellidos, principalFunc:  this.funcPrincipal, 
+			telephone: this.telefono, dni: this.dni, email: this.correo, password: this.password};
+>>>>>>> c06b13ca9da38ad07c98063779d3ec0863665978
 	
 	
 		this.Empleado.addEmpleado(data).subscribe(response => {
