@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HistoriaAtr } from '../historiaServicio/HistoriaAtr';
-import { Historia } from '../historiaServicio/historia.service';
+import { HistoriaMedAtr } from '../HistoriaMed/historiamed';
+import { HistoriaMed } from '../HistoriaMed/historiamed.component';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 @Component({
@@ -10,14 +10,28 @@ import { Title } from '@angular/platform-browser';
 })
 export class HistoriaMedicaPacienteComponent implements OnInit {
 
-  historias?: History[];
-  //currentHistoria: History = {};
-  currentIndex = -1;
-  nombre='';
+  historia = {
+    numhistorial: 0,
+    tipoAnimal: '',
+    fecha: '',
+    idanimal: 0,
+    descripcion: '',
+  }
+  edit = false;
+  add = false;
+  historias !: HistoriaMedAtr[];
 
-  constructor() { }
+  constructor(public HistoriaMed: HistoriaMed, private titleHistoria: Title) { 
+    this.titleHistoria.setTitle("Historias");
+  }
 
   ngOnInit(): void {
+    this.getHistoriasMed();
+        document.getElementsByName("historia")[0].style.fontWeight = "bold";
+  }
+
+  getHistoriasMed() {
+    this.HistoriaMed.getHistoriasMed().subscribe(historias => this.historias = historias);
   }
 }
 
