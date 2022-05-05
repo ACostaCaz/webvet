@@ -11,9 +11,11 @@ import { Title } from '@angular/platform-browser';
 export class AddHistoriaComponent implements OnInit{
   numhistorial!: number;
   fecha!: string;
-  idanimal!: number;
-  descripcion!: string;
-  tipoAnimal!: string;
+  idanimal !: number;
+  descripcion !: string;
+  treatment !: string;
+  observaciones !: string;
+
 
   constructor(public Historia: Historia, public router: Router, private titleService: Title) {
     this.titleService.setTitle("Añadir Historia");
@@ -24,8 +26,8 @@ export class AddHistoriaComponent implements OnInit{
 
   aceptar() {
     const historia = { numhistorial: this.numhistorial, fecha: this.fecha, 
-    idanimal: this.idanimal, descripcion: this.descripcion, tipoAnimal: 
-    this.tipoAnimal};
+      idanimal: this.idanimal, descripcion: this.descripcion, treatment: 
+    this.treatment, observaciones: this.observaciones};
 
     this.Historia.addHistoria(historia).subscribe(response => {
       console.log(response)

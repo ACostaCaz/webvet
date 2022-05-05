@@ -3,7 +3,6 @@ import { HistoriaAtr } from '../historiaServicio/HistoriaAtr';
 import { Historia } from '../historiaServicio/historia.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-
 @Component({
   selector: 'app-historia-medica-paciente',
   templateUrl: './historia-medica-paciente.component.html',
@@ -11,41 +10,15 @@ import { Title } from '@angular/platform-browser';
 })
 export class HistoriaMedicaPacienteComponent implements OnInit {
 
-@Component({
-  selector: 'app-historia-medica',
-  templateUrl: './historia-medica.component.html',
-  styleUrls: ['./historia-medica.component.css']
-})
+  historias?: History[];
+  //currentHistoria: History = {};
+  currentIndex = -1;
+  nombre='';
 
-  historia = {
-    numhistorial: 0,
-    fecha: '',
-    tipoAnimal: '',
-    idanimal: 0,
-    descripcion: '',
-    tratamiento: '',
-    observaciones: '',
-    veterinarioEncargado: ''
-  }
-
-
-  edit = false;
-  add = false;
-  historias!: HistoriaAtr[];
-
-  constructor(public Historia: Historia, private titleService: Title) {
-    this.titleService.setTitle("Historias");
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getHistorias();
-    document.getElementsByName("historias")[0].style.fontWeight = "bold";
   }
-
-  getHistorias() {
-    this.Historia.getHistorias().subscribe(historias => this.historias = historias);
-  }
-
 }
 
 

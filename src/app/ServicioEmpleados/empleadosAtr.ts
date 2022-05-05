@@ -1,10 +1,10 @@
 export interface EmpleadosAtr {
-  imagen: File;
-  nombre: string;
-  apellidos: string;
-  funcPrincipal: string;
-  telefono: number;
-  dni:string;
-  correo: string;
-  password: string;
-  }
+    image: File;
+    name: string;
+    surname: string;
+    principalFunc: string;
+    telephone: number;
+    dni:string;
+    email: string;
+    password: string;
+}

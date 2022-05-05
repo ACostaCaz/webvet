@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../producto/producto.component';
 import { Product } from '../producto/producto';
-
 import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-gestion-inventario',
@@ -31,7 +30,7 @@ export class GestionInventarioComponent implements OnInit {
   }
 
   getProductos() {
-    this.Producto.getProducto().subscribe(productos => this.productos = productos);
+    this.Producto.getProductos().subscribe(productos => this.productos = productos);
   }
 
 }
