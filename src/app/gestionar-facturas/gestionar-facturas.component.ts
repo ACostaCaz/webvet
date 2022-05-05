@@ -12,11 +12,12 @@ import { Title } from '@angular/platform-browser';
 export class GestionarFacturasComponent implements OnInit {
 
       factura = {
-        tipofactura: '',
+        billType: '',
         nameAnimal: '',
         animal: '',
         descripcion: '',
-        precio: 0,
+        precio: '',
+        createDate:''
       }
 
 

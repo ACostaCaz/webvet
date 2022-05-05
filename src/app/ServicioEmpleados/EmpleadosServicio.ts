@@ -10,9 +10,9 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class Empleado {
 
-  private productsUrl = 'http://localhost:3002/employ/newEmploy';
+  private productsUrl = 'http://localhost:3002/users/registeremployee';
 
-  private productsUrl1 = 'http://localhost:3002/employ/showEmployers';
+  private productsUrl1 = 'http://localhost:3002/users/showemployees';
   
   constructor(private http: HttpClient) {}
 

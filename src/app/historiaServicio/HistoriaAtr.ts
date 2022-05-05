@@ -1,9 +1,6 @@
 export interface HistoriaAtr {
-    numhistorial: number;
-    fecha: string;
-    idanimal: number;
-    descripcion: string;
-    treatment : string;
-    observaciones : string;
-
+    history_id: string;
+    createdAt: string;
+    animal_id: string;
+    treatment: string;
 }

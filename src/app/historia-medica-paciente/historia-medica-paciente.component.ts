@@ -33,6 +33,7 @@ export class HistoriaMedicaPacienteComponent implements OnInit {
   getHistoriasMed() {
     this.HistoriaMed.getHistoriasMed().subscribe(historias => this.historias = historias);
   }
+
 }
 
 

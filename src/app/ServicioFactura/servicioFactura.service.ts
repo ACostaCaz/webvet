@@ -12,9 +12,9 @@ export class servicioFactura {
 
   //private productsUrl = 'api/servicios';
 
-  private productsUrl = 'http://localhost:3002/factura/newFactura';
+  private productsUrl = 'http://localhost:3002/billing/newBill';
 
-  private productsUrl1 = 'http://localhost:3002/service/showFactura';
+  private productsUrl1 = 'http://localhost:3002/billing/showBills';
   
   constructor(private http: HttpClient) {}
 

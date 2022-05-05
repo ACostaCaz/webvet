@@ -1,7 +1,8 @@
 export interface facturaAtr {
-  facturaType: string;
+  billType: string;
   animalType: string;
   animalName: string;
   description: string;
-    cost: number;
+  cost: string;
+  createDate:string
   }

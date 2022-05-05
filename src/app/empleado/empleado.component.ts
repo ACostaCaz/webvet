@@ -12,7 +12,6 @@ import { Title } from '@angular/platform-browser';
 export class EmpleadoComponent implements OnInit {
 
   empleado = {
-    imagen: '',
     nombre: '',
   }
 

@@ -10,13 +10,9 @@ import { Title } from '@angular/platform-browser';
 })
 export class AddEmpleadoComponent implements OnInit {
 
-	imagen!: File;
-	nombre!: string;
-	apellidos!: string;
-	funcPrincipal!: string;
-	telefono!: number;
-	dni!: string;
-	correo!:string;
+	repeatedPassword!: string;
+	repeatedEmail!: string;
+	email!:string;
 	password!:string;
 
 	constructor(public Empleado: Empleado, public router: Router, private titleService: Title) {
@@ -24,23 +20,22 @@ export class AddEmpleadoComponent implements OnInit {
 	  }
 	
 	  ngOnInit(): void {
-		document.getElementsByName("servicios")[0].style.fontWeight = "bold";
+		document.getElementsByName("Empleados")[0].style.fontWeight = "bold";
 	  }
 	
 	 
 	
 	  addEmpleado() {
-		const data = { image: this.imagen, name:  this.nombre, 
-			surname:  this.apellidos, principalFunc:  this.funcPrincipal, 
-			telephone: this.telefono, dni: this.dni, email: this.correo, password: this.password};
+		const data = {email: this.email, repeatedEmail: this.repeatedEmail, password: this.password, repeatedPassword: this.repeatedPassword};
 	
 	
 		this.Empleado.addEmpleado(data).subscribe(response => {
 		  console.log(response)
 		});
+
+		this.router.navigateByUrl('/empleados');
 	
 		
-		this.router.navigateByUrl('/servicios');
 	  }
 	
 	}
