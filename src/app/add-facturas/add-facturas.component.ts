@@ -10,7 +10,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class AddFacturasComponent implements OnInit {
 
-  facturaType!: string;
+  billType!: string;
   animalType!: string;
   animalName!: string;
   idAnimal!: string;
@@ -28,7 +28,7 @@ export class AddFacturasComponent implements OnInit {
  
 
   addFactura() {
-    const data = { facturaType: this.facturaType,animalName:  this.animalName, 
+    const data = { billType: this.billType,animalName:  this.animalName, 
       animalType:  this.animalType, description:  this.description, 
       cost: this.cost, createDate:this.idAnimal};
 
@@ -38,7 +38,7 @@ export class AddFacturasComponent implements OnInit {
     });
 
     
-    this.router.navigateByUrl('/facturas');
+    this.router.navigateByUrl('/historialFacturas');
   }
 
 }

@@ -1,5 +1,5 @@
 export interface facturaAtr {
-  facturaType: string;
+  billType: string;
   animalType: string;
   animalName: string;
   description: string;
