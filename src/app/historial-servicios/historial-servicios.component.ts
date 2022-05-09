@@ -76,14 +76,17 @@ export class HistorialServiciosComponent implements OnInit {
 
                 if (type.toLowerCase().includes(buscar.toLowerCase())) {
                     this.servicios.push(element)
+                    return
                 }
                 
                 if (description.toLowerCase().includes(buscar.toLowerCase())) {
                     this.servicios.push(element)
+                    return
                 }
 
                 if (serviceName.toLowerCase().includes(buscar.toLowerCase())) {
                     this.servicios.push(element)
+                    return
                 }
             /*
             if (element.cost.toLowerCase().includes(buscar.toLowerCase())) {
