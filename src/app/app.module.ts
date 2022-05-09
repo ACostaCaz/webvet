@@ -35,6 +35,7 @@ import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-factu
 import { AddFacturasComponent } from './add-facturas/add-facturas.component';
 import { MostrarAnimalesComponent } from './mostrar-animales/mostrar-animales.component';
 import { AddAnimalComponent } from './add-animal/add-animal.component';
+import { FichaAnimalComponent } from './ficha-animal/ficha-animal.component';
 
 
 @NgModule({
@@ -44,7 +45,7 @@ import { AddAnimalComponent } from './add-animal/add-animal.component';
     PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, GestionInventarioComponent,
     HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, 
     InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, 
-    ModificarEmpleadoComponent, GestionarFacturasComponent, AddFacturasComponent, MostrarAnimalesComponent, AddAnimalComponent],
+    ModificarEmpleadoComponent, GestionarFacturasComponent, AddFacturasComponent, MostrarAnimalesComponent, AddAnimalComponent, FichaAnimalComponent],
 
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule, HttpClientModule,],
 
