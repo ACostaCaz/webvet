@@ -1,0 +1,79 @@
+<app-nav></app-nav>
+
+<div class = parteSuperior>
+
+    <p class = titulo> Animales de la clínica</p>
+
+    <div class = buscadorContenedor>
+
+        <p class = textoBucador> Buscar: </p>
+
+        <input class = buscador>
+
+    </div>
+
+    <input class = botonAñadir type="submit" value="Añadir">
+
+</div>
+
+<section class = recuadroAnimal *ngFor="let animal of animales">
+
+    <div class=container>
+        
+        <div class="dni">
+            <p class = textoFomr> Dni del dueño: </p>
+            <div class = recuadroForm> 
+                <td  class = info> {{animal.ownerId}} </td>
+            </div>
+        </div>
+
+        <div class="idAnimal">
+            <p class = textoFomr> Id del animal: </p>
+            <div class = recuadroForm>
+                <td  class = info> {{animal.history_id}} </td>
+            </div>
+        </div>
+
+        <div class="nombreAnimal">
+            <p class = textoFomr> Nombre del animal: </p>
+            <div class = recuadroForm>
+                <td  class = info> {{animal.name}} </td>
+            </div>
+        </div>
+
+        <div class="generoAnimalh">
+            <p class = textoFomr> Género del animal: </p>
+            <div class = recuadroForm>
+                <td  class = info> {{animal.gender}} </td>
+            </div>
+        </div>
+
+        <div class="tipoAnimal">
+            <p class = textoFomr> Tipo de animal: </p>
+            <div class = recuadroForm>
+                <td  class = info> {{animal.animalType}} </td>
+            </div>
+        </div>
+
+        <div class="edadAnimal">
+            <p class = textoFomr> Edad del animal: </p>
+
+            <div class = recuadroForm>
+                <td  class = info> {{animal.age}} </td>
+            </div>
+        </div>
+
+        <div class="nombreProp">
+            <p class = textoFomr> Nombre Dueño: </p>
+
+            <div class = recuadroForm>
+                <td  class = info> {{animal.ownerName}} </td>
+            </div>
+
+        </div>
+
+  </div>
+
+  <input class = botonEliminar type="submit" value="Eliminar">
+
+</section>

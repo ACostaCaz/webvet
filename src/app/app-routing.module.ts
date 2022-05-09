@@ -21,6 +21,7 @@ import { HistoriaMedicaPacienteComponent } from './historia-medica-paciente/hist
 import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
 import { AddFacturasComponent } from './add-facturas/add-facturas.component';
 import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-facturas.component';
+import { MostrarAnimalesComponent } from './mostrar-animales/mostrar-animales.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'addEmpleado', component: AddEmpleadoComponent, pathMatch: 'full'},
   { path: 'addFactura', component: AddFacturasComponent, pathMatch: 'full'},
   { path: 'historialFacturas', component: GestionarFacturasComponent, pathMatch: 'full'},
+  { path: 'mostrarAnimales', component: MostrarAnimalesComponent, pathMatch: 'full'},
 ];
 
 @NgModule({
