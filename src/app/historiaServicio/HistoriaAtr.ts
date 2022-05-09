@@ -1,6 +1,6 @@
 export interface HistoriaAtr {
-    history_id: string;
-    createdAt: string;
-    animal_id: string;
+    historyIdd: string;
+    createdat: string;
+    animalId: string;
     treatment: string;
 }
