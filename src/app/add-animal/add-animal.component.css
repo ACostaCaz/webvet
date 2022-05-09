@@ -1,0 +1,166 @@
+.container {  
+    display: grid;
+    grid-template-columns: 0.8fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "dni"
+      "nombre"
+      "tipo"
+      "genero"
+      "edad"
+      "nombreProp";
+
+      box-sizing: border-box;
+
+      width: 826px;
+      height: 614px;
+      
+      background: #ACFAFF;
+      border: 2px solid #000000;
+  }
+
+    .nombreProp{
+        margin: 0 auto;
+        grid-area: nombreProp; 
+        width: 600px;
+        margin-top: 20px;
+        margin-left: 150px;
+    }
+  
+  .dni { 
+      margin: 0 auto;
+      grid-area: dni; 
+      width: 600px;
+      margin-top: 20px;
+      margin-left: 150px;
+    }
+  
+  .nombre { 
+      margin: 0 auto;
+      grid-area: nombre; 
+      width: 600px;
+      margin-top: 20px;
+      margin-left: 150px;
+    }
+  
+  .tipo {
+      margin: 0 auto;
+      grid-area: tipo;
+      width: 600px;
+      margin-top: 20px;
+      margin-left: 150px;
+    }
+  
+  .genero { 
+      margin: 0 auto;
+      grid-area: genero; 
+      width: 600px;
+      margin-top: 20px;
+      margin-left: 150px;
+    }
+  
+  .edad { 
+      margin: 0 auto;
+      grid-area: edad; 
+      width: 600px;
+      margin-top: 20px;
+      margin-left: 150px;
+    }
+
+.recuadroCompleto{
+    width: 926px;
+    height: 594px;
+    margin: 0 auto;
+}
+
+.tituloRecuadro{
+    width: 926px;
+    margin: 0 auto;
+
+}
+
+.titulo{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    float: left;
+
+    color: #000000;
+}
+
+
+.textoForm{
+    width: 211px;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+
+    float: left;
+
+}
+
+.recuadroForm{
+    width: 293px;
+    height: 28px;
+    margin-top: 20px;
+    margin-right: 40px;
+    float: right;
+
+    background: #FFFFFF;
+}
+
+.botones{
+    width: 826px;
+    margin-top: 30px;
+}
+
+.botonAdd{
+    float: left;
+    box-sizing: border-box;
+    width: 140px;
+    height: 41px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+
+}
+
+.botonCancelar{
+    float: right;
+    box-sizing: border-box;
+    width: 150px;
+    height: 40px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+
+}
+  

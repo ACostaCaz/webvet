@@ -22,7 +22,7 @@ import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
 import { AddFacturasComponent } from './add-facturas/add-facturas.component';
 import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-facturas.component';
 import { MostrarAnimalesComponent } from './mostrar-animales/mostrar-animales.component';
-
+import { AddAnimalComponent } from './add-animal/add-animal.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
@@ -46,6 +46,7 @@ const routes: Routes = [
   { path: 'addFactura', component: AddFacturasComponent, pathMatch: 'full'},
   { path: 'historialFacturas', component: GestionarFacturasComponent, pathMatch: 'full'},
   { path: 'mostrarAnimales', component: MostrarAnimalesComponent, pathMatch: 'full'},
+  { path: 'addAnimal', component: AddAnimalComponent, pathMatch: 'full'},
 ];
 
 @NgModule({

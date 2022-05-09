@@ -9,9 +9,9 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class ServicioAnimal {
 
-  private productsUrl = 'http://localhost:3002/users/createAnimal';
+  private productsUrl = 'http://localhost:3002/animals/newAnimal';
 
-  private productsUrl1 = 'http://localhost:3002/users/showAnimal';
+  private productsUrl1 = 'http://localhost:3002/animals/showAnimals';
   
   constructor(private http: HttpClient) {}
 
