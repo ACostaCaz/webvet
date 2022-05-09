@@ -2,15 +2,15 @@
 <form method="post">
     <h1 class= titulo >Modificar un producto del inventario</h1>
     
-    <div class= block >
+    <!--<div *ngIf="!submitted" class= block >
 
-        <!--<div class= left >
+        <div class= left >
             <div class = nombre>
                 <p for="nombre" class = texto>Nombre:</p>
                 <input 
                 type="text" 
                 class="recuadro1" 
-                [(ngModel)]="producto.name"
+                [(ngModel)]="producto.nombre"
                 autocomplete="on"
                 required="required">
             </div>
@@ -22,7 +22,7 @@
                     spellcheck="true"
                     class = recuadro2
                     type="text"
-                    [(ngModel)]="producto.description"
+                    [(ngModel)]="producto.descripcion"
                     name="Descripcion"
                     required="required">
                 </textarea>
@@ -34,7 +34,7 @@
                     <input 
                     type="number" 
                     class="recuadro3" 
-                    [(ngModel)]="producto.price"
+                    [(ngModel)]="producto.precio"
                     autocomplete="on"
                     required="required">
                 </div>
@@ -44,7 +44,7 @@
                     <input 
                     type="number" 
                     class="recuadro3" 
-                    [(ngModel)]="producto.units"
+                    [(ngModel)]="producto.cantidad"
                     autocomplete="on"
                     required="required">
                 </div>
@@ -67,5 +67,5 @@
         </div>
     </div>
     <button class = boton onclick="location.href='http://localhost:4200/'" type="submit" (click)="saveProduct()">Guardar</button>
-</form>-->
-    
+</form>
+-->

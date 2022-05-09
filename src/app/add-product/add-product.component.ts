@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 })
 
 
-export class AddProductoComponent implements OnInit{
+export class AddProductComponent implements OnInit{
   name !: string;
   description !: string;
   units !: number;

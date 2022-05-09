@@ -11,29 +11,30 @@
 
 <section *ngFor="let historia of historias">
 
-    <div class = recuadroHM >
+    <div class = recuadroHM *ngFor="let historia of historias">
         
         <div class = NumHistorial>
             Número del historial: 
-            <td  class = info> {{historia.history_id}}</td>
+            <td  class = info> {{historia.numhistorial}}</td>
         </div>
 
         <div class = NumHistorial>
-            <td > {{historia.createDate}}</td>
+            Animal:
+            <td > {{historia.tipoAnimal}}</td>
         </div>
 
         <div class = NombreAnimal>
             Fecha: 
-            <td  class = info> {{historia.createdAt}}</td>
+            <td  class = info> {{historia.fecha}}</td>
         </div>
         <div class = Id-animal>
             Id del animal: 
-            <td  class = info> {{historia.animal_id}}</td>
+            <td  class = info> {{historia.idanimal}}</td>
         </div>
 
         <div class = Descripcion>Descripción:</div>
         <div class = Texto-Descripcion>
-            <td > {{historia.treatment[3]}}</td>
+            <td > {{historia.descripcion}}</td>
         </div>
     </div>
 

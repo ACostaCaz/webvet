@@ -11,7 +11,7 @@ import { RegistrarseSoftwareComponent } from './registrarse-software/registrarse
 import { ContactarComponent } from './contactar/contactar.component';
 import { CondicionesComponent } from './condiciones/condiciones.component';
 import { AddServiciosComponent } from './add-servicios/add-servicios.component';
-import { AddProductoComponent } from './add-product/add-product.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { ModProductComponent } from './mod-product/mod-product.component';
 import { HistorialServiciosComponent } from './historial-servicios/historial-servicios.component';
 import { InventarioClinicaComponent } from './inventario-clinica/inventario-clinica.component';
@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: 'contactar', component: ContactarComponent, pathMatch: 'full' },
   { path: 'condiciones', component: CondicionesComponent, pathMatch: 'full' },
   { path: 'addServicios', component: AddServiciosComponent, pathMatch: 'full' },
-  { path: 'addproduct', component: AddProductoComponent, pathMatch: 'full'},
+  { path: 'addproduct', component: AddProductComponent, pathMatch: 'full'},
   { path: 'modproduct', component: ModProductComponent, pathMatch: 'full'},
   { path: 'servicios', component: HistorialServiciosComponent, pathMatch: 'full'},
   { path: 'inventarioClinica', component: InventarioClinicaComponent, pathMatch: 'full'},

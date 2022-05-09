@@ -11,7 +11,7 @@ export class GestionInventarioComponent implements OnInit {
   producto = {
     name: '',
     description: '',
-    units: '',
+    units: 0,
     price: 0,
   }
 
@@ -26,10 +26,11 @@ export class GestionInventarioComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProductos();
-    document.getElementsByName("servicios")[0].style.fontWeight = "bold";
+    document.getElementsByName("productos")[0].style.fontWeight = "bold";
   }
+
   getProductos() {
     this.Producto.getProductos().subscribe(productos => this.productos = productos);
   }
-  
+
 }
