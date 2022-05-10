@@ -24,6 +24,8 @@ import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-factu
 import { MostrarAnimalesComponent } from './mostrar-animales/mostrar-animales.component';
 import { AddAnimalComponent } from './add-animal/add-animal.component';
 import { FichaAnimalComponent } from './ficha-animal/ficha-animal.component';
+import { MostrarCitasComponent } from './mostrar-citas/mostrar-citas.component';
+import { AddCitasComponent } from './add-citas/add-citas.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
@@ -49,6 +51,8 @@ const routes: Routes = [
   { path: 'mostrarAnimales', component: MostrarAnimalesComponent, pathMatch: 'full'},
   { path: 'addAnimal', component: AddAnimalComponent, pathMatch: 'full'},
   { path: 'fichaAnimal/:id', component: FichaAnimalComponent, pathMatch: 'full'},
+  { path: 'citas', component: MostrarCitasComponent, pathMatch: 'full'},
+  { path: 'addCitas', component: AddCitasComponent, pathMatch: 'full'},
 ];
 
 @NgModule({

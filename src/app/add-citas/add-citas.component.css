@@ -1,0 +1,137 @@
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Dni nombreDueño"
+      "animalType Fecha"
+      "Descripcion Descripcion";
+
+    width: 1029px;
+    margin: 0 auto;
+    height: 355px;
+    margin-top: 30px;
+      
+    background: #FEE4FF;
+  }
+  
+  .titulo{
+    width: 501px;
+    height: 42px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+    color: #000000;
+    
+  }
+  .Dni { 
+      margin-left: 30px;
+      grid-area: Dni; 
+      width: 450px;
+    }
+  
+  .nombreDueño {
+      grid-area: nombreDueño; 
+      width: 450px;
+    }
+  
+  .animalType { 
+        margin-left: 30px;
+      grid-area: animalType; 
+      width: 450px;
+    }
+  
+  .Fecha { 
+      grid-area: Fecha; 
+      width: 450px;
+    }
+  
+  .Descripcion { 
+        margin-left: 30px;
+      grid-area: Descripcion; 
+    }
+  
+
+.textoForm{
+    width: 203px;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+    float: left;
+
+}
+
+.recuadroTexto {
+    width: 201px;
+    height: 28px;
+
+    background: #FFFFFF;
+    float: right;
+    margin-top: 25px;
+    line-height:28px;
+    font-style: justify;
+
+}
+
+.textoFormDesc{
+    width: 203px;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    font-style: justify;
+
+    color: #000000;
+
+}
+
+
+.recuadroDesc{
+    width: 936px;
+    height: 104px;
+
+    background: #FFFFFF;
+}
+
+.recBoton{
+    width: 1029px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.botonAdd{
+    width: 110px;
+    height: 34px;
+
+    background: #8DF2B0;
+    border-radius: 10px;
+    float: right;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+
+
+    color: #000000;
+
+}

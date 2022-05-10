@@ -1,0 +1,76 @@
+<app-nav></app-nav>
+
+<p class = titulo> Formulario de Petición de Citas</p>
+<div class="container">
+
+    <div class="Dni">
+
+        <p class = textoForm> DNI: </p>
+        <input  
+            class = recuadroTexto
+            type="text"
+            [(ngModel)]="dni"
+            name="dni"
+            required="required"  
+        > 
+
+    </div>
+
+    <div class="nombreDueño">
+        <p class = textoForm> Nombre del dueño: </p>
+        <input  
+            class = recuadroTexto
+            type="text"
+            [(ngModel)]="ownerName"
+            name="ownerName"
+            required="required"  
+        > 
+
+
+    </div>
+
+    <div class="animalType">
+
+        <p class = textoForm> Tipo de animal: </p>
+        <input  
+            class = recuadroTexto
+            type="text"
+            [(ngModel)]="animalType"
+            name="animalType"
+            required="required"  
+        > 
+
+    </div>
+
+    <div class="Fecha">
+
+        <p class = textoForm> Fecha: </p>
+        <input  
+            class = recuadroTexto
+            type="text"
+            [(ngModel)]="date"
+            name="date"
+            required="required"  
+        > 
+
+    </div>
+
+    <div class="Descripcion">
+
+        <p class = textoFormDesc> Descripción: </p>
+        <textarea
+            class = recuadroDesc
+            type="text"
+            [(ngModel)]="description"
+            name="description"
+            required="required"  
+        >
+        </textarea>
+
+    </div>
+
+  </div>
+
+  <div class = recBoton>
+    <button class = botonAdd (click)="addCita()" >Añadir</button>
+  </div>

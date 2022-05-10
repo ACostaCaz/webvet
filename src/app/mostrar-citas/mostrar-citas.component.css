@@ -1,0 +1,182 @@
+.parteSuperior{
+    width: 1129px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.titulo{
+    width: 186px;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+    float: left;
+
+}
+
+.botonAdd{
+    margin-top: 20px;
+    box-sizing: border-box;
+
+    width: 134px;
+    height: 42px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+
+    float: right;
+}
+
+.fichaCita{
+    width: 1129px;
+    margin: 0 auto;
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Dni nombreDueño"
+      "animalType Fecha"
+      "Descripcion Descripcion";
+
+    width: 1129px;
+    height: 355px;
+      
+    background: #FEE4FF;
+  }
+  
+  .Dni { 
+      margin-left: 30px;
+      grid-area: Dni; 
+      width: 450px;
+    }
+  
+  .nombreDueño {
+      grid-area: nombreDueño; 
+      width: 450px;
+    }
+  
+  .animalType { 
+        margin-left: 30px;
+      grid-area: animalType; 
+      width: 450px;
+    }
+  
+  .Fecha { 
+      grid-area: Fecha; 
+      width: 450px;
+    }
+  
+  .Descripcion { 
+        margin-left: 30px;
+      grid-area: Descripcion; 
+    }
+  
+
+.textoForm{
+    width: 203px;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+    float: left;
+
+}
+
+.recuadroTexto {
+    width: 201px;
+    height: 28px;
+
+    background: #FFFFFF;
+    float: right;
+    margin-top: 25px;
+    line-height:28px;
+    font-style: justify;
+
+}
+
+.textoFormDesc{
+    width: 203px;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    font-style: justify;
+
+    color: #000000;
+
+}
+
+
+.recuadroDesc{
+    width: 986px;
+    height: 104px;
+
+    background: #FFFFFF;
+}
+
+.botonModificar{
+    box-sizing: border-box;
+    width: 134px;
+    height: 42px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+    float: left;
+    margin-top: 20px;
+}
+
+.botonDelete{
+    box-sizing: border-box;
+    width: 134px;
+    height: 42px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+    float: right;
+    margin-top: 20px;
+}

@@ -24,7 +24,7 @@ export class AddAnimalComponent implements OnInit {
 	  }
 	
 	  ngOnInit(): void {
-		document.getElementsByName("Empleados")[0].style.fontWeight = "bold";
+		document.getElementsByName("Animales")[0].style.fontWeight = "bold";
 	  }
 	
 	 

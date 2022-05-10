@@ -1,0 +1,53 @@
+<app-nav></app-nav>
+<div class = parteSuperior>
+
+    <p class = titulo> Historial de Citas </p>
+    <button class = botonAdd onclick="location.href='http://localhost:4200/addCitas'">Añadir Cita</button>
+
+</div>
+
+<section class = fichaCita *ngFor="let cita of citas">
+
+<div class="container">
+
+    <div class="Dni">
+
+        <p class = textoForm> DNI: </p>
+        <td  class = recuadroTexto> {{cita.dni}} </td>
+
+    </div>
+
+    <div class="nombreDueño">
+        <p class = textoForm> Nombre del dueño: </p>
+        <td  class = recuadroTexto> {{cita.ownerName}} </td>
+
+
+    </div>
+
+    <div class="animalType">
+
+        <p class = textoForm> Tipo de animal: </p>
+        <td  class = recuadroTexto> {{cita.animalType}} </td>
+
+    </div>
+
+    <div class="Fecha">
+
+        <p class = textoForm> Fecha: </p>
+        <td  class = recuadroTexto> {{cita.date}} </td>
+
+    </div>
+
+    <div class="Descripcion">
+
+        <p class = textoFormDesc> Descripción: </p>
+        <td  class = recuadroDesc> {{cita.description}} </td>
+
+    </div>
+
+  </div>
+
+  <button class = botonModificar>Modificar</button>
+  <button class = botonDelete>Eliminar</button>
+
+</section>
