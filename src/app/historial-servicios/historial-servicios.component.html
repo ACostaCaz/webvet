@@ -1,38 +1,45 @@
 <app-nav></app-nav>
-<p class = titulo>Servicios ofrecidos por la clinica</p>
 
-<form class="formBuscar" [formGroup]="buscador">
-    <label for="buscador">Buscador: </label>
-    <input type="text" class="buscador" id="buscador" formControlName="buscar" 
-    (change)="filtrar($event)">
-</form>
+<div class="container">
+    <div class="area1">
 
-<button class = boton onclick="location.href='http://localhost:4200/addServicios'" type="submit">Añadir nuevo servicio</button>
+        <p class = titulo>Servicios ofrecidos por la clinica</p>
 
+        <form class="formBuscar" [formGroup]="buscador">
+            <label for="buscador">Buscador: </label>
+            <input type="text" class="buscador" id="buscador" formControlName="buscar" 
+            (change)="filtrar($event)">
+        </form>
 
-<div class="container" *ngFor="let servicio of servicios">
+        <button class = boton onclick="location.href='http://localhost:4200/addServicios'" type="submit">Añadir nuevo servicio</button>
 
-    <div class="servicio">
-        <p class = caracteristicas>Nombre del Servicio: </p>
-        <td  class = info> {{servicio.serviceName}}</td>
     </div>
 
-    <div class="animal">
-        <p class = caracteristicas>Tipo de Animal: </p>
-        <td  class = info>  {{servicio.animalType}}</td>
-    </div>
-    
-    <div class="Descripcion">
-        <p class = caracteristicasDesc>Descripcion:</p>
-        <td class = infoDesc> {{servicio.description}}</td>
+    <div class="contenedor" *ngFor="let servicio of servicios">
+
+        <div class="servicio">
+            <p class = caracteristicas>Nombre del Servicio: </p>
+            <td  class = info> {{servicio.serviceName}}</td>
+        </div>
+
+        <div class="animal">
+            <p class = caracteristicas>Tipo de Animal: </p>
+            <td  class = info>  {{servicio.animalType}}</td>
+        </div>
+        
+        <div class="Descripcion">
+            <p class = caracteristicasDesc>Descripcion:</p>
+            <td class = infoDesc> {{servicio.description}}</td>
+        </div>
+
+        <div class="Precio">
+            <p class = caracteristicas>Precio:</p>
+            <td  class = info> {{servicio.cost}} €</td>
+        </div>
+
     </div>
 
-    <div class="Precio">
-        <p class = caracteristicas>Precio:</p>
-        <td  class = info> {{servicio.cost}} €</td>
-    </div>
-
-  </div>
+</div>
 
 
   
