@@ -8,28 +8,26 @@
         <h1>DATOS DEL ANIMAL</h1>
 
         <form class="formulario">
-
-            
             
             <label  for="">Dni del dueño:</label>
-            <input class="campo" type="text" name="" id="">
+            <input class="campo" type="text" formControlName="dni">
 
             <label for="">Nombre del animal:</label>
-            <input class="campo" type="text" name="" id="">
+            <input class="campo" type="text" formControlName="nombre">
 
             <label for="">Tipo de animal:</label>
-            <input class="campo" type="text" name="" id="">
+            <input class="campo" type="text" formControlName="tipo">
 
             <label for="">Género del animal</label>
-            <input class="campo" type="text" name="" id="">
+            <input class="campo" type="text" formControlName="genero">
 
             <label for="">Edad del animal</label>
-            <input class="campo" type="text" name="" id="">
+            <input class="campo" type="text" formControlName="edad">
 
 
         </form>
 
-        <button class="botonModificar">Modificar</button>
+        <button (click)="modificar()" class="botonModificar">Modificar</button>
 
     </div>
 
@@ -41,8 +39,8 @@
         <img class="imagen" src="/assets/vet.jpeg" alt="">
         
         <div class="botones">
-            <button class="botonHistoria">Añadir Historia</button>
-            <button class="botonFactura">Añadir Factura</button>
+            <button routerLink="/addhistoria" class="botonHistoria">Añadir Historia</button>
+            <button routerLink="/addFactura" class="botonFactura">Añadir Factura</button>
         </div>
           
         

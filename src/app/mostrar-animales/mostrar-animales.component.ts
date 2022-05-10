@@ -26,12 +26,12 @@ export class MostrarAnimalesComponent implements OnInit {
       animales: any;
     
       constructor(public ServicioAnimal: ServicioAnimal, private titleService: Title) {
-        this.titleService.setTitle("");
+        this.titleService.setTitle("Animales");
       }
     
       ngOnInit(): void {
         this.geAnimales();
-        document.getElementsByName("facturas")[0].style.fontWeight = "bold";
+        document.getElementsByName("animales")[0].style.fontWeight = "bold";
       }
     
       geAnimales() {

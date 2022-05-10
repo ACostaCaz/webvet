@@ -125,6 +125,7 @@ label {
     border-radius: 10px;
     margin: auto;
     margin-left: 0px;
+    cursor: pointer;
 
 }
 
@@ -137,5 +138,5 @@ label {
     border-radius: 10px;
     margin: auto;
     margin-right: 0px;
-
+    cursor: pointer;
 }

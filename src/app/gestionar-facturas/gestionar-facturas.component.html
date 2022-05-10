@@ -7,13 +7,11 @@
 
         <p class = titulo>Historial de facturas</p>
 
-        <form class="formBuscar">
+        <form class="formBuscar" [formGroup]="buscador">
             <label for="buscador">Buscador: </label>
-            <input type="text" class="buscador" id="buscador" formControlName="buscar">
+            <input type="text" class="buscador" id="buscador" formControlName="buscar" 
+            (change)="filtrar($event)">
         </form>
-
-
-        <button class = boton onclick="location.href='http://localhost:4200/addFactura'" type="submit">Añadir nueva Factura</button>
 
     </div>
 

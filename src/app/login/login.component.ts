@@ -14,13 +14,17 @@ export class LoginComponent {
 
 	constructor(public userService: UsersService, public router: Router, private titleService: Title) {
 		this.titleService.setTitle("Iniciar Sesión");
+		console.log("Token", this.userService.getToken())
 	}
 
   	login() {
 		const user = { email: this.email, password: this.password };
 			this.userService.login(user).subscribe(data => {
-			this.userService.setToken(data.token);
+				console.log(data)
+			this.userService.setToken(data.token, data.role);
 			this.router.navigateByUrl('/servicios');
 		});
 	}
+
+	
 }

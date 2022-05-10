@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { servicioFactura } from '../ServicioFactura/servicioFactura.service';
-import { facturaAtr } from '../ServicioFactura/factura';
-import { Router } from '@angular/router';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
+import { FacturaService } from '../servicios/factura/factura.service';
 
 @Component({
   selector: 'app-gestionar-facturas',
@@ -11,32 +10,78 @@ import { Title } from '@angular/platform-browser';
 })
 export class GestionarFacturasComponent implements OnInit {
 
-      factura = {
-        billType: '',
-        nameAnimal: '',
-        animal: '',
-        descripcion: '',
-        precio: '',
-        createDate:''
-      }
-
-
-      edit = false;
-      add = false;
-      facturas!: facturaAtr[];
+      facturas!: any;
+      allFacturas!: any;
     
-      constructor(public servicioFactura: servicioFactura, private titleService: Title) {
+      constructor(private titleService: Title, private servicioFactura: FacturaService) {
         this.titleService.setTitle("Servicios");
       }
     
-      ngOnInit(): void {
-        this.getFacturas();
-        document.getElementsByName("facturas")[0].style.fontWeight = "bold";
-      }
-    
-      getFacturas() {
-        this.servicioFactura.getFacturas().subscribe(facturas => this.facturas = facturas);
-      }
-    
-    }
+      buscador = new FormGroup({
+        buscar: new FormControl('')
+      })
 
+      async ngOnInit(): Promise<void> {
+          
+          this.servicioFactura.getFacturas().then((data) => {
+            data.subscribe((data) => {
+              this.allFacturas = data
+              this.facturas = data
+            });
+          })
+          
+          document.getElementsByName("facturas")[0].style.fontWeight = "bold";
+      }
+    
+
+      filtrar(event: any) {
+        
+        var buscar:string = this.buscador.get("buscar")!.value
+        buscar = buscar.toLowerCase()
+        this.facturas = this.allFacturas
+
+        if (buscar == "" || buscar == " ") {
+            this.facturas = this.allFacturas
+        }
+
+        else {
+
+            this.facturas = [];
+            this.allFacturas.forEach((element: any) => {
+              
+                var animalId = element.animalId.toString();
+                var billType = element.billType.toString();
+                var animalType = element.animalType.toString();
+                var animalName = element.animalName.toString();
+                var description = element.description.toString();
+
+
+                if (animalId.toLowerCase().includes(buscar.toLowerCase())) {
+                    this.facturas.push(element)
+                    return
+                }
+                
+                if (billType.toLowerCase().includes(buscar.toLowerCase())) {
+                    this.facturas.push(element)
+                    return
+                }
+
+                if (animalType.toLowerCase().includes(buscar.toLowerCase())) {
+                    this.facturas.push(element)
+                    return
+                }
+
+                if (animalName.toLowerCase().includes(buscar.toLowerCase())) {
+                  this.facturas.push(element)
+                  return
+                }
+
+                if (description.toLowerCase().includes(buscar.toLowerCase())) {
+                  this.facturas.push(element)
+      
+                }
+            })
+    
+        }
+      }
+}
