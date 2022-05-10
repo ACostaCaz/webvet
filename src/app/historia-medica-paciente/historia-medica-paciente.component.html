@@ -1,46 +1,63 @@
 <app-nav></app-nav>
 
 
-<div>
+    
+<div class="container">
 
-    <p class = "tituloHM"> Historial de historias médicas</p>
 
-    <input class = botonAñadir onclick="location.href='./addhistoria'" type="submit" value="Añadir Historia">
+    <div class="area1">
 
-</div>
+        <p class = "titulo"> Historial de historias médicas</p>
 
-<section *ngFor="let historia of historias">
+        <form class="formBuscar">
+            <label for="buscador">Buscador: </label>
+            <input type="text" class="buscador" id="buscador" formControlName="buscar">
+        </form>
 
-    <div class = recuadroHM *ngFor="let historia of historias">
-        
-        <div class = NumHistorial>
-            Número del historial: 
-            <td  class = info> {{historia.numhistorial}}</td>
-        </div>
+        <input class = botonAñadir onclick="location.href='./addhistoria'" type="submit" value="Añadir Historia">
 
-        <div class = NumHistorial>
-            Animal:
-            <td > {{historia.tipoAnimal}}</td>
-        </div>
-
-        <div class = NombreAnimal>
-            Fecha: 
-            <td  class = info> {{historia.fecha}}</td>
-        </div>
-        <div class = Id-animal>
-            Id del animal: 
-            <td  class = info> {{historia.idanimal}}</td>
-        </div>
-
-        <div class = Descripcion>Descripción:</div>
-        <div class = Texto-Descripcion>
-            <td > {{historia.descripcion}}</td>
-        </div>
     </div>
 
-    <input type=button class = botonEliminar value = Eliminar>
+    <div class="facturas" *ngFor="let historia of historias">
 
-</section>
+        <div class="recuadro">
+            <div class = datos>
+            
+        
+                <p>Número del historial: </p> 
+                <p> {{historia.numhistorial}} </p>
+        
+                <p>Animal:</p>
+                <p> {{historia.tipoAnimal}} </p>
+
+                <p>Fecha:</p>
+                <p> {{historia.fecha}}</p>
+            
+                <p>Id del Animal:</p>
+                <p> {{historia.idanimal}} </p>
+
+            </div>
+
+            <div class="descripcion">
+                <p>Descripcion:
+                <br>
+                    {{historia.descripcion}}
+                </p>
+            
+            </div>        
+        
+        </div>
+            
+        
+        <div class="botones">
+            <button class="botonModificar">Modificar</button>
+            <button class="botonEliminar">Eliminar</button>
+        </div>
+
+        
+
+    </div>
 
 
+</div>
 
