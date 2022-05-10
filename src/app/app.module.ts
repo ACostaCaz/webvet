@@ -35,6 +35,11 @@ import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-factu
 import { AddFacturasComponent } from './add-facturas/add-facturas.component';
 import { PermisosComponent } from './permisos/permisos.component';
 
+import { MostrarAnimalesComponent } from './mostrar-animales/mostrar-animales.component';
+import { AddAnimalComponent } from './add-animal/add-animal.component';
+import { FichaAnimalComponent } from './ficha-animal/ficha-animal.component';
+import { MostrarCitasComponent } from './mostrar-citas/mostrar-citas.component';
+import { AddCitasComponent } from './add-citas/add-citas.component';
 
 
 @NgModule({
@@ -43,7 +48,9 @@ import { PermisosComponent } from './permisos/permisos.component';
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
     PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, GestionInventarioComponent,
     HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, 
-    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent, GestionarFacturasComponent, AddFacturasComponent, PermisosComponent,],
+    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent, GestionarFacturasComponent, AddFacturasComponent, PermisosComponent,
+    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, 
+    ModificarEmpleadoComponent, GestionarFacturasComponent, AddFacturasComponent, MostrarAnimalesComponent, AddAnimalComponent, FichaAnimalComponent, MostrarCitasComponent, AddCitasComponent],
 
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule, HttpClientModule,],
 
@@ -51,4 +58,3 @@ import { PermisosComponent } from './permisos/permisos.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-

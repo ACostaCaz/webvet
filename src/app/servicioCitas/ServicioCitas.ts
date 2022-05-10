@@ -1,25 +1,22 @@
 import { Observable,  throwError } from "rxjs";
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { facturaAtr } from './factura';
 import { HttpErrorResponse } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: "root"
 })
-export class servicioFactura {
+export class ServicioCitas {
 
-  //private productsUrl = 'api/servicios';
+  private productsUrl = 'http://localhost:3002/appointments/newAppointment';
 
-  private productsUrl = 'http://localhost:3002/billing/newBill';
-
-  private productsUrl1 = 'http://localhost:3002/billing/showBills';
+  private productsUrl1 = 'http://localhost:3002/appointments/getAppointments';
   
   constructor(private http: HttpClient) {}
 
-  getFacturas(): Observable<facturaAtr[]>  {
-    return this.http.get<facturaAtr[]>(this.productsUrl1).pipe(
+  getCitas()  {
+    return this.http.get(this.productsUrl1).pipe(
       retry(2),
       catchError((error: HttpErrorResponse) => {
         console.error(error);
@@ -28,8 +25,8 @@ export class servicioFactura {
     );
   }
 
-  addFactura(factura: facturaAtr): Observable<facturaAtr> {
-    return this.http.post<facturaAtr>(this.productsUrl, factura).pipe(
+  addCitas(animal: any) {
+    return this.http.post(this.productsUrl, animal).pipe(
       catchError((error: HttpErrorResponse) => {
         console.error(error);
         return throwError(error);
@@ -37,5 +34,4 @@ export class servicioFactura {
     )
   }
 }
-
 

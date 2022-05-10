@@ -1,0 +1,93 @@
+<app-nav></app-nav>
+
+<div class = tituloRecuadro>
+    <p class = titulo>Formulario de Animal</p>
+</div>
+
+<section class = recuadroCompleto>
+    <div class="container">
+
+        <div class="dni">
+
+            <p class = textoForm> Dni del dueño: </p>
+
+            <input
+                class = recuadroForm
+                type="text"
+                [(ngModel)]="ownerId"
+                name="ownerId"
+                required="required"  
+            >  
+
+        </div>
+
+        <div class="nombre">
+            <p class = textoForm> Nombre del Animal: </p>
+            <input
+                class = recuadroForm
+                type="text"
+                [(ngModel)]="name"
+                name="name"
+                required="required"  
+            >   
+
+        </div>
+
+        <div class="tipo">
+            <p class = textoForm> Tipo de animal: </p>
+            <input
+                class = recuadroForm
+                type="text"
+                [(ngModel)]="animalType"
+                name="animalType"
+                required="required"  
+            >   
+
+        </div>
+        <div class="genero">
+            <p class = textoForm> Género del animal: </p>
+            <input
+                class = recuadroForm
+                type="text"
+                [(ngModel)]="gender"
+                name="gender"
+                required="required"  
+            >    
+
+        </div>
+        <div class="edad">
+            <p class = textoForm> Edad del animal: </p>
+            <input
+                class = recuadroForm
+                type="text"
+                [(ngModel)]="age"
+                name="age"
+                required="required"  
+            >    
+
+        </div>
+
+        <div class="nombreProp">
+            <p class = textoForm> Nombre dueño: </p>
+            <input
+                class = recuadroForm
+                type="text"
+                [(ngModel)]="ownerName"
+                name="ownerName"
+                required="required"  
+            >    
+
+        </div>
+
+    </div>
+
+    <div class="botones">
+
+        <button class = botonAdd (click)="addAnimal()" >Añadir</button>
+
+        <button class = botonCancelar>Cancelar</button>
+
+    </div>
+
+
+</section>

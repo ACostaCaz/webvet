@@ -27,7 +27,7 @@ export class HistoriaMedicaPacienteComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHistoriasMed();
-        document.getElementsByName("historia")[0].style.fontWeight = "bold";
+        document.getElementsByName("historiales")[0].style.fontWeight = "bold";
   }
 
   getHistoriasMed() {

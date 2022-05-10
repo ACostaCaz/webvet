@@ -1,10 +1,66 @@
-.tituloHM{
-    font-size: 40px;
-    font-style: bold;
-    margin-left: 125px;
-    font-weight: bold;
-    float: left;
+
+
+.container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "area1"
+        "facturas"; 
+        margin: auto;
+        margin-top: 70px;
 }
+
+
+
+
+.area1 {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . ."; 
+    grid-area: area1;
+    margin: auto;
+}
+
+.formBuscar {
+    margin: auto;    
+}
+  
+label{
+    font-style: normal;
+    font-size: 24px;
+}
+  
+  
+.titulo {
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 42px;
+    margin: auto;
+    color: #000000;
+}
+  
+.buscador {
+    width: 400px;
+    height: 35px;
+  
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    border: 1px solid #8DF2B0;
+    border-radius: 10px;
+}
+
+
+
 
 .info{
     float: right;
@@ -12,106 +68,114 @@
     font-style: normal;
 
 }
-.recuadroHM {
-    width: 1090px;
-    height: 160px;
-
-    margin-top: 50px;
-    margin-left: 125px;
-
-    border: 1px solid black;
-
-    background: #ffffff;
 
 
-    
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    gap: 7px 15px; 
+.facturas {
+
+    grid-area: facturas;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
     grid-template-areas: 
-    "NumHistorial NombreAnimal Id-animal Id-animal"
-    "Descripcion Descripcion Descripcion Descripcion"
-    "Texto-Descripcion Texto-Descripcion Texto-Descripcion Texto-Descripcion"; 
+        "recuadro"
+        "botones"; 
+    margin: auto;
 
-    margin-bottom: 20px;
-      
-  }
-  .Descripcion { 
-        margin-left: -1007px;
-        margin-top: 70px;
-        width: 1010px;
-        font-weight: bold;
-    }
-  .Texto-Descripcion { 
-        grid-area: Texto-Descripcion; 
-        margin-left: 40px;
-        margin-top: -30px;
-        width: 1010px;
-        text-align: justify;
-        
-    }
-  .NumHistorial { 
-        margin-left: 40px;
-        margin-top: 15px;
-        font-weight: bold;
-    }
-  .TipoAnimal { 
-        margin-left: 40px;
-        margin-top: 15px;
-        font-weight: bold;
-    }
-  .NombreAnimal { 
-        margin-left: 40px;
-        margin-top: 15px;
-        font-weight: bold;
-        margin-left: 100px;
-        width: 300px;
-    }
-  .Id-animal { 
-        margin-left: 150px;
-        width: 200px;
-        margin-top: 15px;
-        font-weight: bold;
-    }
+}
 
-    .botonModificar{
-        width: 100px;
-        height: 37px;
+p {
+    margin: auto;
+}
 
-        background: #8DF2B0;
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        border-radius: 10px;
-        font-weight: bold;
-        margin-left: 125px;
-        margin-bottom: 20px;
-        cursor: pointer;
-    }
 
-    .botonAñadir{
-        width: 120px;
-        height: 37px;
-        background: #8DF2B0;
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        border-radius: 10px;
-        font-weight: bold;
-        margin-left: 460px;
-        margin-top: 50px;
-        cursor: pointer;
-    }
+.descripcion {
+    grid-area: descripcion;
+    margin: auto;
+    width: 1150px;
+}
 
-    .botonEliminar{
-        width: 100px;
-        height: 37px;
+.datos {
 
-        background: #8DF2B0;
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        border-radius: 10px;
-        font-weight: bold;
-        margin-left: 1120px;
-        margin-bottom: 20px;
-        cursor: pointer;
-    }
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . . . . . . ."; 
+    grid-area: datos; 
+    margin: auto;
+}
+
+.recuadro {
+    grid-area: recuadro;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.5fr 1.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "datos"
+        "descripcion"; 
+    width: 1200px;
+    height: 200px;
+    background: #F1F1F1;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: auto;
+    grid-area: facturas;
+
+}
+
+.botones {
+    grid-area: botones;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+
+
+.botonAñadir {
+    width: 220px;
+    height: 37px;
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: auto;
+    cursor: pointer;
+}
+
+.botonModificar{
+    width: 100px;
+    height: 37px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: auto;
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+.botonEliminar{
+    width: 100px;
+    height: 37px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: auto;
+    margin-right: 1px;
+    cursor: pointer;
+}
+  

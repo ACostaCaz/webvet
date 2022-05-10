@@ -1,0 +1,142 @@
+.container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "area1 area2"; 
+    margin: auto;
+    width: 1200px;
+}
+
+
+.area1 {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.4fr 1fr 0.4fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "."
+      "."
+      "."; 
+    grid-area: area1; 
+    margin: auto;
+    margin-top: 60px;
+}
+
+h1 {
+    margin: auto;
+}
+
+
+.area2 {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.4fr 1fr 0.4fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "."
+      "."
+      "botones"; 
+    grid-area: area2;
+    margin: auto;
+    margin-top: 60px; 
+}
+
+.formulario {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        ". ."
+        ". ."
+        ". ."
+        ". ."
+        ". ."; 
+
+    font-size: 20px;
+    box-sizing: border-box;
+    background: #E4FFD7;
+    width: 443px;
+    height: 408px;
+    border: 1px solid #000000;
+    border-radius: 17px;
+    margin: auto;
+
+}
+
+label {
+    margin: auto;
+    margin-left: 20px
+}
+
+.campo {
+    font-size: 20px;
+    width: 180px;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    height: 20px;
+    
+}
+
+
+.botonModificar {
+    width: 116px;
+    height: 35px;
+    margin: auto;
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 0px;
+
+}
+
+.botones {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        ". ."; 
+    grid-area: botones; 
+}
+
+.imagen {
+    font-size: 20px;
+    box-sizing: border-box;
+    background: #E4FFD7;
+    width: 443px;
+    height: 408px;
+    border: 1px solid #000000;
+    border-radius: 17px;
+    margin: auto;
+}
+
+.botonHistoria {
+    width: 116px;
+    height: 35px;
+    margin: auto;
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 0px;
+    cursor: pointer;
+
+}
+
+.botonFactura {
+    width: 116px;
+    height: 35px;
+    margin: auto;
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin: auto;
+    margin-right: 0px;
+    cursor: pointer;
+}

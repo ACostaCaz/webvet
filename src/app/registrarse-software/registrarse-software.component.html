@@ -5,7 +5,13 @@
     <h2 class = "titulo">Credenciales - Crear Cuenta</h2>
 
 
-    <form [formGroup]="credenciales" method="post" class="area1">
+    <form [formGroup]="credenciales" class="area1">
+
+        <input class="campos" type="text" required="required" name="cif" 
+        formControlName="cif" placeholder="CIF">
+
+        <input class="campos" type="text" required="required" name="clinicName"
+        formControlName="clinicName" placeholder="Nombre de la clínica">
 
         <input class="campos" type="email" required="required" name="email" 
         formControlName="email" placeholder="Correo Electrónico">
@@ -75,7 +81,7 @@
                 50 € / mes
             </h3>
 
-            <input class="boton" type="submit" value="Suscribirse" (click)="register('Mensual')" >
+            <input class="boton" type="submit" value="Suscribirse" (click)="register('monthly')" >
         </div>
 
         <div class="cuadro">
@@ -88,7 +94,7 @@
                 340 € / año
             </h3>
 
-            <input class="boton" type="submit" value="Suscribirse" (click)="register('Anual')">
+            <input class="boton" type="submit" value="Suscribirse" (click)="register('yearly')">
         </div>
     </div>
 

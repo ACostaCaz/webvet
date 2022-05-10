@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import {Title} from "@angular/platform-browser";
 import { Router } from '@angular/router';
@@ -20,6 +20,8 @@ export class RegistrarseSoftwareComponent {
 
 
 	credenciales = new FormGroup ({
+		cif: new FormControl(),
+		clinicName: new FormControl(),
 		email: new FormControl(),
 		repeatedEmail: new FormControl(),
 		password: new FormControl(),
@@ -39,40 +41,48 @@ export class RegistrarseSoftwareComponent {
 
 
 
-  	register(suscruption: string) {
+  	register(suscription: string) {
 
+		const cif = this.credenciales.get('cif')!.value;
+		const clinicName = this.credenciales.get('clinicName')!.value;
 		const email = this.credenciales.get('email')!.value;
 		const repeatedEmail = this.credenciales.get('repeatedEmail')!.value;
 		const password = this.credenciales.get('password')!.value;
 		const repeatedPassword = this.credenciales.get('repeatedPassword')!.value;
-		const cardNumber = this.pago.get('cardNumber')!.value;
+		/*const cardNumber = this.pago.get('cardNumber')!.value;
 		const expirationDate = this.pago.get('expirationDate')!.value;
 		const cvv = this.pago.get('cvv')!.value;
-		const cardOwnerName = this.pago.get('cardOwnerName')!.value;
-		
-		console.log(email)
+		const cardOwnerName = this.pago.get('cardOwnerName')!.value;*/
 
-		if (this.validationForm1(email, repeatedEmail, password, repeatedPassword)) {
-			const user = { email: email, password: password, repeatedPassword: repeatedPassword, 
-			suscription: suscruption, cardNumber: cardNumber, expirationDate: expirationDate,
-			cvv: cvv, cardOwnerName :cardOwnerName};
-
-			console.log(user)
-			this.userService.register(user).subscribe(data => {
-				alert("El usuario se ha creado correctamente");
-				this.router.navigateByUrl('/login');
+		if (this.validationForm1(email, repeatedEmail, password, repeatedPassword, cif, clinicName)) {
 			
+			const userRegister = { email: email, password: password, repeatedPassword: repeatedPassword}
+			const userLogin = {email: email, password: password}
+
+			
+			this.userService.register(userRegister).subscribe(data => {
+				this.userService.login(userLogin).subscribe(data => {
+					alert("El usuario se ha creado correctamente");
+					this.router.navigateByUrl("/login")
+				})
+				
 			});
+
+			
 		}
 	}
 
 
 
-	validationForm1(email: string, repeatedEmail: string, password: string, repeatedPassword: string, ): boolean {
+	validationForm1(email: string, repeatedEmail: string, password: string, repeatedPassword: string, cif: string, clinicName: string): boolean {
 
-		let value:boolean = true;
+		let value = true;
 
 		var html;
+
+		if (email == null || password == null || repeatedEmail == null || repeatedPassword == null || cif == null || clinicName == null) {
+			return false;
+		}
 
 		if (email != repeatedEmail) {
 
@@ -80,15 +90,15 @@ export class RegistrarseSoftwareComponent {
 			html.setAttribute('value','');
 			html.style.border = "1px solid #e24a4a";
 
-			alert("Los emails tienen que ser iguales, inténtelo de nuevo");
 			value = false;
+			alert("Los emails tienen que ser iguales, inténtelo de nuevo");
 			
 		}
 
 		else {
 
 			html = document.getElementsByName("repeatedEmail")[0];
-			html.style.border = "1px solid black";
+			html.style.border = "";
 
 		}
 
@@ -98,19 +108,55 @@ export class RegistrarseSoftwareComponent {
 			html.setAttribute('value','');
 			html.style.border = "1px solid #e24a4a";
 
-			alert("Las contraseñas tienen que ser iguales, inténtelo de nuevo");
 			value = false;
+			alert("Las contraseñas tienen que ser iguales, inténtelo de nuevo");
 
 		}
 
 		else {
 
 			html = document.getElementsByName("repeatedPassword")[0];
-			html.style.border = "1px solid black";
+			html.style.border = "";
 
 		}
 
+
+		if (clinicName == "") {
+			html = document.getElementsByName("clinicName")[0];
+			html.setAttribute('value','');
+			html.style.border = "";
+			
+			value = false;
+			alert("Por favor, rellene todos los campos");
+			
+		}
+
+		else {
+
+			html = document.getElementsByName("clinicName")[0];
+			html.style.border = "";
+
+		}
+
+	
+		if (cif == "") {
+			html = document.getElementsByName("cif")[0];
+			html.setAttribute('value','');
+			html.style.border = "1px solid #e24a4a";
+			
+			value = false;
+			alert("Por favor, rellene todos los campos");
+			
+		}
+
+		else {
+
+			html = document.getElementsByName("cif")[0];
+			html.style.border = "";
+
+		}
 		
+		console.log("Valor", value)
 		
 
 		return value;

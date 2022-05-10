@@ -1,0 +1,206 @@
+
+.container {  
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "dni idAnimal"
+      "nombreAnimal generoAnimalh"
+      "tipoAnimal edadAnimal"
+      "nombreProp .";
+
+    box-sizing: border-box;
+
+    width: 1100px;
+    height: 289px;
+      
+    background: #FFDBDB;
+    border: 2px solid #000000;
+
+    margin: 0 auto;
+  }
+  
+  .nombreProp{
+    margin-left: 20px;
+    width: 420px;
+    grid-area: nombreProp; 
+  }
+  .dni { 
+      margin-left: 20px;
+      width: 420px;
+      grid-area: dni; 
+    }
+  
+  .idAnimal { 
+      width: 420px;
+      margin-left: 20px;
+      grid-area: idAnimal; 
+    }
+  
+  .nombreAnimal { 
+      width: 420px;
+      margin-left: 20px;
+      grid-area: nombreAnimal; 
+    }
+  
+  .generoAnimalh { 
+      width: 420px;
+      margin-left: 20px;
+      grid-area: generoAnimalh; 
+    }
+  
+  .tipoAnimal { 
+      width: 420px;
+      margin-left: 20px;
+      grid-area: tipoAnimal; 
+    }
+  
+  .edadAnimal {   
+      width: 420px;
+      margin-left: 20px;
+      grid-area: edadAnimal;
+    }
+
+.parteSuperior{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 1100px;
+    height: 110px;
+
+}
+
+.titulo{
+    margin-top: 2px;
+    width: 348px;
+    height: 32px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+    float: left;
+}
+
+.buscadorContenedor{
+    width: 450px;
+    float: left;
+    margin-left: 20px;
+}
+
+.textoBucador{
+    width: 67px;
+    height: 23px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 10px;
+    margin-left: 16px;
+
+    color: #000000;
+    float:left;
+}
+
+.buscador{
+    box-sizing: border-box;
+    width: 336px;
+    height: 48px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 18px;
+    float: right;
+    font-size: 20px;
+    line-height:48px;
+}
+
+.botonAñadir{
+    box-sizing: border-box;
+
+    width: 127px;
+    height: 40px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    float: right;
+}
+
+.recuadroAnimal{
+    width: 1366px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.textoFomr{
+    width: 174px;
+    height: 28px;
+    float: left;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.recuadroForm{
+    margin-top: 20px;
+    float: right;
+    width: 225px;
+    height: 28px;
+
+    background: #FFFFFF;
+}
+
+.info{
+
+    font-family: 'Roboto';
+    font-style: justify;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+
+    color: #000000;
+
+}
+  
+.botonEliminar{
+    box-sizing: border-box;
+
+    width: 130px;
+    height: 42px;
+
+    background: #8DF2B0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 25px;
+    margin-right: 130px;
+
+
+    color: #000000;
+
+    float: right;
+    
+}

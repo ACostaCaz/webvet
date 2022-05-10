@@ -9,8 +9,9 @@
 
         </div>
 
-        <div class="navegación">
-
+        <div class="botones">
+            <button routerLink="/addAnimal" class="botonCrearFicha">Crear Ficha</button>
+            <button (click)="cerrarSesion()" class="botonCrearFicha">Cerrar Sesión</button>
         </div>
 
         <div class="cuenta">
@@ -23,6 +24,7 @@
 
     <div class="area2">
         <a name = "calendario" href="">CALENDARIO</a>
+        <a name = "animales" href="mostrarAnimales">ANIMALES</a>
         <a name = "servicios" href="./servicios">SERVICIOS</a>
         <a name = "inventario" href="./inventarioClinica">INVENTARIO</a>
         <a name = "facturas" href="./historialFacturas">FACTURAS</a>

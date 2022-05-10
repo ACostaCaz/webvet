@@ -79,9 +79,9 @@ textarea {
     width: 253px;
     height: 28px;
     
-    margin-top: -50px;
+    margin-top: 27px;
 
-    margin-right: -30px;
+    margin-right: -240px;
 
     float: right;
 
@@ -167,8 +167,8 @@ textarea {
     width: 198px;
     height: 50px;
 
-    margin-left: 230px;
-    margin-top: 30px;
+    margin-left: 0px;
+    margin-top: 160px;
 
     background: #8DF2B0;
     border: 1px solid #000000;
@@ -188,7 +188,8 @@ textarea {
     width: 198px;
     height: 50px;
 
-    margin-left: 430px;
+    margin-left: 630px;
+    margin-top: -200px;
 
     background: #8DF2B0;
     border: 1px solid #000000;

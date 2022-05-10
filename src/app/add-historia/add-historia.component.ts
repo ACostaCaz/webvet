@@ -9,10 +9,11 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./add-historia.component.css']
 })
 export class AddHistoriaComponent implements OnInit{
-  history_id!: string;
-  createdAt!: string;
-  animal_id!: string;
+  historyIdd!: string;
+  animalId!: string;
   treatment!: string;
+  createdat!: string;
+
 
   constructor(public Historia: Historia, public router: Router, private titleService: Title) {
     this.titleService.setTitle("Añadir Historia");
@@ -22,8 +23,8 @@ export class AddHistoriaComponent implements OnInit{
   }
 
   aceptar() {
-    const historia = { history_id: this.history_id, createdAt: this.createdAt, 
-      animal_id: this.animal_id, treatment: this.treatment,};
+    const historia = { historyIdd: this.historyIdd, createdat: this.createdat, 
+      animalId: this.animalId, treatment: this.treatment,};
 
     this.Historia.addHistoria(historia).subscribe(response => {
       console.log(response)

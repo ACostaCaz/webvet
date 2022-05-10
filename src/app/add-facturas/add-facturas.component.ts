@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { servicioFactura } from '../ServicioFactura/servicioFactura.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
@@ -17,7 +16,7 @@ export class AddFacturasComponent implements OnInit {
   description!: string;
   cost!: string;
   
-  constructor(public servicioFactura: servicioFactura, public router: Router, private titleService: Title) {
+  constructor(public router: Router, private titleService: Title) {
     this.titleService.setTitle("Añadir facturas");
   }
 
@@ -33,9 +32,9 @@ export class AddFacturasComponent implements OnInit {
       cost: this.cost, createDate:this.idAnimal};
 
 
-    this.servicioFactura.addFactura(data).subscribe(response => {
-      console.log(response)
-    });
+    //this.servicioFactura.addFactura(data).subscribe(response => {
+    //  console.log(response)
+    //});
 
     
     this.router.navigateByUrl('/historialFacturas');

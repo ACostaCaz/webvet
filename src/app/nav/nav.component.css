@@ -14,12 +14,12 @@
   
 .area1 {  
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.2fr 0.5fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "foto navegacion cuenta";
+      "foto botones cuenta";
     grid-area: area1;
     border: 1px solid #000000;
     box-sizing: border-box;
@@ -30,9 +30,15 @@
     margin: auto;
 }
   
-.navegacion { 
-    grid-area: navegacion; 
+.botones { 
+    grid-area: botones; 
     margin: auto;
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
 }
   
 .cuenta { 
@@ -44,7 +50,7 @@
 .area2 {  
     
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -62,5 +68,19 @@ a {
     color: black;
     padding-bottom: 10px;
     padding-top: 10px;
+
+}
+
+.botonCrearFicha {
+
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: auto;
+    margin-right: 20px;
+    background-color: white;
+    cursor: pointer;
 
 }
