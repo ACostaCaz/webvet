@@ -1,8 +1,68 @@
-.container {  
+.container1 {
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "area1"
+    "area2"; 
+  width: 1300px;
+  margin: auto;
+}
+
+
+.area1{
+
+  display: grid; 
+  grid-auto-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". .";
+  grid-area: area1;
+
+}
+
+
+.formBuscar {
+  margin: auto;
+  
+}
+
+label{
+  font-style: normal;
+  font-size: 24px;
+}
+
+
+.titulo{
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 42px;
+  margin: auto;
+  color: #000000;
+}
+
+.buscador {
+  width: 400px;
+  height: 35px;
+
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+  border: 1px solid #8DF2B0;
+  border-radius: 10px;
+}
+
+
+.container2 {  
 
     margin-left: 90px;
-    margin-top: 150px;
-    width: 1170px;
     height: 228px;
     background: #F1F1F1;
 
@@ -69,7 +129,7 @@
     font-size: 16px;
     line-height: 19px;
     width: 760px;
-    
+    text-align: justify;
     color: #000000;
     
   }
@@ -109,67 +169,26 @@
     color: #000000;
   }
 
-  .botonesCanc{
+  .botonEliminar{
     width: 158px;
     height: 33px;
-    
     background: #5EFD95;
     border-radius: 11px;
-
     margin-top: 40px;
-    margin-left: 850px;
+    margin-left: 890px;
   }
 
-  .botonesMod{
+  .botonModificar{
     width: 158px;
     height: 33px;
-    
     background: #5EFD95;
     border-radius: 11px;
     margin-top: 40px;
     margin-left: 90px;
+
   }
 
-  .textoBuscador{
-    width: 187px;
-    height: 28px;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-
-    color: #000000;
-
-    float: left;
-
-    margin-left: 250px;
-  }
-
-  .buscador{
-    width: 594px;
-    height: 71px;
-    
-    background: #C4C4C4;
-    border-radius: 13px;
-
-    float: left;
-    margin-left: 50px;
-  }
-
-  .titulo{
-    width: 354px;
-    height: 45px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    
-    color: #000000;
-  }
+ 
 
 
    

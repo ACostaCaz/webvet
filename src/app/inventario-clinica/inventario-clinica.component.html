@@ -1,39 +1,51 @@
 <app-nav></app-nav>
 
-<p class = titulo>Todos los Productos:</p>
+<div class="container1">
 
-<div>
-    <p class = textoBuscador>Buscar Producto</p>
-    <div class = buscador></div>
-</div>
+    <div class="area1">
+        <p class = titulo>Todos los Productos:</p>
 
-
-<div class="container">
-
-    <div class="image">
-        <img class = recuadroImagen src="https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg" alt = "">
-    </div>
-    <div class="Nombre">
-        <p class = nombreProduto>Nombre Producto</p>
-    </div>
-    <div class="Descripcion">
-        <p class = textoDesc>Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo Esto
-            Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo
-        </p>
-    </div>
-    <div class="cantidad">
-        <img class = masMenos src="https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg" alt = "">
-
-        <p class = cantidadText>Cantidad Disponible: 20</p>
-
-        <img class = masMenos src="https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg" alt = "">
-    </div>
-    <div class="Precio">
-        <p class = precioText>Precio: 79€</p>
+        <form class="formBuscar" [formGroup]="buscador">
+            <label for="buscador">Buscador: </label>
+            <input type="text" class="buscador" id="buscador" formControlName="buscar" 
+            (change)="filtrar($event)">
+        </form>
     </div>
 
-  </div>
 
-  <button class = botonesMod onclick="location.href='http://localhost:4200/modproduct'" type="submit">Modificar</button>
+    <div class="area2">
 
-  <button class = botonesCanc onclick="location.href='http://localhost:4200/inventarioClinica'" type="submit">Eliminar</button>
+        <div class="container2">
+
+            <div class="image">
+                <img class = recuadroImagen src="https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg" alt = "">
+            </div>
+            <div class="Nombre">
+                <p class = nombreProduto>Nombre Producto</p>
+            </div>
+            <div class="Descripcion">
+                <p class = textoDesc>Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo Esto
+                    Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo
+                </p>
+            </div>
+            <div class="cantidad">
+                <!--img class = masMenos src="https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg" alt = ""-->
+        
+                <p class = cantidadText>Cantidad Disponible: 20</p>
+        
+                <!--img class = masMenos src="https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg" alt = ""-->
+            </div>
+            <div class="Precio">
+                <p class = precioText>Precio: 79€</p>
+            </div>
+        
+          </div>
+        
+          <button class = botonModificar onclick="location.href='http://localhost:4200/modproduct'" type="submit">Modificar</button>
+        
+          <button class = botonEliminar onclick="location.href='http://localhost:4200/inventarioClinica'" type="submit">Eliminar</button>
+        
+        </div>
+
+    </div>
+

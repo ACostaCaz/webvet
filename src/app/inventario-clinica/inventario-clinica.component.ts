@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import {Title} from "@angular/platform-browser";
 
 @Component({
@@ -15,5 +16,56 @@ export class InventarioClinicaComponent implements OnInit {
     ngOnInit(): void {
       document.getElementsByName("inventario")[0].style.fontWeight = "bold";
     }
+
+    inventario!: any[];
+
+    allInventario!: any[];
+
+    buscador = new FormGroup({
+      buscar: new FormControl('')
+  })
+
+
+  filtrar(event: any) {
+    var buscar:string = this.buscador.get("buscar")!.value
+    buscar = buscar.toLowerCase()
+    this.inventario = this.allInventario
+
+    if (buscar == "" || buscar == " ") {
+        this.inventario = this.allInventario
+    }
+
+    else {
+
+        this.inventario = [];
+        this.allInventario.forEach(element => {
+            
+            var type = element.animalType.toString();
+            var serviceName = element.serviceName.toString();
+            var description = element.description.toString();
+
+
+            if (type.toLowerCase().includes(buscar.toLowerCase())) {
+                this.inventario.push(element)
+                return
+            }
+            
+            if (description.toLowerCase().includes(buscar.toLowerCase())) {
+                this.inventario.push(element)
+                return
+            }
+
+            if (serviceName.toLowerCase().includes(buscar.toLowerCase())) {
+                this.inventario.push(element)
+            }
+
+        })
+    }
+           
+   
+
+}
+
+
 
 }
