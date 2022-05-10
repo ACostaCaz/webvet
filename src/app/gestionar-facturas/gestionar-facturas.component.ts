@@ -54,6 +54,7 @@ export class GestionarFacturasComponent implements OnInit {
                 var animalType = element.animalType.toString();
                 var animalName = element.animalName.toString();
                 var description = element.description.toString();
+                var dni = element.dni.toString();
 
 
                 if (animalId.toLowerCase().includes(buscar.toLowerCase())) {
@@ -77,6 +78,11 @@ export class GestionarFacturasComponent implements OnInit {
                 }
 
                 if (description.toLowerCase().includes(buscar.toLowerCase())) {
+                  this.facturas.push(element)
+                  return
+                }
+
+                if (dni.toLowerCase().includes(buscar.toLowerCase())) {
                   this.facturas.push(element)
       
                 }
