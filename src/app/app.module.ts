@@ -33,6 +33,7 @@ import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
 import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-empleado.component';
 import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-facturas.component';
 import { AddFacturasComponent } from './add-facturas/add-facturas.component';
+import { PermisosComponent } from './permisos/permisos.component';
 
 
 
@@ -42,7 +43,7 @@ import { AddFacturasComponent } from './add-facturas/add-facturas.component';
   declarations: [AppComponent, LoginComponent, RegisterComponent, EmpleadosComponent, EmpleadoComponent, FotoComponent, 
     PaginaPrincipalComponent, AddHistoriaComponent, AddServiciosComponent, RegistrarseSoftwareComponent, GestionInventarioComponent,
     HeaderSoftwareComponent, ContactarComponent, CondicionesComponent, AddProductComponent, ModProductComponent, HistorialServiciosComponent, 
-    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent, GestionarFacturasComponent, AddFacturasComponent,],
+    InventarioClinicaComponent, PoliticaYPrivacidadComponent, NavComponent, HistoriaMedicaPacienteComponent, AddEmpleadoComponent, ModificarEmpleadoComponent, GestionarFacturasComponent, AddFacturasComponent, PermisosComponent,],
 
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule, HttpClientModule,],
 

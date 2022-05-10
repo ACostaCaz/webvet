@@ -21,7 +21,7 @@ import { HistoriaMedicaPacienteComponent } from './historia-medica-paciente/hist
 import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
 import { AddFacturasComponent } from './add-facturas/add-facturas.component';
 import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-facturas.component';
-
+import { PermisosComponent } from './permisos/permisos.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
@@ -44,6 +44,7 @@ const routes: Routes = [
   { path: 'addEmpleado', component: AddEmpleadoComponent, pathMatch: 'full'},
   { path: 'addFactura', component: AddFacturasComponent, pathMatch: 'full'},
   { path: 'historialFacturas', component: GestionarFacturasComponent, pathMatch: 'full'},
+  { path: 'permisos', component: PermisosComponent, pathMatch: 'full'},
 ];
 
 @NgModule({

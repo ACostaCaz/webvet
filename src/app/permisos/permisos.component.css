@@ -1,0 +1,27 @@
+.body {
+    width: 100%;
+    
+}
+
+.permiso{
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    
+
+    font-family: 'Verdana';
+    
+    font-weight: 600;
+    font-size: 67px;
+    line-height: 28px;
+}
+
+.text{
+    text-align: center;
+    
+    font-family: 'Roboto';
+    
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+}
