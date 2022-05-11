@@ -36,14 +36,18 @@ a {
 
 .nombre {
     position: relative;
-    width: 100%;
+    width: 200px;
     height: 28px;
-    top: 60px;
+    top: 100px;
+    left: 10px;
     
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 18px;
+
+    list-style: center;
+    
 
     color: #000000;
 

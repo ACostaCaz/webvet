@@ -29,7 +29,10 @@ export class InventarioClinicaComponent implements OnInit {
   })
 
   getProductos() {
-    this.Producto.getProductos().subscribe(productos => this.allInventario = productos);
+    this.Producto.getProductos().subscribe((productos)  => {
+        this.allInventario = productos;
+        this.inventario = productos;
+    });
   }
   filtrar(event: any) {
     var buscar:string = this.buscador.get("buscar")!.value
@@ -45,23 +48,19 @@ export class InventarioClinicaComponent implements OnInit {
         this.inventario = [];
         this.allInventario.forEach(element => {
             
-            var type = element.animalType.toString();
-            var serviceName = element.serviceName.toString();
+            var name = element.name.toString();
             var description = element.description.toString();
+            
 
 
-            if (type.toLowerCase().includes(buscar.toLowerCase())) {
+            if (name.toLowerCase().includes(buscar.toLowerCase())) {
                 this.inventario.push(element)
                 return
             }
             
             if (description.toLowerCase().includes(buscar.toLowerCase())) {
                 this.inventario.push(element)
-                return
-            }
-
-            if (serviceName.toLowerCase().includes(buscar.toLowerCase())) {
-                this.inventario.push(element)
+                
             }
 
         })
