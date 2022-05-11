@@ -15,13 +15,13 @@
 
     <div class="area2">
 
-        <div class="container2">
+        <div class="container2" *ngFor="let producto of inventario; let i = index">
 
             <div class="image">
                 <img class = recuadroImagen src="https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg" alt = "">
             </div>
             <div class="Nombre">
-                <p class = nombreProduto>Nombre Producto</p>
+                <p class = nombreProduto>{{producto.name}}</p>
             </div>
             <div class="Descripcion">
                 <p class = textoDesc>Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo Esto es una descripcion de ejemplo Esto

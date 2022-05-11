@@ -12,9 +12,9 @@ export class Producto {
 
   //private productsUrl = 'api/servicios';
 
-  private productsUrl = 'http://localhost:3002/service/addproduct';
+  private productsUrl = 'http://localhost:3002/product/addproduct';
 
-  private productsUrl1 = 'http://localhost:3002/service/showProducts';
+  private productsUrl1 = 'http://localhost:3002/product/showProducts';
   
   constructor(private http: HttpClient) {}
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Producto } from '../producto/producto.component';
+import { Product } from '../producto/producto';
 import {Title} from "@angular/platform-browser";
 
 @Component({
@@ -9,12 +11,13 @@ import {Title} from "@angular/platform-browser";
 })
 export class InventarioClinicaComponent implements OnInit {
 
-    constructor(private titleService: Title) {
+    constructor(private titleService: Title, public Producto: Producto,) {
         this.titleService.setTitle("Inventario");
     }
 
     ngOnInit(): void {
       document.getElementsByName("inventario")[0].style.fontWeight = "bold";
+        this.getProductos();
     }
 
     inventario!: any[];
@@ -25,7 +28,9 @@ export class InventarioClinicaComponent implements OnInit {
       buscar: new FormControl('')
   })
 
-
+  getProductos() {
+    this.Producto.getProductos().subscribe(productos => this.allInventario = productos);
+  }
   filtrar(event: any) {
     var buscar:string = this.buscador.get("buscar")!.value
     buscar = buscar.toLowerCase()
