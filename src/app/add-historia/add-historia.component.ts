@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./add-historia.component.css']
 })
 export class AddHistoriaComponent implements OnInit{
-  historyIdd!: string;
+  cause!: string;
   animalId!: any;
   treatment!: string;
   createdat!: string;
@@ -24,14 +24,13 @@ export class AddHistoriaComponent implements OnInit{
   }
 
   aceptar() {
-    const historia = { historyIdd: this.historyIdd, createdat: this.createdat, 
+    const historia = { cause: this.cause, createdat: this.createdat, 
       animalId: this.animalId, treatment: this.treatment,};
 
     this.Historia.addHistoria(historia).subscribe(response => {
       console.log(response)
+      this.router.navigateByUrl("/fichaAnimal/" + this.animalId)
     });
-
-    this.router.navigateByUrl('/historial');
   }
 }
 

@@ -1,5 +1,5 @@
 export interface HistoriaAtr {
-    historyIdd: string;
+    cause: string;
     createdat: string;
     animalId: string;
     treatment: string;
