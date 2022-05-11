@@ -13,6 +13,10 @@ export class FichaAnimalComponent implements OnInit {
   id!: any;
   animalData: any;
 
+  historias!: any[];
+  facturas!: any[];
+
+
   
   constructor(private route: ActivatedRoute, private path: Router, private animalService: AnimalService)  {
     this.id = this.route.snapshot.paramMap.get('id')

@@ -52,16 +52,87 @@
 
 
 <div class="container2">
-    <div class="titulo">
-        <h2>Historia Médica:</h2>
-    </div>
+    
+        <h3 class="titulo">HISTORIAL MÉDICO:</h3>
+    
 
     <div class="historias">
 
-        <div class="historia">
+        <div class="historia" *ngFor="let historia of historias">
 
+        <div class="recuadro">
+            <div class = datos>
+            
+        
+                <p>Número del historial: </p> 
+                <p> {{historia.numhistorial}} </p>
+        
+                <p>Animal:</p>
+                <p> {{historia.tipoAnimal}} </p>
+
+                <p>Fecha:</p>
+                <p> {{historia.fecha}}</p>
+            
+                <p>Id del Animal:</p>
+                <p> {{historia.idanimal}} </p>
+
+            </div>
+
+            <div class="descripcion">
+                <p>Descripcion:
+                <br>
+                    {{historia.descripcion}}
+                </p>
+            
+            </div>        
+        
         </div>
 
     </div>
 
+    
+</div>
+
+
+<div class="container3">
+
+    <h3 class = titulo>FACTURAS</h3>
+
+    <div class="factura" *ngFor="let factura of facturas">
+
+        <div class="tipoServicio">
+            <p class = caracteristicas>Tipo Servicio: </p>
+            <td  class = info> {{factura.billType}}</td>
+        </div>
+    
+        <div class="tipoAnimal">
+            <p class = caracteristicas>Animal: </p>
+            <td  class = info>  {{factura.animalType}}</td>
+        </div>
+    
+        <div class="nombreAnimal">
+            <p class = caracteristicas>Nombre animal:</p>
+            <td  class = info> {{factura.animalName}}</td>
+        </div>
+    
+        <div class="idAnimal">
+            <p class = caracteristicas>Dni del cliente:</p>
+            <td  class = info> {{factura.dni}} </td>
+        </div>
+    
+        <div class="Descripcion">
+            <p class = caracteristicasDesc>Descripcion:</p>
+            <td class = infoDesc> {{factura.description}}</td>
+        </div>
+    
+        <div class="Precio">
+            <p class = caracteristicas>Precio:</p>
+            <td  class = info> {{factura.cost}} €</td>
+        </div>
+    
+    </div>
+
+    
+
+    
 </div>
