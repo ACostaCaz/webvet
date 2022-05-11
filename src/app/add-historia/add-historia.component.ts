@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Historia } from '../historiaServicio/historia.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -10,13 +10,14 @@ import { Title } from '@angular/platform-browser';
 })
 export class AddHistoriaComponent implements OnInit{
   historyIdd!: string;
-  animalId!: string;
+  animalId!: any;
   treatment!: string;
   createdat!: string;
 
 
-  constructor(public Historia: Historia, public router: Router, private titleService: Title) {
+  constructor(public Historia: Historia,public route: ActivatedRoute, public router: Router, private titleService: Title) {
     this.titleService.setTitle("Añadir Historia");
+    this.animalId = this.route.snapshot.paramMap.get('id');
   }
   ngOnInit(): void {
     document.getElementsByName("historiales")[0].style.fontWeight = "bold";

@@ -35,7 +35,7 @@ import { PermisosComponent } from './permisos/permisos.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
   { path: 'register', component: RegisterComponent, pathMatch: 'full' },
-  { path: 'addhistoria', component: AddHistoriaComponent, pathMatch: 'full', canActivate:[VetGuard] },
+  { path: 'addhistoria/:id', component: AddHistoriaComponent, pathMatch: 'full', canActivate:[VetGuard] },
   { path: 'modificar-empleado', component: ModificarEmpleadoComponent, pathMatch: 'full', canActivate:[AdminGuard] },
   { path: 'empleados', component: EmpleadosComponent, pathMatch: 'full', canActivate:[AdminGuard] },
   { path: '', component: PaginaPrincipalComponent, pathMatch: 'full' },
