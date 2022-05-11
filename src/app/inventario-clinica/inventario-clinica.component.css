@@ -9,6 +9,10 @@
     "area2"; 
   width: 1300px;
   margin: auto;
+  margin-bottom: 20px;
+}
+.area2{
+  margin: 0 auto;
 }
 
 
@@ -22,6 +26,9 @@
   grid-template-areas: 
     ". .";
   grid-area: area1;
+
+  margin: 0 auto;
+  margin-top: 20px;
 
 }
 
@@ -183,8 +190,20 @@ label{
     height: 33px;
     background: #5EFD95;
     border-radius: 11px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 90px;
+
+  }
+
+  .botonAdd{
+    width: 158px;
+    height: 33px;
+    background: #5EFD95;
+    border-radius: 11px;
+    margin-top: -36px;
+    margin-left: -40px;
+    float: left;
+    margin-bottom: 20px;
 
   }
 
