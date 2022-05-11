@@ -49,7 +49,6 @@ const routes: Routes = [
   { path: 'inventarioClinica', component: InventarioClinicaComponent, pathMatch: 'full', canActivate:[UserGuard]},
   //{ path: 'inventario', component: GestionInventarioComponent, pathMatch: 'full'}, //ELIMINAR; NO ES NADA
   { path: 'politica-y-privacidad', component: PoliticaYPrivacidadComponent, pathMatch: 'full'},
-  { path: 'historial', component: HistoriaMedicaPacienteComponent, pathMatch: 'full'},
   { path: 'addEmpleado', component: AddEmpleadoComponent, pathMatch: 'full', canActivate:[AdminGuard]},
   { path: 'addFactura', component: AddFacturasComponent, pathMatch: 'full', canActivate:[UserGuard]},
   { path: 'historialFacturas', component: GestionarFacturasComponent, pathMatch: 'full', canActivate:[UserGuard]},
