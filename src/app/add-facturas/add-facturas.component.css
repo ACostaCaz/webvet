@@ -16,6 +16,8 @@
       "NombreAnimal IdAnimal"
       "Descripcion Descripcion"
       ". Precio";
+
+    margin: 0 auto;
   }
   
   .Tipo-servicio { 
@@ -83,6 +85,9 @@
     margin-left: 85px;
     width: 241px;
     height: 28px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -91,6 +96,11 @@
     line-height: 28px;
     
     color: #000000;
+  }
+
+  .botones{
+    width: 1170px;
+    margin: 0 auto;
   }
 
   .boton{
@@ -109,4 +119,5 @@
     line-height: 19px;
 
     color: #000000;
+    float: right;
   }

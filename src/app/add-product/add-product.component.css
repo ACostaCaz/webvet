@@ -2,19 +2,20 @@
     width: 85%;
     text-align: left;
     margin-left: 12%;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .block {
     
-    width: 80%;
-    height: 500px;
+    width: 40%;
+    height: 400px;
 
     margin-top: 35px;
     margin-left: auto;
     margin-right: auto;
 
     padding: 20px;
+    background-color: #97ffb9;
     
 }
 
@@ -31,6 +32,10 @@
     font-size: 24px;
     line-height: 28px;
 }
+
+.nombre{
+    margin-top: -20px;
+}
 #insertar{
     background-color: rgb(255, 255, 255);
     border-color: rgb(134, 26, 26);
@@ -44,6 +49,7 @@
     
     position: relative;
     display: flex;
+    float: center;
     align-items: center;
     justify-content: center;
 
@@ -90,12 +96,11 @@
 
 
 .left{
-    width: 45%;
-    height: 500px;
+    width: 80%;
+    height: 400px;
     
-    margin-left: 3%;
+    margin:0 auto;
 
-    float: left;
 }
 
 .recuadro1{
@@ -107,7 +112,7 @@
 }
 
 .descripcion{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .recuadro2{
@@ -124,7 +129,7 @@
 .precio {
     width: 45%;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
     float: left;
     
@@ -133,7 +138,7 @@
 .cantidad {
     width: 45%;
 
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 5%;
     
     float: right;
@@ -150,10 +155,10 @@
 }
 
 .boton {
-    width: 198px;
-    height: 60px;
+    width: 128px;
+    height: 30px;
 
-    margin-left: 45%;
+    margin-left:62%;
     margin-top: 30px;
     
     
@@ -165,8 +170,8 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 20px;
+    line-height: 27px;
 
     color: #000000;
 }

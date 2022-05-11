@@ -3,4 +3,4 @@ export interface ServiciosAtr {
   animalType: string;
   description: string;
   cost: number;
-  }
+}
