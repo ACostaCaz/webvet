@@ -23,7 +23,7 @@
   grid-template-areas: 
   ". . .";
   margin: auto;
-  width: max-content;
+  width: 1300px;
 }
 
 
@@ -63,7 +63,7 @@ label{
 
 
 .buscador {
-  width: 400px;
+  width: 320px;
   height: 35px;
 
   font-style: normal;
@@ -160,7 +160,7 @@ label{
  }
 
  .boton{ 
-      width: 275px;
+      width: 200px;
       height: 40px;
 
       background: #8DF2B0;
@@ -169,7 +169,7 @@ label{
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 18px;
       line-height: 28px;
 
       color: #000000;

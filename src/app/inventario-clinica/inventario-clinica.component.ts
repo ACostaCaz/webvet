@@ -29,7 +29,10 @@ export class InventarioClinicaComponent implements OnInit {
   })
 
   getProductos() {
-    this.Producto.getProductos().subscribe(productos => this.allInventario = productos);
+    this.Producto.getProductos().subscribe((productos)  => {
+        this.allInventario = productos;
+        this.inventario = productos;
+    });
   }
   filtrar(event: any) {
     var buscar:string = this.buscador.get("buscar")!.value
