@@ -61,30 +61,17 @@
         <div class="historia" *ngFor="let historia of historias">
 
         <div class="recuadro">
-            <div class = datos>
-            
-        
-                <p>Número del historial: </p> 
-                <p> {{historia.numhistorial}} </p>
-        
-                <p>Animal:</p>
-                <p> {{historia.tipoAnimal}} </p>
 
-                <p>Fecha:</p>
-                <p> {{historia.fecha}}</p>
-            
-                <p>Id del Animal:</p>
-                <p> {{historia.idanimal}} </p>
+            <p class="treatment"> <b>Causa:</b>  &nbsp;&nbsp;&nbsp;&nbsp;
 
-            </div>
+                {{historia.cause}}
 
-            <div class="descripcion">
-                <p>Descripcion:
-                <br>
-                    {{historia.descripcion}}
-                </p>
-            
-            </div>        
+                <br><br>
+
+                <b>Tratamiento: </b>  &nbsp;&nbsp;&nbsp;&nbsp;
+
+                {{historia.treatment}}
+            </p>
         
         </div>
 
