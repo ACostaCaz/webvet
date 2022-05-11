@@ -12,6 +12,7 @@ import { FacturaService } from '../servicios/factura/factura.service';
 export class FichaAnimalComponent implements OnInit {
 
   id!: any;
+  dni!: any;
   animalData: any;
 
   historias!: any[];
@@ -39,6 +40,7 @@ export class FichaAnimalComponent implements OnInit {
     this.animalService.showAnimal(this.id).then((data) => {
       data.subscribe((data: any) => {
         console.log(data)
+        this.dni = data.ownerId
         this.formulario.get("dni")!.setValue(data.ownerId)
         this.formulario.get("nombre")!.setValue(data.name)
         this.formulario.get("tipo")!.setValue(data.animalType)
