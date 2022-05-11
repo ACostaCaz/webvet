@@ -37,7 +37,7 @@ export class AddProductComponent implements OnInit{
     });
 
     
-    this.router.navigateByUrl('/productos');
+    this.router.navigateByUrl('/inventarioClinica');
   }
 
 }

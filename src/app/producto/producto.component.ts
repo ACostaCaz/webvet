@@ -12,7 +12,7 @@ export class Producto {
 
   //private productsUrl = 'api/servicios';
 
-  private productsUrl = 'http://localhost:3002/product/addproduct';
+  private productsUrl = 'http://localhost:3002/product/addProduct';
 
   private productsUrl1 = 'http://localhost:3002/product/showProducts';
   
