@@ -294,7 +294,7 @@ padding-left:20px;
     margin: auto;
     color: #000000;
     margin: auto;
-    margin-left: 360px;
+    margin-left: 120px;
     margin-top: 20px;
     margin-bottom: 60px;
     
@@ -318,34 +318,24 @@ padding-left:20px;
 }
 
 
-.descripcion {
-    grid-area: descripcion;
-    margin: auto;
-    width: 1150px;
+.treatment {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    margin-left:  20px;
 }
 
-.datos {
-
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      ". . . . . . . ."; 
-    grid-area: datos; 
-    margin: auto;
-}
 
 .recuadro {
     grid-area: recuadro;
     display: grid; 
     grid-auto-columns: 1fr; 
     grid-template-columns: 1fr; 
-    grid-template-rows: 0.5fr 1.5fr; 
+    grid-template-rows: 1fr; 
     gap: 0px 0px; 
-    grid-template-areas: 
-        "datos"
-        "descripcion"; 
     width: 1200px;
     height: 200px;
     background: #F1F1F1;

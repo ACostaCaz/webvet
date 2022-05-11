@@ -1,5 +1,4 @@
 import { HttpClient } from '@angular/common/http';
-import { i18nMetaToJSDoc } from '@angular/compiler/src/render3/view/i18n/meta';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -38,6 +37,11 @@ export class AnimalService {
       alert("El animal se ha eliminado correctamente")
       this.path.navigateByUrl("/mostrarAnimales")
     })
+  }
+
+
+  async getAnimalHistory(id: string) {
+    return await this.http.get("http://localhost:3002/history/show_history/" + id)
   }
 
 }

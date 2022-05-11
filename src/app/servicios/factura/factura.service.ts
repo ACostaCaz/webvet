@@ -16,6 +16,10 @@ export class FacturaService {
     return await this.http.get("http://localhost:3002/bills/showBills")
   }
 
+  async getFacturasAnimal(id: any) {
+    return await this.http.get("http://localhost:3002/bills/showBills/"+ id)
+  }
+
 }
 
 

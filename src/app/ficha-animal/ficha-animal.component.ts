@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimalService } from '../servicios/animal/animal.service';
+import { FacturaService } from '../servicios/factura/factura.service';
 
 @Component({
   selector: 'app-ficha-animal',
@@ -18,7 +19,8 @@ export class FichaAnimalComponent implements OnInit {
 
 
   
-  constructor(private route: ActivatedRoute, private path: Router, private animalService: AnimalService)  {
+  constructor(private route: ActivatedRoute, private path: Router, private animalService: AnimalService,
+    private bills: FacturaService)  {
     this.id = this.route.snapshot.paramMap.get('id')
   }
 
@@ -46,6 +48,20 @@ export class FichaAnimalComponent implements OnInit {
       });
     })
 
+
+    this.bills.getFacturasAnimal(this.id).then((data) => {
+      data.subscribe((data: any) => {
+        this.facturas = data
+      });
+    });
+
+    (await this.animalService.getAnimalHistory(this.id)).subscribe((data:any) => {
+      this.historias = data
+    })
+
+
+
+
     
 
   }
@@ -71,7 +87,7 @@ export class FichaAnimalComponent implements OnInit {
     var nombre = this.formulario.get("nombre")!.value
     var opcion = confirm("Está segur@ de que quiere eliminar a " + nombre + ". Esta acción es irreversible")
     
-    if (true) {
+    if (opcion) {
       this.animalService.removeAnimal(this.id)
     }
 
