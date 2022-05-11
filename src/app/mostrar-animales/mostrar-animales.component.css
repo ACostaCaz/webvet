@@ -6,81 +6,99 @@
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "dni idAnimal"
+      "dni nombreProp"
       "nombreAnimal generoAnimalh"
-      "tipoAnimal edadAnimal"
-      "nombreProp .";
+      "tipoAnimal edadAnimal";
 
     box-sizing: border-box;
-
+    border-radius: 15px;
     width: 1100px;
-    height: 289px;
+    height: 215px;
       
-    background: #FFDBDB;
+    background: #c2fbc9;
     border: 2px solid #000000;
 
     margin: 0 auto;
+    margin-bottom: 50px;
   }
   
   .nombreProp{
-    margin-left: 20px;
+    margin-left: 50px;
     width: 420px;
     grid-area: nombreProp; 
   }
+
+
+  .buscador {
+    width: 400px;
+    height: 35px;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    border: 1px solid #8DF2B0;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 20px;
+}
+.formBuscar {
+    margin: auto;
+}
+
+label{
+    font-size: 30px;
+    font-style: normal;
+    margin: auto;
+    margin-left: 180px;
+}  
+
   .dni { 
-      margin-left: 20px;
+      margin-left: 60px;
       width: 420px;
       grid-area: dni; 
     }
-  
-  .idAnimal { 
-      width: 420px;
-      margin-left: 20px;
-      grid-area: idAnimal; 
-    }
-  
+
   .nombreAnimal { 
       width: 420px;
-      margin-left: 20px;
+      margin-left: 60px;
       grid-area: nombreAnimal; 
     }
   
   .generoAnimalh { 
       width: 420px;
-      margin-left: 20px;
+      margin-left: 50px;
       grid-area: generoAnimalh; 
     }
   
   .tipoAnimal { 
       width: 420px;
-      margin-left: 20px;
+      margin-left: 60px;
       grid-area: tipoAnimal; 
     }
   
   .edadAnimal {   
       width: 420px;
-      margin-left: 20px;
+      margin-left: 50px;
       grid-area: edadAnimal;
     }
 
 .parteSuperior{
     margin: 0 auto;
     margin-top: 50px;
-    width: 1100px;
+    width: 1200px;
     height: 110px;
 
 }
 
 .titulo{
-    margin-top: 2px;
+    margin: auto;
     width: 348px;
     height: 32px;
-
+    margin-left: 60px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 30px;
+  
 
     color: #000000;
     float: left;
@@ -107,37 +125,6 @@
     float:left;
 }
 
-.buscador{
-    box-sizing: border-box;
-    width: 336px;
-    height: 48px;
-
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    border-radius: 18px;
-    float: right;
-    font-size: 20px;
-    line-height:48px;
-}
-
-.botonAñadir{
-    box-sizing: border-box;
-
-    width: 127px;
-    height: 40px;
-
-    background: #8DF2B0;
-    border: 1px solid #000000;
-    border-radius: 10px;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: #000000;
-    float: right;
-}
 
 .recuadroAnimal{
     width: 1366px;
@@ -164,6 +151,8 @@
     float: right;
     width: 225px;
     height: 28px;
+    border-radius: 5px;
+    border: 1px solid black;
 
     background: #FFFFFF;
 }
@@ -178,29 +167,4 @@
 
     color: #000000;
 
-}
-  
-.botonEliminar{
-    box-sizing: border-box;
-
-    width: 130px;
-    height: 42px;
-
-    background: #8DF2B0;
-    border: 1px solid #000000;
-    border-radius: 10px;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    margin-top: 25px;
-    margin-right: 130px;
-
-
-    color: #000000;
-
-    float: right;
-    
 }

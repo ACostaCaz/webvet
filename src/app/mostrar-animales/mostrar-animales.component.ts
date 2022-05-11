@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ServicioAnimal } from '../ServicioAnimales/ServicioAnimales';
-import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { AnimalService } from '../servicios/animal/animal.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-mostrar-animales',
@@ -11,32 +11,75 @@ import { Title } from '@angular/platform-browser';
 
 export class MostrarAnimalesComponent implements OnInit {
 
-      animal = {
-        ownerId: "",
-        name: "",
-        animalType: "",
-        ownerName: "",
-        gender: "",
-        age: "",
-      }
-
-
-      edit = false;
-      add = false;
       animales: any;
+      allAnimales: any;
     
-      constructor(public ServicioAnimal: ServicioAnimal, private titleService: Title) {
+      constructor(public animalService: AnimalService, private titleService: Title) {
         this.titleService.setTitle("Animales");
       }
+
+      buscador = new FormGroup({
+        buscar: new FormControl('')
+      })
     
-      ngOnInit(): void {
-        this.geAnimales();
+      async ngOnInit() {
+
+        this.animalService.showAnimals().then((data) => {
+          data.subscribe((data) => {
+            this.animales = data
+            this.allAnimales = data
+          });
+        })
         document.getElementsByName("animales")[0].style.fontWeight = "bold";
       }
+
+
+      filtrar(event: any) {
+        
+        var buscar:string = this.buscador.get("buscar")!.value
+        buscar = buscar.toLowerCase()
+
+        if (buscar == "" || buscar == " ") {
+            this.animales = this.allAnimales
+        }
+
+        else {
+
+            this.animales = [];
+            this.allAnimales.forEach((element: any) => {
+              
+                var ownerId = element.ownerId.toString();
+                var ownerName = element.ownerName.toString();
+                var name = element.name.toString();
+                var animalType = element.animalType.toString();
+
+
+
+                if (ownerId.toLowerCase().includes(buscar.toLowerCase())) {
+                    this.animales.push(element)
+                    return
+                }
+                
+                if (ownerName.toLowerCase().includes(buscar.toLowerCase())) {
+                    this.animales.push(element)
+                    return
+                }
+
+                if (name.toLowerCase().includes(buscar.toLowerCase())) {
+                    this.animales.push(element)
+                    return
+                }
+
+                if (animalType.toLowerCase().includes(buscar.toLowerCase())) {
+                  this.animales.push(element)
+                  
+                }
+
+            })
     
-      geAnimales() {
-        this.ServicioAnimal.getAnimales().subscribe(animales => this.animales = animales);
+        }
       }
+    
     
     }
 

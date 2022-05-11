@@ -6,7 +6,6 @@ textarea {
     height: 350px;
 
     margin-left: 230px;
-
     background: #F1F1F1;
     border: 2px solid #000000;
     box-sizing: border-box;
@@ -168,7 +167,7 @@ textarea {
     height: 50px;
 
     margin-left: 0px;
-    margin-top: 160px;
+    margin-top: 190px;
 
     background: #8DF2B0;
     border: 1px solid #000000;
@@ -189,7 +188,7 @@ textarea {
     height: 50px;
 
     margin-left: 630px;
-    margin-top: -200px;
+    margin-top: -240px;
 
     background: #8DF2B0;
     border: 1px solid #000000;

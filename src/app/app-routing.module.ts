@@ -21,9 +21,6 @@ import { HistoriaMedicaPacienteComponent } from './historia-medica-paciente/hist
 import { AddEmpleadoComponent } from './add-empleado/add-empleado.component';
 import { AddFacturasComponent } from './add-facturas/add-facturas.component';
 import { GestionarFacturasComponent } from './gestionar-facturas/gestionar-facturas.component';
-<<<<<<< HEAD
-import { PermisosComponent } from './permisos/permisos.component';
-=======
 import { MostrarAnimalesComponent } from './mostrar-animales/mostrar-animales.component';
 import { AddAnimalComponent } from './add-animal/add-animal.component';
 import { FichaAnimalComponent } from './ficha-animal/ficha-animal.component';
@@ -32,10 +29,8 @@ import { AddCitasComponent } from './add-citas/add-citas.component';
 import { AdminGuard } from './guard/admin.guard';
 import { VetGuard } from './guard/vet.guard';
 import { UserGuard } from './guard/user.guard';
+import { PermisosComponent } from './permisos/permisos.component';
 
-
-
->>>>>>> 4e1cc509f59c06265c191c8f3c7dfd7be4d285c3
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
@@ -52,15 +47,9 @@ const routes: Routes = [
   { path: 'modproduct', component: ModProductComponent, pathMatch: 'full', canActivate:[UserGuard]},
   { path: 'servicios', component: HistorialServiciosComponent, pathMatch: 'full', canActivate:[UserGuard]},
   { path: 'inventarioClinica', component: InventarioClinicaComponent, pathMatch: 'full', canActivate:[UserGuard]},
-  { path: 'inventario', component: GestionInventarioComponent, pathMatch: 'full'}, //ELIMINAR; NO ES NADA
+  //{ path: 'inventario', component: GestionInventarioComponent, pathMatch: 'full'}, //ELIMINAR; NO ES NADA
   { path: 'politica-y-privacidad', component: PoliticaYPrivacidadComponent, pathMatch: 'full'},
   { path: 'historial', component: HistoriaMedicaPacienteComponent, pathMatch: 'full'},
-<<<<<<< HEAD
-  { path: 'addEmpleado', component: AddEmpleadoComponent, pathMatch: 'full'},
-  { path: 'addFactura', component: AddFacturasComponent, pathMatch: 'full'},
-  { path: 'historialFacturas', component: GestionarFacturasComponent, pathMatch: 'full'},
-  { path: 'permisos', component: PermisosComponent, pathMatch: 'full'},
-=======
   { path: 'addEmpleado', component: AddEmpleadoComponent, pathMatch: 'full', canActivate:[AdminGuard]},
   { path: 'addFactura', component: AddFacturasComponent, pathMatch: 'full', canActivate:[UserGuard]},
   { path: 'historialFacturas', component: GestionarFacturasComponent, pathMatch: 'full', canActivate:[UserGuard]},
@@ -69,7 +58,8 @@ const routes: Routes = [
   { path: 'fichaAnimal/:id', component: FichaAnimalComponent, pathMatch: 'full', canActivate:[VetGuard]},
   { path: 'citas', component: MostrarCitasComponent, pathMatch: 'full', canActivate:[VetGuard]},
   { path: 'addCitas', component: AddCitasComponent, pathMatch: 'full', canActivate:[VetGuard]},
->>>>>>> 4e1cc509f59c06265c191c8f3c7dfd7be4d285c3
+  { path: 'permisoDenegado', component: PermisosComponent, pathMatch: 'full'},
+
 ];
 
 @NgModule({

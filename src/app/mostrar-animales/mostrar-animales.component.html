@@ -4,54 +4,43 @@
 
     <p class = titulo> Animales de la clínica</p>
 
-    <div class = buscadorContenedor>
-
-        <p class = textoBucador> Buscar: </p>
-
-        <input class = buscador>
-
-    </div>
-
-    <input class = botonAñadir type="submit" value="Añadir">
+    <form class="formBuscar" [formGroup]="buscador">
+        <label for="buscador">Buscador: </label>
+        <input type="text" class="buscador" id="buscador" formControlName="buscar" 
+        (change)="filtrar($event)">
+    </form>
 
 </div>
 
-<section class = recuadroAnimal *ngFor="let animal of animales">
+<a [routerLink]="['/fichaAnimal', animal.id]" class = recuadroAnimal *ngFor="let animal of animales">
 
     <div class=container>
         
         <div class="dni">
             <p class = textoFomr> Dni del dueño: </p>
             <div class = recuadroForm> 
-                <td  class = info> {{animal.ownerId}} </td>
-            </div>
-        </div>
-
-        <div class="idAnimal">
-            <p class = textoFomr> Id del animal: </p>
-            <div class = recuadroForm>
-                <td  class = info> {{animal.history_id}} </td>
+                <td  class = info> &nbsp; {{animal.ownerId}} </td>
             </div>
         </div>
 
         <div class="nombreAnimal">
             <p class = textoFomr> Nombre del animal: </p>
             <div class = recuadroForm>
-                <td  class = info> {{animal.name}} </td>
+                <td  class = info> &nbsp; {{animal.name}} </td>
             </div>
         </div>
 
         <div class="generoAnimalh">
             <p class = textoFomr> Género del animal: </p>
             <div class = recuadroForm>
-                <td  class = info> {{animal.gender}} </td>
+                <td  class = info> &nbsp; {{animal.gender}} </td>
             </div>
         </div>
 
         <div class="tipoAnimal">
             <p class = textoFomr> Tipo de animal: </p>
             <div class = recuadroForm>
-                <td  class = info> {{animal.animalType}} </td>
+                <td  class = info> &nbsp; {{animal.animalType}} </td>
             </div>
         </div>
 
@@ -59,7 +48,7 @@
             <p class = textoFomr> Edad del animal: </p>
 
             <div class = recuadroForm>
-                <td  class = info> {{animal.age}} </td>
+                <td  class = info> &nbsp; {{animal.age}} año/s </td>
             </div>
         </div>
 
@@ -67,13 +56,11 @@
             <p class = textoFomr> Nombre Dueño: </p>
 
             <div class = recuadroForm>
-                <td  class = info> {{animal.ownerName}} </td>
+                <td  class = info> &nbsp; {{animal.ownerName}} </td>
             </div>
 
         </div>
 
   </div>
 
-  <input class = botonEliminar type="submit" value="Eliminar">
-
-</section>
+</a>

@@ -7,7 +7,7 @@
 
         <h1>DATOS DEL ANIMAL</h1>
 
-        <form class="formulario">
+        <form [formGroup] = "formulario" class="formulario">
             
             <label  for="">Dni del dueño:</label>
             <input class="campo" type="text" formControlName="dni">
@@ -27,8 +27,10 @@
 
         </form>
 
-        <button (click)="modificar()" class="botonModificar">Modificar</button>
-
+        <div class="botones">
+            <button (click)="modificar()" class="botonModificar">Modificar</button>
+            <button (click)="eliminar()"  class="botonEliminar">Eliminar</button>
+        </div>
     </div>
 
     <div class="area2">
@@ -44,6 +46,22 @@
         </div>
           
         
+    </div>
+
+</div>
+
+
+<div class="container2">
+    <div class="titulo">
+        <h2>Historia Médica:</h2>
+    </div>
+
+    <div class="historias">
+
+        <div class="historia">
+
+        </div>
+
     </div>
 
 </div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs';
 
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class VetGuard implements CanActivate {
 
-  constructor(private cookie: CookieService) {}
+  constructor(private cookie: CookieService, private path: Router) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -19,7 +19,10 @@ export class VetGuard implements CanActivate {
       return true;
     }
     else {
-      return false;
+
+      //this.path.navigateByUrl("/permisoDenegado")
+      return false
+      
     }
   }
 
