@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { Observable,  throwError } from "rxjs";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
+import { catchError, retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-add-facturas',
@@ -12,12 +16,15 @@ export class AddFacturasComponent implements OnInit {
   billType!: string;
   animalType!: string;
   animalName!: string;
-  idAnimal!: string;
+  animalId!: any;
   description!: string;
   cost!: string;
+  dni!: string;
   
-  constructor(public router: Router, private titleService: Title) {
+  constructor(public router: Router,public http:HttpClient, public route: ActivatedRoute, private titleService: Title) {
     this.titleService.setTitle("Añadir facturas");
+    this.animalId = this.route.snapshot.paramMap.get('id');
+
   }
 
   ngOnInit(): void {
@@ -25,20 +32,30 @@ export class AddFacturasComponent implements OnInit {
   }
 
  
-
-  addFactura() {
+  addFactura(){
+    const data = {dni: this.dni, billType: this.billType,animalName:  this.animalName, 
+      animalType:  this.animalType, description:  this.description, 
+      cost: this.cost, animalId:this.animalId};
+    console.log(data)
+     this.http.post('http://localhost:3002/bills/newBill', data).subscribe(
+      res => {
+        console.log(res);
+      }
+    )
+  }
+ /*  addFactura() {
     const data = { billType: this.billType,animalName:  this.animalName, 
       animalType:  this.animalType, description:  this.description, 
-      cost: this.cost, createDate:this.idAnimal};
+      cost: this.cost, animalId:this.animalId};
 
 
-    //this.servicioFactura.addFactura(data).subscribe(response => {
-    //  console.log(response)
-    //});
+    this.servicioFactura.addFactura(data).subscribe(response => {
+      console.log(response)
+    });
 
     
     this.router.navigateByUrl('/historialFacturas');
-  }
+  } */
 
 }
 

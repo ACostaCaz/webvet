@@ -50,7 +50,7 @@ const routes: Routes = [
   //{ path: 'inventario', component: GestionInventarioComponent, pathMatch: 'full'}, //ELIMINAR; NO ES NADA
   { path: 'politica-y-privacidad', component: PoliticaYPrivacidadComponent, pathMatch: 'full'},
   { path: 'addEmpleado', component: AddEmpleadoComponent, pathMatch: 'full', canActivate:[AdminGuard]},
-  { path: 'addFactura', component: AddFacturasComponent, pathMatch: 'full', canActivate:[UserGuard]},
+  { path: 'addFactura/:id', component: AddFacturasComponent, pathMatch: 'full', canActivate:[UserGuard]},
   { path: 'historialFacturas', component: GestionarFacturasComponent, pathMatch: 'full', canActivate:[UserGuard]},
   { path: 'mostrarAnimales', component: MostrarAnimalesComponent, pathMatch: 'full', canActivate:[VetGuard]},
   { path: 'addAnimal', component: AddAnimalComponent, pathMatch: 'full', canActivate:[VetGuard]},
